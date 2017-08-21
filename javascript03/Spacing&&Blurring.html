@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Update CSS Variables with JS</title>
+</head>
+<body>
+  <h2>Update CSS Variables with <span class='hl'>JS</span></h2>
+
+  <div class="controls">
+    <label for="spacing">Spacing:</label>
+    <input id="spacing" type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
+
+    <label for="blur">Blur:</label>
+    <input id="blur" type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
+
+    <label for="brightness">Brightness</label>
+    <input id="brightness" type="range" name="brightness" min="50" max="150" value="100" data-sizing="%">
+
+    <label for="base">Base Color</label>
+    <input id="base" type="color" name="base" value="#f2c2d2">
+  </div>
+
+  <img src="https://i.ytimg.com/vi/KGWpsOolxos/maxresdefault.jpg">
+
+  <style>
+    :root {
+      --base: #f2c2d2;
+      --spacing: 10px;
+      --blur: 10px;
+      --brightness: 100%;
+    }
+
+    img {
+      padding: var(--spacing);
+      background: var(--base);
+      filter: blur(var(--blur)) brightness(var(--brightness));
+      height: 350px;
+    }
+
+  
+    h2{
+      font-size: 1.8rem;
+      font-family: Halo Handletter;
+    }
+    
+
+    body {
+      text-align: center;
+      border: var(--base) 2rem solid;
+      color: darkblue;
+      box-sizing: border-box;
+      font-family: 'helvetica neue', sans-serif;
+      font-weight: 100;
+      font-size: 50px;
+    }
+
+    .controls {
+      margin-bottom: 50px;
+      font-size: 1.5rem;
+      font-family: Halo Handletter;
+    }
+
+    input {
+      width:100px;
+      
+    }
+  </style>
+
+  <script>
+    const inputs = document.querySelectorAll('.controls input');
+
+    function handleUpdate() {
+      const suffix = this.dataset.sizing || '';
+      document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
+    }
+
+    inputs.forEach(input => input.addEventListener('change', handleUpdate));
+    inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
+  </script>
+
+
+</body>
+</html>
