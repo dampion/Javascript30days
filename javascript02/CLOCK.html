@@ -15,7 +15,8 @@
     </script>
     <div class="clock">
       <div class="clock-face">
-        
+        <div class="title">Javascript Day 2</div>
+        <div class="middle-point"></div>
         <div class="hour-hand"></div>
         <div class="min-hand"></div>
         <div class="second-hand" style="background: red"></div>
@@ -33,6 +34,8 @@
       align-items: top;
     }
     body {
+      background: url(http://www.easytravel.com.tw/Upload/SEOTemplate/taipei-101.easytravel.com.tw-banner-1024.jpg);
+      background-size: cover;
       margin: 0;
       font-size: 2rem;
       display:flex;
@@ -60,6 +63,25 @@
       height: 100%;
       transform: translateY(-3px); /* account for the height of the clock hands */
     }
+    .title{
+      color: white;
+      font-size: 60px;
+      width:80%;
+      position: relative;
+      padding-left: 14%;
+      padding-top: 8%;
+    }
+    .middle-point{
+      position: absolute;
+      top:48%;
+      left:47%;
+      background: black;
+      box-shadow: -3px -3px darken(#FFF, 24) inset;
+      border-radius:50%;
+      width: 1rem;
+      height: 1rem; 
+      z-index:1;
+      }
     .hour-hand {
       width:40%;
       height:8px;
@@ -69,7 +91,6 @@
       transform-origin: 113%;
       transform: rotate(90deg);
       transition: all 0.05s;
-      transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
     }
     .min-hand {
       width:50%;
@@ -80,7 +101,6 @@
       transform-origin: 100%;
       transform: rotate(90deg);
       transition: all 0.05s;
-      transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
     }
     .second-hand {
       width:50%;
@@ -116,14 +136,14 @@
   setInterval(setDate, 1000);
   setDate();
 
-  function ShowTime(){
-    　var NowDate=new Date();
-    　var h=NowDate.getHours();
-    　var m=NowDate.getMinutes();
-    　var s=NowDate.getSeconds();　
-    　document.getElementById('showbox').innerHTML = h+':'+m+':'+s+'';
-    　setTimeout('ShowTime()',1000);
-    }
+  // function ShowTime(){
+  //   　var NowDate=new Date();
+  //   　var h=NowDate.getHours();
+  //   　var m=NowDate.getMinutes();
+  //   　var s=NowDate.getSeconds();　
+  //   　document.getElementById('showbox').innerHTML = h+':'+m+':'+s+'';
+  //   　setTimeout('ShowTime()',1000);
+  //   }
 
 </script>
 
