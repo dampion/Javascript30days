@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 Canvas</title>
+</head>
+<body>
+<canvas id="draw" width="100" height="100"></canvas>
+<script>
+// querySelector(), getContext() 
+// the difference of innerWidth and innerHeight
+const canvas = document.querySelector('#draw');
+const ctx = canvas.getContext('2d');
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+ctx.strokeStyle = '#whereisthis';
+ctx.lineJoin = 'round';
+ctx.lineCap = 'round';
+// 一開始 最大寬度半徑初始值 like value用法
+ctx.lineWidth = 100;
+// ctx.globalCompositeOperation = 'multiply';
+
+let isDrawing = false;
+let lastX = 0;
+let lastY = 0;
+let hue = 0;
+// canvas.direction 
+// 由左至右以及由右至左 畫法，true是四面八方皆可
+let direction = true;
+
+function draw(e) {
+  if (!isDrawing) return; // stop the fn from running when they are not moused down
+  console.log(e);
+  // 多種顏色種類控制
+  ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+
+//   ctx.beginPath(); 起始
+// ctx.moveTo(20,20); 起始點
+// ctx.lineTo(20,100); 終點1
+// ctx.lineTo(70,100); 終點2
+// ctx.strokeStyle="red"; 顏色
+// ctx.stroke(); 畫圖總行程執行
+  // canvas 畫圖起始
+  ctx.beginPath();
+  // start from lastX, lastY
+  ctx.moveTo(lastX, lastY);
+  // go to offsetX, offsetY
+  ctx.lineTo(e.offsetX, e.offsetY);
+  // storke() ：畫圖的 
+  ctx.stroke();
+  // 刷新起始點
+  [lastX, lastY] = [e.offsetX, e.offsetY];
+
+  hue++;
+  // the maximum of HSL color is 359
+  if (hue >= 360) {
+    hue = 0;
+  }
+  // 控制畫筆半徑過大以及過小的情況
+  if (ctx.lineWidth >= 100 || ctx.lineWidth <= 1) {
+    direction = !direction;
+  }
+// 承上 到100時 改成--， 到1則為++。
+  if(direction) {
+    ctx.lineWidth++;
+  } else {
+    ctx.lineWidth--;
+  }
+
+}
+
+// mousedown: 滑鼠按下去的狀態
+// mouseup: 滑鼠按上來的狀態
+// mouseout: 鼠標不在上方的狀態
+// mouseover: 鼠標在上方的狀態
+// mousemove: 鼠標在上方的狀態，且隨著鼠標移動可能有所變化
+canvas.addEventListener('mousedown', (e) => {
+  isDrawing = true;
+  [lastX, lastY] = [e.offsetX, e.offsetY];
+});
+
+// document.addEventListener() 方法用于向文档添加事件句柄。
+canvas.addEventListener('mousemove', draw);
+canvas.addEventListener('mouseup', () => isDrawing = false);
+canvas.addEventListener('mouseout', () => isDrawing = false);
+
+</script>
+
+<style>
+  html, body {
+    margin:0;
+  }
+</style>
+
+</body>
+</html>
