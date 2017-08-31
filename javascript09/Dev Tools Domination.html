@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Console Tricks!</title>
+</head>
+<body>
+
+  <p onClick="makeGreen()">console practice</p>
+  <h1 class="change" style = "color: white;">You made it!</h1>
+  <script>
+    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+
+    function makeGreen() {
+      const p = document.querySelector('p');
+      p.style.color = 'red';
+      p.style.fontSize = '80px';
+      const h1 = document.querySelector('h1');
+      h1.style.color = 'black';
+    }
+
+    // Regular
+    console.log('hello');
+
+    // Interpolated
+    // %s a variable, use another string to replace it
+    console.log('Hello I am a %s string!', '💩');
+
+    // Styled
+    // %c, style expression'anthing before ;'
+    // console.log('%c I am some great text', 'font-size:50px; background:red; text-shadow: 10px 10px 0 blue')
+
+    // warning!
+    // show the warning with the string 'OH NOOO'
+    console.warn('OH NOOO');
+
+    // Error :|
+    // show the error with the string 'shit!'
+    console.error('Shit!');
+
+    // Info
+    // show the information with the string 'Crocodile eat 3-4 people per year'
+    console.info('Crocodiles eat 3-4 people per year');
+
+    // Testing
+    // 選取 element p 
+    const p = document.querySelector('p');
+    // console.assert()
+    // Writes an error message to the console if the assertion is false.
+    // If the assertion is true, nothing happens.
+    // console.assert(assertion, obj1 [, obj2, ..., objN]);
+    // assertion: Any boolean expression. If the assertion is false, the message is written to the console.
+    // classList.add(), .remove(), .toggle(), .item(index)
+    // classList.contain(), Returns a Boolean value, indicating whether an element has the specified class name. 
+    // classList(), 列出所有class
+    console.assert(p.classList.contains('ouch'), 'That is wrong!');
+
+    // clearing
+    // 清空表單內容
+    console.clear();
+
+    // Viewing DOM Elements
+    // console.log(p); 顯示 element p
+    // The <dir> tag is not supported in HTML5. Use CSS instead. alike ul tag 
+    console.log(p);
+    console.dir(p);
+
+    console.clear();
+
+    // Grouping together
+    // console.group() and console.groupEnd() 一次迴圈各執行一次才進行下一個變數
+    // console.groupCollapsed() 一開始就不顯示詳細資料，必須點擊開來
+    dogs.forEach(dog => {
+      console.groupCollapsed(`${dog.name}`);
+      console.log(`This is ${dog.name}`);
+      console.log(`${dog.name} is ${dog.age} years old`);
+      console.log(`${dog.name} is ${dog.age * 7} dog years old`);
+      console.groupEnd(`${dog.name}`);
+    });
+
+    // counting
+    // count the times that we use the string''
+    console.count('Wes');
+    console.count('Wes');
+    console.count('Steve');
+    console.count('Steve');
+    console.count('Wes');
+    console.count('Steve');
+    console.count('Wes');
+    console.count('Steve');
+    console.count('Steve');
+    console.count('Steve');
+    console.count('Steve');
+    console.count('Steve');
+
+    // timing
+    // console.time(), .timeEnd() 取得中間的函數執行時間
+
+    console.time('fetching data');
+    fetch('https://api.github.com/users/wesbos')
+      .then(data => data.json())
+      .then(data => {
+        console.timeEnd('fetching data');
+        console.log(data);
+      });
+
+    console.table(dogs);
+
+  </script>
+</body>
+</html>
