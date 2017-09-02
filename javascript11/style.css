@@ -154,3 +154,8 @@ input[type=range]::-moz-range-thumb {
   background: #ffc600;
   cursor: pointer;
 }
+.name{
+  display: inline-block;
+  position: absolute;
+  bottom: 10%;
+}
