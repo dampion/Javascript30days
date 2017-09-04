@@ -5,8 +5,14 @@
   <title>JS Reference VS Copy</title>
 </head>
 <body>
-
+<p onclick="colorChange()"> basic array concept </p>
   <script>
+    function colorChange() {
+      const p = document.querySelector('p');
+      p.style.color = 'red';
+      p.style.fontSize = '40px';
+      p.style.fontWeight = '400';
+    }
     // start with strings, numbers and booleans
     // let age = 100;
     // let age2 = age;
