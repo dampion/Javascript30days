@@ -11,28 +11,33 @@
 	<script type="text/javascript" src="http://unpkg.com/iview/dist/iview.min.js"></script>
 </head>
 <body>
-	<template>
 	<div id="app">
 		<div class="index">
 			<Row type="flex" justify="center" align="middle">
-				<img id="bg" style="background: cover;" src="./promotion-bn-bg.png" />
-				<Col span="24" style="position: absolute;
+				<i-col span="24" style="position: absolute;
         z-index: 100;">
         <h1>
         	<img src="https://raw.githubusercontent.com/iview/iview/master/assets/logo.png">
         </h1>
         <h2>
         	<p>{{message}}</p>
-        	<Button type="ghost" @click="handleStart">Start iView</Button>
+        	<Dropdown trigger="click">
+        		<a href="javascript:void(0)">
+		          Choose one
+		          <Icon type="arrow-down-b"></Icon>
+		        </a>
+		        <DropdownMenu slot="list">
+	        		<DropdownItem v-for="number in 30">
+	        			{{'Javascript'+ number}}
+	        		</DropdownItem>
+	        	</DropdownMenu>
+        	</Dropdown>
+        	<i-button class="iview_button" type="ghost" @click="handleStart">Start iView</i-button>
         </h2>
-      </Col>
+      </i-col>
     </Row>
-    <div class"hi" style="background: #000;">
-    	<canvas ref="canvas" id="canvas"></canvas>
-    </div>
     </div>
 	</div>
-	</template>
 </body>
 
 <script>
@@ -40,7 +45,15 @@ var app = new Vue({
   el: '#app',
   data: {
     message: 'Hello Javascript 30 days!'
-  }
+  },
+  methods: {
+  	handleStart() {
+  		this.$Modal.info({
+  			title: 'Bravo',
+  			content: 'Now, enjoy the convenience of iView.'
+  		});
+  	},
+  },
 })
 </script>
 </html>
