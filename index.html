@@ -10,7 +10,6 @@
 	<script type="text/javascript" src="http://vuejs.org/js/vue.min.js"></script>
 	<script type="text/javascript" src="http://unpkg.com/iview/dist/iview.min.js"></script>
 	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
 </head>
 <body>
 	<div id="app">
@@ -23,17 +22,6 @@
         </h1>
         <h2>
         	<p>{{message}}</p>
-        	<Dropdown trigger="click">
-        		<a href="javascript:void(0)">
-		          Choose one
-		          <Icon type="arrow-down-b"></Icon>
-		        </a>
-		        <DropdownMenu slot="list">
-	        		<DropdownItem v-for="number in 30">
-	        			{{'Javascript'+ number}}
-	        		</DropdownItem>
-	        	</DropdownMenu>
-        	</Dropdown>
         	<i-button class="iview_button" type="ghost" @click="handleStart">Start iView</i-button>
         </h2>
       </i-col>
