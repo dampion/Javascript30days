@@ -2,14 +2,43 @@
 <html lang="zh-CN">
 
 <head>
-    <title>588Champ</title>
-    <!-- <link rel="shortcut icon" href="../assets/images/home/favicon.ico"/> -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <!-- <link rel="stylesheet" href="/dist/main.css"> -->
+	<title>588Champ</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link rel="stylesheet" type="text/css" href="assets/main.css">
+	<link rel="stylesheet" type="text/css" href="http://unpkg.com/iview/dist/styles/iview.css">
+	<script type="text/javascript" src="http://vuejs.org/js/vue.min.js"></script>
+	<script type="text/javascript" src="http://unpkg.com/iview/dist/iview.min.js"></script>
 </head>
-
 <body>
-    <div id="app"></div>
+	<div id="app">
+		<div class="index">
+			<Row type="flex" justify="center" align="middle">
+				<img id="bg" style="background: cover;" src="./promotion-bn-bg.png" />
+				<Col span="24" style="position: absolute;
+        z-index: 100;">
+        <h1>
+        	<img src="https://raw.githubusercontent.com/iview/iview/master/assets/logo.png">
+        </h1>
+        <h2>
+        	<p>{{message}}</p>
+        	<Button type="ghost" @click="handleStart">Start iView</Button>
+        </h2>
+      </Col>
+    </Row>
+    <div class"hi" style="background: #000;">
+    	<canvas ref="canvas" id="canvas"></canvas>
+    </div>
+    </div>
+	</div>
 </body>
+
+<script>
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Javascript 30 days!'
+  }
+})
+</script>
 </html>
