@@ -5,13 +5,16 @@
 	<title>588娱乐-经销加盟网</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-	<link rel="stylesheet" type="text/css" href="http://unpkg.com/iview/dist/styles/iview.css">
-	<script type="text/javascript" src="http://vuejs.org/js/vue.min.js"></script>
-	<script type="text/javascript" src="http://unpkg.com/iview/dist/iview.min.js"></script>
+	<!-- <link rel="stylesheet" type="text/css" href="http://unpkg.com/iview/dist/styles/iview.css"> -->
+	<!-- <script type="text/javascript" src="http://vuejs.org/js/vue.min.js"></script> -->
+	<!-- <script type="text/javascript" src="http://unpkg.com/iview/dist/iview.min.js"></script> -->
+	<script src="js/vue.min.js"></script>
+	<script src="js/iview.min.js"></script>
 	<link href="https://cdn.jsdelivr.net/npm/animate.css@3.5.1" rel="stylesheet" type="text/css">
 	<link href="css/animate.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="css/mainNotTransformed.css">
 	<link rel="stylesheet" href="css/mainRWD.css">
+	<link rel="stylesheet" href="css/iview.css">
 	<script src="js/jquery-1.12.4.min.js"></script>
 	<script src="js/reWrite.js"></script>
 	<script type="text/javascript" src="js/rellax.js"></script>
@@ -22,11 +25,6 @@
 	<div id="app">
 
 		<div class="app-home-background" ref="appHomeBackground">
-			<div class="bg-video">
-				<video class="main-bg-video" muted autoplay loops>
-					<source src="video/main-bg.mp4" type="video/mp4">
-				</video>
-			</div>
 			<div class="app-header" :class="{black_bg: (!checkScrollTop)}" ref="appHeader">
 				<div class="app-brand" >
 					<img class="hover" src="images/logo.svg" @click="refresh" />
@@ -37,15 +35,19 @@
 					<div class="hover service" :class="{active: (tab_active == 'service')}" @click="toggleTab('service')">经销制度</div>
 				</div>
 				<div class="app-navbar-right devicePC" >
-					<!-- <div class="FAQ">
-						<img src="images/" />
-						<span>常见问题</span>
-					</div> -->
-					<Tooltip content="3355715137" class="QQhao" v-if="!checkScrollTop">
+					<Tooltip class="QQhao" v-if="!checkScrollTop">
 						<img src="images/icon-qq-w-s.svg" />
+						<div slot="content">
+							<img src="" width="100" height="100" />
+							<p>1054342701</p>
+						</div>
 					</Tooltip>
-					<Tooltip content="pinnaclkentaiwan" class="wechat"  v-if="!checkScrollTop">
+					<Tooltip  class="wechat"  v-if="!checkScrollTop">
 						<img src="images/icon-wechat-w-s.svg" />
+						<div slot="content">
+							<img src="images/wechat-qrcode-min.jpg" width="100" height="100" />
+							<p>ez588588</p>
+						</div>
 					</Tooltip>
 					<div class="instruction hover" @click="downloadFile('588-affiliate-min.pdf', 'instruction')">
 						<img src="images/icon-download-g.svg" />
@@ -56,8 +58,8 @@
 					</div>
 
 					<Tooltip   placement="bottom-end">
-						<div class="goToHome hover">
-							<p @click="goToHome">参观官网</p>
+						<div class="goToHome hover" @click="goToHome">
+							<p>参观官网</p>
 						</div>
 						<div slot="content" >
 							<img src="images/bet588.biz8588-min.jpg" width="100" height="100" />
@@ -71,7 +73,7 @@
 			<div class="app-section">
 				<div class="sloganBox">
 					<h1 class="slogan">588娱乐超强优势<br>
-					<span class="typewrite" data-period="2000" data-type="[ &quot;分红/退水 双轨制&quot;,&quot;低门槛高福利&quot;,&quot;互动游戏、红利日领&quot;]"><span class="wrap">工具</span></span></h1>
+					<span class="typewrite" data-period="2000" data-type="[ &quot;分红/退水 双轨制&quot;,&quot;低门槛、高福利&quot;,&quot;互动游戏、红利日领&quot;]"><span class="wrap"></span></span></h1>
 					<p class="supplement">588娱乐是您成功的助力</p>
 				</div>
 			</div>
@@ -101,14 +103,30 @@
 					<div class="isolationLine intro hover"></div>
 				</div>
 				<div class="app-footer-right devicePC">
-					<div class="QQhao">
+					<!-- <div class="QQhao">
 						<img src="images/icon-qq-w-s.svg" />
-						<span>3355715137</span>
+						<span>1054342701</span>
 					</div>
 					<div class="wechat">
 						<img src="images/icon-wechat-w-s.svg" />
-						<span>pinnaclkentaiwan</span>
-					</div>
+						<span>ez588588</span>
+					</div> -->
+					<Tooltip placement="top-end">
+						<div class="QQhao">
+							<img src="images/icon-qq-w-s.svg" />
+							<span>1054342701</span>
+						</div>
+						<div slot="content"></div>
+					</Tooltip>
+					<Tooltip placement="top-end">
+						<div class="wechat">
+							<img src="images/icon-wechat-w-s.svg" />
+							<span>ez588588</span>
+						</div>
+						<div slot="content">
+							<img src="images/wechat-qrcode-min.jpg" width="100" height="100" />
+						</div>
+					</Tooltip>
 				</div>
 			</div>
 		</div>
@@ -121,6 +139,16 @@
 		    <div class="advantage home-tab" :class="{active: (tab_active == 'advantage')}" @click="toggleModal">优势</div>
 		    <div class="service home-tab" :class="{active: (tab_active == 'service')}" @click="toggleModal">经销制度</div>
 		  </div>
+		  <div class="QQhao_M" @click="addContact('QQhao')">
+		  	<img class="mainImage" src="images/icon-qq-w-s.svg" />
+				<p class="mainTitle">1054342701</p>
+		  </div>
+
+		  <div class="wechat_M" @click="addContact('wechat')">
+		  	<img class="mainImage" src="images/icon-wechat-w-s.svg" />
+		  	<p class="mainTitle">ez588588</p>
+		  </div>
+		  <div></div>
 		  <div class="instruction" @click="downloadFile('588-affiliate-min.pdf', 'instruction-m')">
 				<img class="mainImage" src="images/icon-download-g.svg" />
 				<span>经销手冊</span>
@@ -201,7 +229,7 @@
 							<div class="gameImage casinoImage " >
 								<img class="mainImage width-rwd"  src="images/affiliate-p-2-pic-1@3x-min.png" />
 								<img class="subImage" src="images/affiliate-p-2-purple-circle.svg" />
-								<p class="gameTitle">平博 / BBIN / 沙巴</p>
+								<p class="gameTitle">AG / BBIN / OG</p>
 							</div>
 						</div>
 						<div class="flexBox animated" >
@@ -212,7 +240,7 @@
 							<div class="gameImage sportImage">
 								<img class="mainImage  width-rwd"  src="images/affiliate-p-2-pic-2@3x-min.png" />
 								<img class="subImage " src="images/affiliate-p-2-purple-circle.svg" />
-								<p class="gameTitle">AG / BBIN / OG</p>
+								<p class="gameTitle">平博 / BBIN / 沙巴</p>
 							</div>
 							
 						</div>
@@ -440,8 +468,10 @@
 			<div class="contactUs container">
 				<h2 class="main">如何与我们联系</h2>
 				<p class="sub">若您想了解更多合作上的细节，欢迎您透过微信或是QQ互加好友，让我们一起谈谈您的未来。</p>
-				<div class="white_bg_box">
-					<div class="contactBox white_bg" v-on:mouseover="hoverContact('QQhaoHover')" v-on:mouseleave="leaveContact('QQhaoHover')"><img class="contactImg" :src="(QQhaoHover)?'images/icon-qq-g-b.svg':'images/icon-qq-w-b.svg'" />3355715137</div>
+				<div class="white_bg_box" id="contactUs">
+					<div class="contactBox white_bg" v-on:mouseover="hoverContact('QQhaoHover')" v-on:mouseleave="leaveContact('QQhaoHover')"><img class="contactImg" :src="(QQhaoHover)?'images/icon-qq-g-b.svg':'images/icon-qq-w-b.svg'" />1054342701
+						<img class="mainImage" src="images/wechat-qrcode-min.jpg" width="100" height="100" /></div>
+
 					<div class="contactBox white_bg" v-on:mouseover="hoverContact('wechatHover')" v-on:mouseleave="leaveContact('wechatHover')"><img class="contactImg" :src="(wechatHover)?'images/icon-wechat-g-b.svg':'images/icon-wechat-w-b.svg'" />pinnaclkentaiwan</div>
 				</div>
 				<div class="scrollTop" @click="scrollTop">
@@ -623,6 +653,15 @@
 		showWindow: function() {
 			return (window.innerHeight / window.innerWidth);
 		},
+		addContact: function(item) {
+			this.toggleModal();
+			if (item == 'QQhao') {
+				this.goToMainTab("http://shang.qq.com/email/stop/email_stop.html?qq=1054342701&sig=a1c657365db7e82805ea4b2351081fc3ebcde159f8ae49b1&tttt=1");
+			}
+			if (item == 'wechat') {
+				this.goToMainTab("https://u.wechat.com/IMVSjrJKZd6Z51bkGuOs57c");
+			}
+		},
 
   },
   mounted: function() {
@@ -748,6 +787,12 @@ $('.intro').click(function(){
 });
 $('.service').click(function(){
 	$('html,body').animate({scrollTop:$('#bonusRule').offset().top - 30}, 800);
+});
+$('.QQhao_M').click(function(){
+	$('html,body').animate({scrollTop:$('#contactUs').offset().top - 30}, 800);
+});
+$('.wechat_M').click(function(){
+	$('html,body').animate({scrollTop:$('#contactUs').offset().top - 30}, 800);
 });
 
 
