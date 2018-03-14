@@ -6,9 +6,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<link rel="stylesheet" type="text/css" href="assets/main.css">
-	<link rel="stylesheet" type="text/css" href="http://unpkg.com/iview/dist/styles/iview.css">
-	<script type="text/javascript" src="http://vuejs.org/js/vue.min.js"></script>
-	<script type="text/javascript" src="http://unpkg.com/iview/dist/iview.min.js"></script>
+  <link rel="stylesheet" href="css/iview.css">
+	<script src="js/vue.min.js"></script>
+  <script src="js/iview.min.js"></script>
 </head>
 <body>
 	<div id="app">
@@ -29,13 +29,14 @@
 </body>
 
 <script>
+'use strict';
 var app = new Vue({
   el: '#app',
   data: {
     message: 'Hello Javascript 30 days!'
   },
   methods: {
-  	handleStart() {
+  	handleStart: function handleStart() {
   		this.$Modal.info({
   			title: 'Bravo',
   			content: 'Now, enjoy the convenience of iView.'
