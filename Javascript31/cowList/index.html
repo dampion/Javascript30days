@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>哞～起來</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name = "format-detection" content = "telephone=no">
+	<link rel="stylesheet" href="css/iview.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/vue.min.js"></script>
+	<script src="js/iview.min.js"></script>
+</script>
+</head>
+<body>
+	<div id="app">
+		<dropdown trigger="click" style="margin-left: 20px">
+        <a href="javascript:void(0)">
+            牛隻清單
+            <icon type="arrow-down-b"></icon>
+        </a>
+        <dropdown-menu slot="list">
+            <dropdown-item v-for="(cow, index) in cowList">{{cow}}</dropdown-item>
+        </dropdown-menu>
+    </dropdown>
+
+	</div>
+  
+
+</body>
+<script>
+var app = new Vue({
+  el: '#app',
+  data: {
+  	cowList: [2666,2555,2855,2888,2699,2684,2984,2456,2654,2345,1234,6548],
+  }
+});
+</script>
+
+</html>
