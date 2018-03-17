@@ -50,6 +50,8 @@
 
   divs.forEach(div => div.addEventListener('click', logText, {
     capture: false,
+    // once means it will only be triggered once and unbind itself
+    // like div.removeEventListener('click', logText)
     once: true
   }));
 
