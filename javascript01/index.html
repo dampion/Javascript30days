@@ -4,10 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Javascript30days Drum Kit</title>
-	<style>
-        /* ��J�r�� @import url(); */
-		/* @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300|Playfair+Display'); */
-		
+	<style>		
         html{
             font-size: 10px;
             background: url(./background.jpg);
@@ -128,21 +125,14 @@
 	
 	<script>
 		function playSound(e){
-			
 			const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
 			const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
-		
+
 			if(!audio)return;
 			audio.currentTime = 0;
 			audio.play();
 			key.classList.add('playing')
 		}
-
-		// function playSoundClick(e){
-		// 	const audio = document.querySelector('audio');
-		// 	audio.currentTime = 0;
-		// 	audio.play(); 
-		// }
 
 		function removeTransition(e){
 			if(e.propertyName !== 'transform')return;
@@ -152,7 +142,6 @@
 		keys.forEach(key =>key.addEventListener('transitionend',removeTransition));
 
 		window.addEventListener('keydown',playSound);
-		// window.addEventListener('mouseup',playSoundClick);
 	</script>
 
 

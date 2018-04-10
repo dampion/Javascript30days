@@ -1,50 +1,79 @@
 .index {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  background: #241e49 url("https://s3.amazonaws.com/js30-cdn/sky--purple-kracked.jpg") bottom center no-repeat;
 }
 
-.index h1 {
-    height: 150px;
-
+.index h1.vueImage {
+  height: 150px;
+  margin: 150px 0 0 0;
 }
 
 .index h1 img {
-    height: 100%;
+  height: 100%;
 }
 
 .index h2 {
-    color: #666;
-    margin-bottom: 200px;
+  color: #666;
+  margin-bottom: 200px;
 }
 
 .index h2 p {
-    margin: 0 0 50px;
-    color: #000;
+  margin: 0 0 50px;
+  color: #000;
 }
 
 .index .ivu-row-flex {
-    height: 100%;
+  height: 100%;
 }
 *{ padding: 0; margin: 0; outline: 0;}
 
 body{
-    overflow: hidden;
-}
+  overflow: hidden;
 
-button{
-    background: #fff;
-    color: #000;
-    padding: 10px 30px;
 }
 
 p{
-    color: #000;
+  color: #000;
 }
 
-.iview_button {
-    padding: 5px 10px;
+.HomeButton {
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+.HomeButton span {
+  color: #fff;
+  font-size: 15px;
+  padding: 0 20px;
+}
+
+.home_Dropdown_Menu {
+  background: transparent;
+  color: rgba(0, 0, 0, 0.3);
+  padding: 10px 30px;
+  border: 1px solid rgba(255,255,255,0.9);
+  font-size: 15px;
+  margin: 0 10px;
+}
+.dropdownmenuDiv {
+  margin-top: 20px;
+}
+/*.dropdownmenuDiv:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+*/p.mainGreeting {
+  color: #fff;
+  font-size: 20px;
+}
+.dropdownmenuDivBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
 }

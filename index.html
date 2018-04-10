@@ -6,24 +6,79 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<link rel="stylesheet" type="text/css" href="assets/main.css">
-  <link rel="stylesheet" href="assets/iview.css">
-	<script src="assets/js/vue.min.js"></script>
-  <script src="assets/js/iview.min.js"></script>
+  <!-- import Vue.js -->
+  <script src="https://vuejs.org/js/vue.min.js"></script>
+  <!-- import stylesheet -->
+  <link rel="stylesheet" href="https://unpkg.com/iview/dist/styles/iview.css">
+  <!-- import iView -->
+  <script src="https://unpkg.com/iview/dist/iview.min.js"></script>
 </head>
 <body>
 	<div id="app">
 		<div class="index">
-			<Row type="flex" justify="center" align="middle">
-				<i-col span="24" style="position: absolute;z-index: 100;">
-        <h1>
-        	<img src="https://raw.githubusercontent.com/iview/iview/master/assets/logo.png">
-        </h1>
-        <h2>
-        	<p>{{message}}</p>
-        	<i-button class="iview_button" type="ghost" @click="handleStart">Start iView</i-button>
-        </h2>
-      </i-col>
-    </Row>
+      <h1 class="vueImage">
+      	<img src="https://raw.githubusercontent.com/iview/iview/master/assets/logo.png">
+      </h1>
+    	<p class="mainGreeting">{{message}}</p>
+    	<i-button class="HomeButton" type="ghost" @click="handleStart">
+        Start Javascript 30 days
+      </i-button>
+      <div class="dropdownmenuDivBox">
+        <div class="dropdownmenuDiv">
+          <dropdown class="home_Dropdown_Menu" trigger="click">
+            <a href="javascript:void(0)">
+              01 - 10 days
+              <icon type="arrow-down-b"></icon>
+            </a>
+            <dropdown-menu slot="list">
+              <dropdown-item v-for="(object, index) in Javascript10days" :key="index">
+                <a :href="object.href">{{ object.title }}</a>
+              </dropdown-item>
+            </dropdown-menu>
+          </dropdown>
+        </div>
+        <div class="dropdownmenuDiv">
+          <dropdown class="home_Dropdown_Menu" trigger="click">
+            <a href="javascript:void(0)">
+              11 ~ 20 days
+              <Icon type="arrow-down-b"></Icon>
+            </a>
+            <dropdown-menu slot="list">
+              <dropdown-item>Javascript day eleven</dropdown-item>
+              <dropdown-item>Javascript day twelve</dropdown-item>
+              <dropdown-item>Javascript day thirteen</dropdown-item>
+              <dropdown-item>Javascript day fourteen</dropdown-item>
+              <dropdown-item>Javascript day fifteen</dropdown-item>
+              <dropdown-item>Javascript day sixteen</dropdown-item>
+              <dropdown-item>Javascript day seventeen</dropdown-item>
+              <dropdown-item>Javascript day eighteen</dropdown-item>
+              <dropdown-item>Javascript day nineteen</dropdown-item>
+              <dropdown-item>Javascript day twenty</dropdown-item>
+            </dropdown-menu>
+          </dropdown>
+        </div>
+        <div class="dropdownmenuDiv">
+          <dropdown class="home_Dropdown_Menu" trigger="click">
+            <a href="javascript:void(0)">
+              21 ~ 30 days
+              <Icon type="arrow-down-b"></Icon>
+            </a>
+            <dropdown-menu slot="list">
+              <dropdown-item>Javascript day twenty-one</dropdown-item>
+              <dropdown-item>Javascript day twenty-two</dropdown-item>
+              <dropdown-item>Javascript day twenty-three</dropdown-item>
+              <dropdown-item>Javascript day twenty-four</dropdown-item>
+              <dropdown-item>Javascript day twenty-five</dropdown-item>
+              <dropdown-item>Javascript day twenty-six</dropdown-item>
+              <dropdown-item>Javascript day twenty-seven</dropdown-item>
+              <dropdown-item>Javascript day twenty-eight</dropdown-item>
+              <dropdown-item>Javascript day twenty-nine</dropdown-item>
+              <dropdown-item>Javascript day twenty-thirty</dropdown-item>
+              <dropdown-item>Javascript day thirty</dropdown-item>
+            </dropdown-menu>
+          </dropdown>
+        </div>
+      </div>
     </div>
 	</div>
 </body>
@@ -32,14 +87,139 @@
 'use strict';
 var app = new Vue({
   el: '#app',
-  data: {
-    message: 'Hello Javascript 30 days!'
+  data() {
+    return {
+      message: 'Hello People!',
+      Javascript10days: [
+        {
+          title: "Javascript day one",
+          href: "javascript01/index.html",
+        },
+        {
+          title: "Javascript day two",
+          href: "javascript02/CLOCK.html",
+        },
+        {
+          title: "Javascript day three",
+          href: "Javascript03/Spacing&&Blurring.html",
+        },
+        {
+          title: "Javascript day two",
+          href: "javascript04/Array Cardio Day 1.html",
+        },
+        {
+          title: "Javascript day five",
+          href: "javascript05/Flex Panel Gallery.html",
+        },
+        {
+          title: "Javascript day six",
+          href: "javascript06/Type Ahead.html",
+        },
+        {
+          title: "Javascript day seven",
+          href: "javascript07/Array Cardio Day 2.html",
+        },
+        {
+          title: "Javascript day eight",
+          href: "javascript08/Fun with HTML5 Canvas.html",
+        },
+        {
+          title: "Javascript day nine",
+          href: "javascript09/Dev Tools Domination.html",
+        },
+        {
+          title: "Javascript day ten",
+          href: "javascript10/Hold Shift and Checkboxes.html",
+        }],
+        Javascript20days: [
+        {
+          href: "javascript11/index.html",
+          title: "Javascript day eleven",
+        },
+        {
+          href: "javascript12/index.html",
+          title: "Javascript day twelve",
+        },
+        {
+          href: "javascript13/index.html",
+          title: "Javascript day thirteen",
+        },
+        {
+          href: "javascript14/index.html",
+          title: "Javascript day fourteen",
+        },
+        {
+          href: "javascript15/index.html",
+          title: "Javascript day fifteen",
+        },
+        {
+          href: "javascript16/index.html",
+          title: "Javascript day sixteen",
+        },
+        {
+          href: "javascript17/index.html",
+          title: "Javascript day seventeen",
+        },
+        {
+          href: "javascript18/index.html",
+          title: "Javascript day eighteen",
+        },
+        {
+          href: "javascript19/index.html",
+          title: "Javascript day nineteen",
+        },
+        {
+          href: "javascript20/index.html",
+          title: "Javascript day twenty",
+        },],
+        Javascript30days: [
+        {
+          title: "Javascript day twenty-one",
+          href: "javascript21/index.html",
+        },
+        {
+          title: "Javascript day twenty-two",
+          href: "javascript22/index.html",
+        },
+        {
+          title: "Javascript day twenty-three",
+          href: "javascript23/index.html",
+        },
+        {
+          title: "Javascript day twenty-four",
+          href: "javascript24/index.html",
+        },
+        {
+          title: "Javascript day twenty-five",
+          href: "javascript25/index.html",
+        },
+        {
+          title: "Javascript day twenty-six",
+          href: "javascript26/index.html",
+        },
+        {
+          title: "Javascript day twenty-seven",
+          href: "javascript27/index.html",
+        },
+        {
+          title: "Javascript day twenty-eight",
+          href: "javascript28/index.html",
+        },
+        {
+          title: "Javascript day twenty-nine",
+          href: "javascript29/index.html",
+        },
+        {
+          title: "Javascript day twenty-ten",
+          href: "javascript30/index.html",
+        },],
+      };
   },
   methods: {
   	handleStart: function handleStart() {
   		this.$Modal.info({
   			title: 'Bravo',
-  			content: 'Now, enjoy the convenience of iView.'
+  			content: 'Now, enjoy the convenience of Dampion Javscript days.'
   		});
   	},
   },
