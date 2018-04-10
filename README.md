@@ -9,7 +9,7 @@
 * If there's any mistake or anything which needs correction, welcome to pull and send the request.
 
 ### Vue.js
-* I use vue.js as my tool, which is good and easy to use.
 ![](https://raw.githubusercontent.com/iview/iview/master/assets/logo.png)
+* I use vue.js as my tool, which is good and easy to use and recommended.
 
 Reference [Javascript 30 days](https://javascript30.com)
