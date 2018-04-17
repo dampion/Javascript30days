@@ -16,13 +16,15 @@
 <body>
 	<div id="app">
 		<div class="index">
-      <h1 class="vueImage">
-      	<img src="assets/images/javascript.jpeg">
-      </h1>
-    	<p class="mainGreeting">{{message}}</p>
-    	<i-button class="HomeButton" type="ghost" @click="handleStart">
-        Start Javascript 30 days
-      </i-button>
+      <div class="homeSection">
+        <h1 class="vueImage">
+        	<img src="assets/images/javascript.jpeg">
+        </h1>
+      	<p class="mainGreeting">{{message}}</p>
+      	<i-button class="HomeButton" type="ghost" @click="handleStart">
+          Start Javascript 30 days
+        </i-button>
+      </div>
       <div class="dropdownmenuDivBox">
         <div class="dropdownmenuDiv">
           <dropdown class="home_Dropdown_Menu" trigger="click">
