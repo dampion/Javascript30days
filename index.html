@@ -44,16 +44,9 @@
               <Icon type="arrow-down-b"></Icon>
             </a>
             <dropdown-menu slot="list">
-              <dropdown-item>Javascript day eleven</dropdown-item>
-              <dropdown-item>Javascript day twelve</dropdown-item>
-              <dropdown-item>Javascript day thirteen</dropdown-item>
-              <dropdown-item>Javascript day fourteen</dropdown-item>
-              <dropdown-item>Javascript day fifteen</dropdown-item>
-              <dropdown-item>Javascript day sixteen</dropdown-item>
-              <dropdown-item>Javascript day seventeen</dropdown-item>
-              <dropdown-item>Javascript day eighteen</dropdown-item>
-              <dropdown-item>Javascript day nineteen</dropdown-item>
-              <dropdown-item>Javascript day twenty</dropdown-item>
+              <dropdown-item v-for="(object, index) in Javascript20days" :key="index">
+                <a :href="object.href">{{ object.title }}</a>
+              </dropdown-item>
             </dropdown-menu>
           </dropdown>
         </div>
@@ -64,17 +57,9 @@
               <Icon type="arrow-down-b"></Icon>
             </a>
             <dropdown-menu slot="list">
-              <dropdown-item>Javascript day twenty-one</dropdown-item>
-              <dropdown-item>Javascript day twenty-two</dropdown-item>
-              <dropdown-item>Javascript day twenty-three</dropdown-item>
-              <dropdown-item>Javascript day twenty-four</dropdown-item>
-              <dropdown-item>Javascript day twenty-five</dropdown-item>
-              <dropdown-item>Javascript day twenty-six</dropdown-item>
-              <dropdown-item>Javascript day twenty-seven</dropdown-item>
-              <dropdown-item>Javascript day twenty-eight</dropdown-item>
-              <dropdown-item>Javascript day twenty-nine</dropdown-item>
-              <dropdown-item>Javascript day twenty-thirty</dropdown-item>
-              <dropdown-item>Javascript day thirty</dropdown-item>
+              <dropdown-item v-for="(object, index) in Javascript30days" :key="index">
+                <a :href="object.href">{{ object.title }}</a>
+              </dropdown-item>
             </dropdown-menu>
           </dropdown>
         </div>
@@ -101,10 +86,10 @@ var app = new Vue({
         },
         {
           title: "Javascript day three",
-          href: "Javascript03/Spacing&&Blurring.html",
+          href: "javascript03/Spacing&&Blurring.html",
         },
         {
-          title: "Javascript day two",
+          title: "Javascript day four",
           href: "javascript04/Array Cardio Day 1.html",
         },
         {
@@ -117,7 +102,7 @@ var app = new Vue({
         },
         {
           title: "Javascript day seven",
-          href: "javascript07/Array Cardio Day 2.html",
+          href: "javascript07/Array Cardio day 2.html",
         },
         {
           title: "Javascript day eight",
@@ -129,9 +114,10 @@ var app = new Vue({
         },
         {
           title: "Javascript day ten",
-          href: "javascript10/Hold Shift and Checkboxes.html",
-        }],
-        Javascript20days: [
+          href: "javascript10/Hold Shift and Check Checkboxes.html",
+        },
+      ],
+      Javascript20days: [
         {
           href: "javascript11/index.html",
           title: "Javascript day eleven",
@@ -171,8 +157,9 @@ var app = new Vue({
         {
           href: "javascript20/index.html",
           title: "Javascript day twenty",
-        },],
-        Javascript30days: [
+        },
+      ],
+      Javascript30days: [
         {
           title: "Javascript day twenty-one",
           href: "javascript21/index.html",

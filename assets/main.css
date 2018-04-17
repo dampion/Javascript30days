@@ -10,8 +10,9 @@
 
 .index h1.vueImage {
   height: 150px;
-  margin: 150px 0 0 0;
+  margin: 100px 0 0 0;
 }
+
 
 .index h1 img {
   height: 100%;
@@ -54,7 +55,7 @@ p{
 .home_Dropdown_Menu {
   background: transparent;
   color: rgba(0, 0, 0, 0.3);
-  padding: 10px 30px;
+  padding: 10px 20px;
   border: 1px solid rgba(255,255,255,0.9);
   font-size: 15px;
   margin: 0 10px;
