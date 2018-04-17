@@ -5,12 +5,12 @@
   bottom: 0;
   left: 0;
   text-align: center;
-  background: #241e49 url("https://s3.amazonaws.com/js30-cdn/sky--purple-kracked.jpg") bottom center no-repeat;
+  background: #fff;
 }
 
 .index h1.vueImage {
   height: 150px;
-  margin: 100px 0 0 0;
+  margin: 70px 0 30px 0;
 }
 
 
@@ -77,5 +77,5 @@ p.mainGreeting {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 50px;
+  margin-top: 20px;
 }
