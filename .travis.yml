@@ -1,0 +1,27 @@
+yml
+language: node_js #選擇語言
+
+node_js: stable #選擇版本
+
+# before_install:
+  # - npm install -g hexo-cli
+
+install:
+  - npm install #安裝npm
+
+script: #要執行的程式
+  - hexo clean # 清除
+  - hexo generate # 生成
+
+after_success: #執行完成後的 git push
+  - cd ./public
+  - git init
+  - git config user.name "你的user帳號"
+  - git config user.email "你的email"
+  - git add .
+  - git commit -m "Update by travis ci"
+  - git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+
+branches: #分支
+  only:
+    - source
