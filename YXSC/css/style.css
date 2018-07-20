@@ -157,6 +157,7 @@ span.menu {
 }
 .top-menu ul li.active a,.top-menu ul li a:hover{
 	color: #f43c60;
+  font-weight: 600;
 }
 ::-webkit-input-placeholder{
 color:#fff !important;
@@ -2572,10 +2573,3 @@ ul.callbacks_tabs.callbacks1_tabs {
   margin-top: 0.5em;
 }
 
-.inlineBlock {
-  display: inline-block;
-}
-
-.ftr-info .marginZero p {
-  margin: 0 1em 0 0;
-}
