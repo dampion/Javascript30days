@@ -133,7 +133,7 @@ background-position:-180px -9px;
 .logo{
 	float:left;
 }
-.logo h1 a{
+.logo h1 a, .logo p{
 	color:#fff;
 	font-family: 'Play-Bold';
 	text-decoration:none;
@@ -166,14 +166,18 @@ color:#fff !important;
 }
 /*--- slider-css --*/
 .banner1{
-	background:url(../images/bnr3.jpg) no-repeat 0px 0px;
+	background:url(../images/bnr4.jpg) no-repeat 0px 0px;
 	background-size:cover;
 	min-height:680px;
+  background-position: bottom;
+  background-repeat: no-repeat;
 }
 .banner2{
-	background:url(../images/bnr2.jpg) no-repeat 0px 0px;
+	background:url(../images/bnr5.jpg) no-repeat 0px 0px;
 	background-size:cover;
 	min-height:680px;
+  background-position: bottom;
+  background-repeat: no-repeat;
 }
 .banner3{
 	background:url(../images/bnr3.jpg) no-repeat 0px 0px;
@@ -2565,4 +2569,12 @@ ul.callbacks_tabs.callbacks1_tabs {
 }
 .blog-info p {
   margin-top: 0.5em;
+}
+
+.inlineBlock {
+  display: inline-block;
+}
+
+.ftr-info .marginZero p {
+  margin: 0 1em 0 0;
 }
