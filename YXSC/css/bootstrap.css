@@ -1583,6 +1583,10 @@ pre code {
   .bannerContainer {
     width: 1200px;
   }
+  .banner-info {
+    left: 50%;
+    margin-left: -600px;
+  }
 }
 .container-fluid {
   padding-right: 15px;
