@@ -30,6 +30,8 @@ body a{
 	-o-transition:0.5s all;
 	-ms-transition:0.5s all;
 }
+.QLcoin {
+}
 .row{
 	margin:0;
 }	
@@ -113,11 +115,15 @@ background-position:-180px -9px;
 	display:inline-block;
 	padding:0.3em 0em 0.3em 1em;
 }
-.details ul li:nth-child(1){
-	margin-right:3em;
+.details ul li:nth-child(1), .details ul li:nth-child(2){
+	margin-right:2em;
+}
+.color-red {
+  color: #ed3f14;
 }
 .details ul li{
-	color:#fff;	
+	/*color:#fff;*/
+  color:#000;	
 	text-decoration:none;
 	font-size:0.9em;
 }
