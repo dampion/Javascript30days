@@ -1,0 +1,350 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>青龙游戏</title>
+<!-- add all the script for the js we nedd -->
+<script src="js/jquery.min.js"></script>
+<!-- jQuery (necessary JavaScript plugins) -->
+<script src="js/bootstrap.js"></script>
+<!-- Custom Theme files -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<!--//theme-style-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!-- <meta name="keywords" content="Game Box  Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" /> -->
+<!-- <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script> -->
+
+</head>
+<body>
+<!-- header -->
+<div class="top-banner">
+	<div class="header">
+		<div class="container">
+			<div class="headr-left">
+				<div class="social">
+					<!-- No facebook and GMS -->							
+					<!-- <a href="#" onclick="donothing()"><i class="facebook"></i></a> -->
+					<!-- <a href="#" onclick="donothing()"><i class="twitter"></i></a> -->
+					<!-- <a href="#" onclick="donothing()"><i class="gplus"></i></a>	 -->
+					<!-- <a href="#" onclick="donothing()"><i class="pin"></i></a>	 -->
+					<!-- <a href="#" onclick="donothing()"><i class="youtube"></i></a>	 -->
+				</div>
+				<div class="search">
+					<form>
+						<input type="submit" value="" onclick="search()">
+						<input type="text" value="" placeholder="搜索...">					 
+					</form>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="headr-right">
+				<div class="details">
+					<ul style="margin: 0px;">
+						<li><p style="margin: 0px;" href="mailto@example.com"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>qlyx@qq.com</p></li>
+						<li style="cursor: pointer;color: #000;"><a href="cart.html" style="color: #000;font-weight: 600;"><img src="images/cart.svg" width="25" height="25" style="margin-right: 8px;vertical-align: bottom;" />购物车</a></li>
+						<li class="QLcoin">
+							<a href="single.html" style="color: #000;font-weight: 600;">青龙币储值</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--banner-info-->	
+	<div class="banner-info">
+		<div class="container bannerContainer">
+			<div class="logo">
+				<h1><a href="#" onclick="donothing()">青龙游戏</a></h1>
+				<p>www.91chcf.com</p>
+			</div>
+			<div class="top-menu">
+				<span class="menu"></span>
+				<ul class="nav1">
+					<li class="active"><a href="index.html">首页</a></li>
+					<!-- 
+						<li><a href="about.html">About</a></li>
+						<li><a href="reviews.html">Reviews</a></li>
+						<li><a href="typo.html">News</a></li>
+						<li><a href="gallery.html">Gallery</a></li>
+						<li><a href="contact.html">Mail</a></li> 
+					-->
+					<li><a href="#" onclick="donothing()">关于我们</a></li>
+					<li><a href="#" onclick="donothing()">评论</a></li>
+					<li><a href="#" onclick="donothing()">新闻中心</a></li>
+					<li><a href="#" onclick="donothing()">会员中心</a></li>
+					<li><a href="#" onclick="donothing()">FAQ</a></li>
+				</ul>
+			</div>	
+	 		<!-- script-for-menu -->
+			<script>
+				$( "span.menu" ).click(function() {
+					$( "ul.nav1" ).slideToggle( 300, function() {
+						// Animation complete.
+					});
+				});
+			</script>
+			<!-- /script-for-menu -->
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+<!-- banner -->
+	 <!-- Slider-starts-Here -->
+	 <script src="js/responsiveslides.min.js"></script>
+	 <script>
+	 	function donothing() {
+	 		alert("亲，网站还在建置中，咱再等会儿～");
+	 	}
+	 	function search() {
+	 		alert("亲，网站还在建置中，咱再等会儿～");
+	 	}
+		$(function () {
+		  $("#slider").responsiveSlides({
+			auto:true,
+			nav: false,
+			speed: 500,
+			namespace: "callbacks",
+			pager:true,
+		  });
+		});
+		
+	   </script>
+	 <div class="slider">
+		  <div class="callbacks_container">
+			  <ul class="rslides" id="slider">
+				
+					<div class="slid banner1">
+						  <div class="caption">
+								<h3>准备好在游戏场上成为最强的领导者吗?</h3>
+								<p>游戏里面有着意想不到的剧情，想要获得最高的荣誉就赶紧加入我们,为诺克萨斯星球奋斗吧．</p>
+						  </div>
+					</div>
+				
+				
+					<div class="slid banner2">	
+						<div class="caption">
+							<h3>超低价格，简单激活，蓝洞授权，闪电授权.</h3>
+							<p>现在购买既可以享有Steam国区95折优惠．</p>
+						</div>
+					</div>
+				
+				
+					<div class="slid banner3">	
+						<div class="caption">
+							<h3>功夫老鼠：传奇重生 </h3>
+							<p>世界正处于灾难边缘。臭名昭着的恶魔控制了这个星球。隻有一个人可以拯救我们：一个叫沙飞鸿的可怜中国孤儿。我们的英雄必须前往遥远的地方，销毁这些一心想要搞破坏的流行偶像的锐气。他会成功吗？他当然会。他可是沙飞鸿。</p>
+						</div>
+					</div>
+				
+			  </ul>
+		 </div>
+	 </div>
+
+<!-- content -->
+<div class="content">
+	 <div class="container">
+		 <div class="top-games">
+			 <h3>热卖 游戏</h3>
+			 <span></span>
+		 </div>
+		 <div class="top-game-grids">
+			 <ul id="flexiselDemo1">
+				 <li onclick="donothing()">
+					 <div class="game-grid">
+						 <h4>动作 游戏</h4>
+						 <p>绝地求生大逃杀 PC版</p>
+						 <img src="images/t1.jpg" class="img-responsive" alt=""/>
+					 </div>	
+				 </li>
+				 <li onclick="donothing()">
+					 <div class="game-grid">
+						 <h4>飙车 世界</h4>
+						 <p>侠盗猎车手3 PC版</p>
+						 <img src="images/t3.jpg" class="img-responsive" alt=""/>
+					 </div>
+				 </li>
+				 <li onclick="donothing()">
+					 <div class="game-grid">
+						 <h4>3D 游戏体验</h4>
+						 <p>深蓝色3D迷宫 PC版 中文版</p>
+						 <img src="images/t4.jpg" class="img-responsive" alt=""/>
+					 </div>
+				 </li>
+				 <li onclick="donothing()">
+					 <div class="game-grid">
+						 <h4>街机 游戏</h4>
+						 <p>终极街头霸王4 PC版 中文</p>
+						 <img src="images/t2.jpg" class="img-responsive" alt=""/>
+					 </div>	
+				 </li>				 				 	
+			 </ul>
+			 
+			 <script type="text/javascript">
+				 $(window).load(function() {			
+				  $("#flexiselDemo1").flexisel({
+					visibleItems: 4,
+					animationSpeed: 1000,
+					autoPlay: true,
+					autoPlaySpeed: 3000,    		
+					pauseOnHover:true,
+					enableResponsiveBreakpoints: true,
+					responsiveBreakpoints: { 
+						portrait: { 
+							changePoint:480,
+							visibleItems: 1
+						}, 
+						landscape: { 
+							changePoint:640,
+							visibleItems: 2
+						},
+						tablet: { 
+							changePoint:768,
+							visibleItems: 3
+						}
+					}
+				});
+				});
+			</script>
+			<script type="text/javascript" src="js/jquery.flexisel.js"></script>	
+		 </div>
+	 </div>
+</div>
+<!-- latest -->
+<div class="latest">
+	 <div class="container">
+		 <div class="latest-games">
+			 <h3>最新 上架</h3>
+			 <span></span>
+		 </div>
+		 <div class="latest-top">				
+				<div class="col-md-5 trailer-text">
+				  <div class="sub-trailer" onclick="donothing()">
+				    <div class="col-md-4 sub-img">
+							<img src="images/v2.jpg" alt="img07"/>
+					  </div>
+					  <div class="col-md-8 sub-text">
+					   	<a href="#">僵屍殺手：重生 PC版</a>
+							<p>僵尸杀手-重生是一个挑战性的，快节奏的2D生存射手！当我们说快的时候…</p>
+					  </div>
+					  <div class="clearfix"> </div>
+				  </div>
+				    <div class="sub-trailer" onclick="donothing()">
+				      <div class="col-md-4 sub-img">
+								<img src="images/v1.jpg" alt="img07"/>
+					   	</div>
+					  	<div class="col-md-8 sub-text">
+					   		<a href="#"> 超杀：行尸走肉 PC版</a>
+							 	<p>玩家们可以在4个主角中进行选择，他们每个人拥有不同的特殊能力、技能树和背景故事…</p>
+					   	</div>
+					  <div class="clearfix"> </div>
+				  </div>
+				  <div class="sub-trailer" onclick="donothing()">
+				    <div class="col-md-4 sub-img">
+							<img src="images/v3.jpg" alt="img07"/>
+					  </div>
+					  <div class="col-md-8 sub-text">
+					   	<a href="#">怒火判官 PC版</a>
+							<p>款史诗般的横版格斗闯关游戏，它将爲21 世纪带来充斥着击打和怒吼的野性魅力…</p>
+					   </div>
+					    <div class="clearfix"> </div>
+				   </div>
+				</div>
+				<div class="col-md-7 trailer">
+					<!-- Youtube film with some errors pending-->
+				 	<!-- <iframe src="https://www.youtube.com/embed/V5-DyoVlNOg?list=PLiVunv1pnIs2c0ORVqY60K3n8XMO9CoGp" frameborder="0" allowfullscreen> -->
+				 	<!-- <iframe frameborder="0" allowfullscreen> -->
+				 		<video controls style="width: 100%;">
+						  <source src="video/trailer.mkv" type="video/mp4">
+						</video>
+				 	<!-- </iframe> -->
+				</div>
+				 <div class="clearfix"> </div>
+			</div>
+	 </div>
+</div>
+<!-- poster -->
+<div class="poster">
+	<div class="container">
+		<div class="poster-info">
+			<h3>Raging Justice</h3>
+			<p>Raging Justice是一款史诗般的横版格斗闯关游戏，它将爲21 世纪带来充斥着击打和怒吼的野性魅力。
+			 这座城市一片溷乱！犯罪和腐败处于曆史最高水平，暴徒正在四处肆虐。在破败的街道上，你需要用铁拳和怒吼来将这些家伙绳之以法。</p>
+			<!-- <a class="hvr-bounce-to-bottom" href="reviews.html">前往 专区</a> -->
+			<a class="hvr-bounce-to-bottom" href="#" onclick="donothing()">前往 专区</a>
+		</div>
+	</div>
+</div>
+<!-- x-box -->
+<div class="x-box">
+	 <div class="container">	
+		 <div class="x-box_sec">
+			 <div class="col-md-7 x-box-left">
+				 <h2>Xbox One X</h2>
+				 <h3>世界上最強大的控制台</h3>
+				 <p>比任何其他遊戲主機強大 40%，讓您體驗真正的 4K 遊戲享受。Xbox One X 讓遊戲變得更好玩。8 核心自訂 AMD CPU 的測量結果為 2.3GHz，可將先進的 AI、逼真的細節和更順暢的互動方式帶到您的遊戲中。12GB GDDR5 圖形記憶體可提升遊戲的速度和效能，帶來更寬廣的世界、更開闊的視野，以及更快的載入速度</p>
+				 <!-- <a class="hvr-bounce-to-top" href="reviews.html">前往 专区</a> -->
+				 <a class="hvr-bounce-to-top" href="#" onclick="donothing()">前往 专区</a>
+			 </div>
+			 <div class="col-md-5 x-box-right">
+				 <img src="images/xbox.jpg" class="img-responsive" alt=""/>
+			 </div>
+			 <div class="clearfix"></div>
+		 </div>
+	 </div>
+</div>
+<!-- footer -->
+<div class="footer-index">
+	 <div class="container">
+		 <div class="footer-grids">
+			 <div class="col-md-3 ftr-info">
+				 <h3>客服中心</h3>
+				 <p>客服在线时间：09:00 - 21:00</p>
+				 <p style="margin-top: 1em;">商城网址：www.91chcf.com</p>
+			 </div>
+			 <div class="col-md-3 ftr-grid">
+				 <h3>购物指南</h3>
+				 <ul class="ftr-list">
+					 <li><a href="#" onclick="donothing()">会员注册</a></li>
+					 <li><a href="#" onclick="donothing()">购物流程</a></li>
+					 <li><a href="#" onclick="donothing()">订单查询</a></li>
+					 <li><a href="#" onclick="donothing()">支付方式</a></li>
+					 <li><a href="#" onclick="donothing()">售后服务</a></li>
+				 </ul>				 
+			 </div>
+			 <div class="col-md-3 ftr-grid">
+				 <h3>游戏平台</h3>
+				 <ul class="ftr-list">
+					 <li><a href="#" onclick="donothing()">Pc</a></li>
+					 <li><a href="#" onclick="donothing()">Ps4</a></li>
+					 <li><a href="#" onclick="donothing()">XBOX 360</a></li>
+					 <li><a href="#" onclick="donothing()">XBOX ONE</a></li>
+					 <li><a href="#" onclick="donothing()">PSP</a></li>
+				 </ul>				 
+			 </div>
+			 <div class="col-md-3 ftr-grid">
+				 <h3>相关讯息</h3>
+				 <ul class="ftr-list">	
+					 <li><a href="#" onclick="donothing()">退换货政策</a></li>
+					 <li><a href="#" onclick="donothing()">收货说明</a></li>
+					 <li><a href="#" onclick="donothing()">在线客服</a></li>
+					 <li><a href="#" onclick="donothing()">常见问题</a></li> 
+				 </ul>				 
+			 </div>		
+			 <div class="clearfix"></div>
+		 </div>
+	 </div>
+	
+</div>
+<!---->
+<div class="copywrite" style="position: relative;">
+ 	<div class="container">
+	 	<p>粤网文〔2016〕1714-358号 深圳市川海长丰网络科技有限公司 Copyright 2018© 青龙游戏, All Rights Reserved</p>
+
+ 	</div>
+</div>
+<!---->
+</body>
+</html>
