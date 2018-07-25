@@ -121,6 +121,52 @@ background-position:-180px -9px;
 .color-red {
   color: #ed3f14;
 }
+.Dp-container {
+  width: 1200px;
+  margin: auto;
+}
+.Dp-title {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+.flexBox {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.flexBox div {
+  width: 50%;
+  text-align: center;
+  margin: 10px 0px 15px;
+}
+.Dp-charac {
+  display: inline-block;
+  font-size: 23px;
+  padding-left: 30px;
+}
+.Dp-amount {
+  display: inline-block;
+  font-size: 24px;
+  margin-right: 14px;
+}
+.Dp-amountBox {
+  margin-top: 20px;
+  text-align: center;
+}
+.Dp-amountBox .Dp-select {
+  width: 180px;
+  height: 28px;
+}
+.Dp-amountInput {
+  width: 180px;
+  height: 28px;
+}
+.submit-btn {
+  text-align: center;
+  padding: 30px 0 25px 0;
+  font-size: 16px;
+}
 .details ul li{
 	/*color:#fff;*/
   color:#000;	
@@ -553,7 +599,15 @@ ul.callbacks_tabs.callbacks1_tabs {
 /*--footer--*/
 .footer{
 	background:#333;
-	padding:2em 0 0 0; 
+	padding:1em 0 0 0;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  bottom: 0;
+}
+.footer-index {
+  background:#333;
+  padding:1em 0 0 0;
 }
 .ftr-grid h3,.ftr-info h3{
 	font-family: 'Play-Regular';
@@ -1418,6 +1472,9 @@ display:block;
   width: 28px;
   height: 28px;
   margin: 0 3px;
+}
+.Dp-container {
+  width: 100%;
 }
 a i.facebook {
   background-position: -3px -5px;
