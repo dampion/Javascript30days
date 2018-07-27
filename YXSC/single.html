@@ -12,8 +12,6 @@
 <!--//theme-style-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Game Box  Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 
 
@@ -93,21 +91,21 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<p class="Dp-charac">邮箱咨询</p>
 			</div>
 		</div>	
-		<div class="Dp-amountBox">
-			<p class="Dp-amount"><span class="color-red">*</span>支付方式</p>
-			<select class="Dp-select">
-			  <option value="volvo">微信</option>
-			  <option value="saab">QQ支付</option>
-			  <option value="mercedes">支付宝</option>
-			</select>
-		</div>
-		<div class="Dp-amountBox">
-			<p class="Dp-amount"><span class="color-red">*</span>存款金额</p>
-			<input class="Dp-amountInput" type="text" placeholder="￥100~10000">
-		</div>
-		<div class="submit-btn">
-			<button onclick="donothing()">确认送出</button>
-		</div>
+		<form action="./register.php" method="post">
+			<div class="Dp-amountBox">
+				<p class="Dp-amount"><span class="color-red">*</span>支付方式</p>
+				<select class="Dp-select">
+				  <option value="volvo"> 银联支付 </option>
+				</select>
+			</div>
+			<div class="Dp-amountBox">
+				<p class="Dp-amount"><span class="color-red">*</span>存款金额</p>
+				<input class="Dp-amountInput" type="text" placeholder="￥100~10000" name="_deposit">
+			</div>
+			<div class="submit-btn">
+				<input type="submit" value="确认送出" />
+			</div>
+		</form>
 	</div>
 </div>
 <script src="js/responsiveslides.min.js"></script>
