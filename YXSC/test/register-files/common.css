@@ -1,0 +1,49 @@
+﻿/*公共样式*/
+html,body{color:black;line-height:1.3em;font-family:Arial,sans-serif;font-size:12px;background:#f2f2f2}
+body{min-width:960px}
+a{color:#007ec4}
+a:hover{text-decoration:underline}
+.bodyWidth{width:960px;margin:0 auto}
+.positionRelative{position:relative}
+.fontFamily{font-family:宋体}
+.font14{font-size:14px}
+.marginTop20{margin-top:20px}
+.marginBottom40{margin-bottom:40px}
+.borderLine{border-top:1px #aaa dashed}
+/*头部*/
+#header{border-top:4px #0b8ab6 solid;border-bottom:1px #ccc solid}
+.headerBox{border-top:1px white solid;border-bottom:1px white solid}
+.headerBox .logo{float:left;position:relative;padding:5px 0}
+.headerBox .logo h1{position:absolute;left:81px;top:20px;width:46px;font-family:微软雅黑;font-size:15px;color:#e77817;border-bottom:2px #ed9c55 solid;font-weight:normal}
+.headerBox .stateInfo{float:right;padding:22px 0 0 0}
+.headerBox .stateInfo a{display:inline-block;padding:0 5px}
+.headerBox .stateInfo .userAcc{padding:0 0 0 10px}
+.headerBox .stateInfo .userAcc strong{font-weight:normal;padding:0 2px;color:#e40000}
+.headerBox .stateInfo .helpSpan{position:relative;padding-left:16px}
+.headerBox .stateInfo .helpSpan s{position:absolute;left:5px;top:1px;width:12px;height:13px;background:url('../images/iconPng8.png') no-repeat -80px 0}
+/*底部*/
+#footer{border-top:1px #ccc solid}
+.footerBox{color:#999;padding:15px 0 20px 0;border-top:1px white solid}
+.footerBox a{color:#999}
+.footerBox .fbInfo{float:left}
+.footerBox .fbInfo span{display:inline-block;padding:0 5px 0 23px}
+.footerBox .fbInfo span s{display:inline-block;margin:-14px 5px 0 0;width:12px;height:13px;background:url('../images/iconPng8.png') no-repeat}
+.footerBox .fbInfo span.fDownload{padding-left:15px}
+.footerBox .fbInfo span.fDownload s{background-position:-80px -17px;left:0}
+.footerBox .fbInfo span.fAbout s{background-position:-80px -34px}
+.footerBox .fbInfo span.fHelp s{background-position:-80px 0}
+.footerBox .fbInfo span.fContact s{background-position:-80px -51px}
+.footerBox .fbCopyright{float:right;text-align:right}
+.footerBox .fbCopyright p{padding:0 0 15px 0}
+.footerBox .fbCopyright .f-org a{float:right;background:url(../../images/v1.3.0/org/org-6.png) no-repeat 0 -32px;height:30px;width:60px;margin-left:10px;overflow:hidden}
+.footerBox .fbCopyright .f-org a.ssl:hover {background-position:0 0}
+.footerBox .fbCopyright .f-org a.baxx {width:30px;background-position:-70px -32px}
+.footerBox .fbCopyright .f-org a.baxx:hover{background-position:-70px 0}
+.footerBox .fbCopyright .f-org a.wsbj{width:30px;background-position:-110px -32px}
+.footerBox .fbCopyright .f-org a.wsbj:hover{background-position:-110px 0}
+.footerBox .fbCopyright .f-org a.zfxk {width:41px;background-position:-150px -32px}
+.footerBox .fbCopyright .f-org a.zfxk:hover{background-position:-150px 0}
+/*内容*/
+#contenter{background:white}
+.contentBox{border-left:2px #eee solid;margin-left:35px;min-height:700px;_height:700px}
+.contentBox a{text-decoration:underline}

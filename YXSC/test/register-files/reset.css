@@ -1,0 +1,8 @@
+﻿body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td ,img,tr,td{margin:0; padding:0}
+table{ border-collapse:collapse;  border-spacing:0}
+ol, ul, dl, dd{list-style:none;}
+a{text-decoration:none}
+img{border:0;vertical-align:middle}
+.clear{height:0;clear:both;overflow:hidden}
+.clearfix:after{content: "\0020"; display: block; height: 0;clear: both; visibility: hidden; }
+.clearfix{zoom: 1;} 

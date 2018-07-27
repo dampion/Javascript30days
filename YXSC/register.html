@@ -1,5 +1,4 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
 <!-- saved from url=(0053)https://trade.hfbpay.com/standard/payment/cashier.cgi -->
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cn" xml:lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
@@ -37,7 +36,6 @@ DD_belatedPNG.fix('.pngIcon');
 </div>
 
 <script type="text/javascript">
-
 function onChecked(obj,id,value)
 {	
 	document.getElementById(obj).checked = true;
@@ -518,7 +516,7 @@ function isfloat(oNum){
 			﻿<h3>订单信息<s class="orderS"></s></h3>
 <div class="listInfo">
 	<div class="liDl">
-		<dl class="borderBottom clearfix"><dt>订单金额：</dt><dd class="ddInfo"><span class="price"><?php echo $_GET["_deposit"]; ?></span>元</dd></dl>
+		<dl class="borderBottom clearfix"><dt>订单金额：</dt><dd class="ddInfo"><span id="price" class="price"></span>元</dd></dl>
 									<dl class="borderBottom widthL clearfix"><dt>收款方：</dt><dd class="ddInfo"><strong>江西畅源信息科技</strong></dd></dl>
 						<div class="clear"></div>
 			<dl class="borderBottom clearfix"><dt>订单号：</dt><dd class="ddInfo">QLcoin-153259<?php echo rand(1000, 9999); ?></dd></dl>
@@ -609,5 +607,8 @@ function isfloat(oNum){
 	</div>
 </div>
 </div>
+<script>
+	$("#price")[0].innerHTML = localStorage.getItem('myCat');
+</script>
 
 </body></html>

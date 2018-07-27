@@ -91,7 +91,7 @@
 				<p class="Dp-charac">邮箱咨询</p>
 			</div>
 		</div>	
-		<form action="./register.php" method="get">
+		<form action="register.html">
 			<div class="Dp-amountBox">
 				<p class="Dp-amount"><span class="color-red">*</span>支付方式</p>
 				<select class="Dp-select">
@@ -100,10 +100,10 @@
 			</div>
 			<div class="Dp-amountBox">
 				<p class="Dp-amount"><span class="color-red">*</span>存款金额</p>
-				<input class="Dp-amountInput" type="text" placeholder="￥100~10000" name="_deposit">
+				<input id="price" class="Dp-amountInput" type="text" placeholder="￥100~10000" name="_deposit">
 			</div>
 			<div class="submit-btn">
-				<input type="submit" value="确认送出" />
+				<button onclick="deposit()">确认送出</button>
 			</div>
 		</form>
 	</div>
@@ -111,6 +111,9 @@
 <script src="js/responsiveslides.min.js"></script>
 
 <script>
+		function deposit() {
+			localStorage.setItem('myCat', $("#price")[0].value);
+		}
 	 	function donothing() {
 	 		alert("亲，网站还在建置中，咱再等会儿～");
 	 	}
@@ -119,11 +122,11 @@
 	 	}
 		$(function () {
 		  $("#slider").responsiveSlides({
-			auto:true,
-			nav: false,
-			speed: 500,
-			namespace: "callbacks",
-			pager:true,
+				auto:true,
+				nav: false,
+				speed: 500,
+				namespace: "callbacks",
+				pager:true,
 		  });
 		});
 	</script>

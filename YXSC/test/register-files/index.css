@@ -1,0 +1,200 @@
+/*==============收银台=============*/
+/*收银台-标题+信息提示*/
+.contentBox h3{border-bottom:2px #ddd solid;color:#333;font-size:14px;line-height:30px;padding:25px 0 0 45px;margin-bottom:20px;position:relative}
+.contentBox h3 s{position:absolute;left:-35px;top:20px;_left:-80px;*top:12px;background:url('../images/iconPng8.png') no-repeat;width:70px;height:70px}
+.contentBox h3 s.orderS{background-position:0 0}
+.contentBox h3 s.bindingS{background-position:0 -224px}
+.contentBox h3 s.prizeS{background-position:0 -297px}
+.contentBox h3 s.transferS{background-position:0 -151px}
+.contentBox h3 s.payS{background-position:0 -75px}
+.contentBox h3 s.MoTransferS{background-position:0 -373px}
+.contentBox h3.part2{font-weight:normal;border-bottom-color:#0b8ab6}
+/*21012.11.1 add*/
+.contentBox h3.part2 .aHrefV141{font-size:12px;text-decoration:none}
+.contentBox h3.part2 .aHrefV141:hover{text-decoration:underline}
+.contentBox .infoTips{background:#ffffeb;border:1px #ccc solid;position:relative;float:left;display:inline;line-height:20px;padding:5px 20px 5px 40px;margin:15px 0 0 0}
+.contentBox .infoTips s{position:absolute;left:14px;top:6px;background:url('../images/iconPng8.png') no-repeat -99px 0;width:20px;height:20px}
+.contentBox .prizeTips{background:#ffffeb;border:1px #ccc solid;line-height:20px;padding:10px 20px;margin:0 55px}
+.contentBox .prizeTips span,.contentBox .prizeTips strong{padding:0 5px}
+.contentBox .prizeTips .fcolor{color:#e77817}
+.contentBox .prizeTips .fsize18px{font-size:18px}
+.contentBox .textInfo{padding:40px 0 0 77px}
+.contentBox .textInfo p{padding:10px 0}
+/*订单信息*/
+.listInfo{padding:0 0 10px 100px}
+.czPadding{padding-top:30px}
+.listInfo .liDl .borderBottom{border-bottom:1px #aaa dashed}
+.listInfo .liDl dl{float:left;display:inline;width:215px;margin-right:35px;line-height:20px}
+.listInfo .bankDl dl{height:70px;line-height:80px}
+.listInfo .bankDl dd img{vertical-align:top}
+.listInfo .liDl dl dt,.listInfo .liDl dl dd{float:left;display:inline;padding:10px 0}
+.listInfo .liDl dl dt{width:80px}
+.listInfo .liDl dl .price{color:#ff0000;font-size:18px;padding-right:5px}
+.listInfo .liDl dl .ddInfo{width:135px;overflow:hidden;white-space:nowrap;-o-text-overflow:ellipsis;text-overflow: ellipsis;}
+.listInfo .liDl dl.widthL{width:320px}
+.listInfo .liDl dl.widthL .ddInfo{width:240px}
+.listInfo .liDl dl.proInfo{position:relative;z-index:10}
+.listInfo .liDl dl .infoLayer{position:absolute;left:150px;top:42px;width:310px;background:#e2f0f9;padding:2px;display:none}
+.listInfo .liDl dl .infoLayer p{border:1px #0b8ab6 solid;padding:8px 15px}
+.listInfo .liDl dl .infoLayer s{position:absolute;left:40px;top:-9px;background:url('../images/iconPng8.png') no-repeat -145px -9px;width:17px;height:13px}
+.listInfo .liDl .orderMore{float:left;display:inline;margin:12px 0 0 30px}
+.listInfo .liDl .orderMore a{text-decoration:none;vertical-align:top}
+.listInfo .liDl .orderMore a:hover{text-decoration:underline}
+.listInfo .liDl .orderMore s{vertical-align:top;background:url('../images/iconPng8.png') no-repeat -126px -85px;width:13px;height:13px;overflow:hidden;display:inline-block;padding-right:4px}
+/*选择支付方式*/
+.paymentChoose{}
+.paymentChoose .tabs{position:absolute;left:175px;top:21px;*top:14px;_left:130px}
+.paymentChoose .tabs .tabUl li{float:left;display:inline;height:33px;text-align:center;padding:1px 1px 0 1px;margin:0 2px;font-size:12px;background:#eee;color:#333;cursor:pointer}
+.paymentChoose .tabs .tabUl li span{height:32px;line-height:32px;float:left;padding:0 20px;border:1px white solid;border-bottom:0 none}
+.paymentChoose .tabs .tabUl li.on{background:#0b8ab6;font-weight:bold;color:white;border-color:#55adcc}
+.paymentChoose .tabs .tabUl li.on span{padding-left:25px;position:relative}
+.paymentChoose .tabs .tabUl li.on s{position:absolute;left:15px;top:13px;background:url('../images/iconPng8.png') no-repeat -145px 0;width:6px;height:6px;overflow:hidden}
+.paymentChoose .tabs-content{}
+.paymentChoose .tabs-content .box{display:none;margin:5px 0 0 45px}
+.paymentChoose .tabs-content .on{display:block;}
+/*表单*/
+.formBoxBg{background:#e2f0f9;border-radius:8px;padding:25px 0 10px 77px}
+.formBox{padding-left:77px;margin:20px 55px 0 0}
+.formBox .formTips{padding:5px 0 10px 110px;position:relative}
+.formBox .formTips s{position:absolute;left:85px;_left:-26px;top:3px;top:-0px\9;background:url('../images/iconPng8.png') no-repeat;width:20px;height:20px }
+.titleH4{position:relative;font-weight:normal;padding:0 0 0 18px;margin:25px 0 0 59px;font-size:12px}
+.titleH4 s{position:absolute;left:0;_left:-20px;top:1px;background:url('../images/iconPng8.png') no-repeat -126px 0;width:13px;height:13px}
+.titleH4 .bankMore{position:absolute;right:57px;top:0px}
+.titleH4 .bankMore a{margin-left:15px;_margin-left:0;text-decoration:none}
+.titleH4 .bankMore a:hover{text-decoration:underline}
+.titleH4 .bankMore s{display:inline-block;background:url('../images/iconPng8.png') no-repeat -126px -17px;width:13px;height:13px;overflow:hidden}
+.formBox .onError{color:#d0150e}
+.formBox .onError s{background-position:-99px -24px}
+.formBox .lfDiv{padding:0 0 30px 0}
+.formBox .lfDiv label{float:left;display:inline;width:80px;height:40px;line-height:40px}
+.formBox .lfDiv p{float:left;display:inline;width:480px;height:40px;line-height:40px;background:#c2e1ef;border-radius:5px}
+/*21012.11.1 add*/
+.formBox .lfDiv p.width400{width:400px}
+.formBox .lfDiv p span{padding:0 0 0 5px}
+.formBox .lfDiv .inputText{vertical-align:middle;height:29px;line-height:29px;margin:4px;padding:0 2px;width:200px;font-size:12px;border-radius:3px;border:1px #0b8ab6 solid;background:white}
+.formBox .lfDiv input.inputTextRed{border-color:red}
+.formBox .lfDiv .telTips{position:absolute;left:88px;top:-20px;color:#999}
+.formBox .lfDiv .telTips span{color:#333}
+.formBox .lfDiv .getTelPassword{display:inline-block;background:url('../images/buttonPng8.png') no-repeat 0 0;width:167px;height:31px;line-height:31px;overflow:hidden;color:white;font-weight:bold;text-align:center;text-decoration:none;vertical-align:middle}
+.formBox .lfDiv a.grayA{cursor:default;background-position:0 -36px;color:#999}
+.formBox .lfDiv .settingPwd{display:inline-block;background:url('../images/buttonPng8.png') no-repeat 0 -72px;width:31px;height:31px;overflow:hidden;text-decoration:none;vertical-align:middle}
+.formBox .lfDiv .freeBut{vertical-align:middle;height:31px;line-height:24px;padding:0 5px;margin:0;overflow:visible;width:auto;*width:1}
+/*操作按钮*/
+.operateDiv{padding:30px 0 50px 55px;position:relative}
+.operateDiv .operateA{float:left;display:inline;background:url('../images/buttonPng8.png') no-repeat -200px 0;width:221px;height:63px;line-height:63px;overflow:hidden;text-align:center;font-size:18px;font-family:微软雅黑;color:#000;text-decoration:none;text-shadow:2px 2px 2px #ffcb00}
+.operateDiv .operateA span{padding-right:15px;_display:inline-block}
+.operateDiv .operateA s{position:absolute;right:-5px;top:6px;_top:23px;background:url('../images/iconPng8.png') no-repeat -126px -35px;width:13px;height:13px;overflow:hidden }
+.operateDiv a.grayBg{background-position:-200px -67px;text-shadow:2px 2px 2px white}
+.operateDiv a.grayBg s{background-position:-126px -52px}
+.operateDiv a.greenBg{background-position:-200px -134px;text-shadow:2px 2px 2px white}
+.operateDiv a.greenBg s{background-position:-126px -154px}
+.operateDiv a.blueBg{background-position:-200px -202px;text-shadow:2px 2px 2px white}
+.operateDiv a.blueBg s{background-position:-126px -136px}
+.operateDiv a.blueBg{text-shadow:none}
+.operateDiv .otherInfo{float:left;padding:0 0 0 50px;line-height:30px;color:#999}
+.operateDiv a:hover{text-decoration:none}
+/*网上银行支付*/
+.bankList{padding:10px 0 0 60px	}
+.bankList ul li{float:left;display:inline;width:160px;padding:5px 0}
+.bankList ul li img{margin-left:8px;*margin-left:4px;width:105px;height:42px;overflow:hidden}
+/*开通MO宝通*/
+.infoTipsBg{background:#e2f0f9;border-radius:8px;margin:30px 55px 0 0;text-align:center;padding:70px 0}
+.infoTipsBg p{line-height:30px}
+.infoTipsBg p.itbOpen s{display:inline-block;background:url('../images/iconPng8.png') no-repeat -126px -68px;width:13px;height:13px;overflow:hidden;vertical-align:middle;margin:0 5px 0 0}
+/*操作状态*/
+.operateBox{background:#f2f2f2;border-radius:8px;margin:30px 30px 0 45px;padding:25px 40px 50px 40px}
+.skipInfo{padding:100px 0;text-align:center}
+.skipInfo p{line-height:20px;padding:8px 0}
+.operatePadding{padding:50px 40px 80px 40px}
+.operateBox h6{line-height:40px;padding:10px 0 20px 0;font-family:微软雅黑;font-size:36px;font-weight:normal;color:#999}
+.operateBox h6 span{color:#999;font-family:Arial;font-size:12px;padding-left:10px}
+.operateBox h6 s{background:url('../images/iconPng8.png') no-repeat;width:53px;height:53px;overflow:hidden;display:inline-block;vertical-align:middle;margin-right:10px}
+.operateBox .oSucceed{color:#4d9500}
+.operateBox .oSucceed s{background-position:-170px -1px}
+.operateBox .oFail s{background-position:-170px -60px}
+.operateBox .dlList{border-bottom:1px #aaa dashed;width:470px;padding:10px 0}
+.operateBox .dlList dt{width:80px;float:left;display:inline;padding-left:5px}
+.operateBox .dlList .prizeInfo{color:#ff0000;font-size:18px}
+.operateBox .operateOverInfo{margin:10px 0 0 0;padding:8px 15px;border:1px #ccc solid;background:white;color:#999;display:inline-block;min-width:415px;_width:415px}
+.operateOther{margin:50px 30px 0 45px;border-top:1px #aaa dashed;padding:30px 20px}
+.operateOther p{line-height:30px;color:#aaa}
+/*支付遇到问题*/
+.operateBox .oTrouble{font-size:14px}
+.operateBox .oTrouble span{color:#666;font-size:18px;padding-left:0}
+.operateBox .oTroubleDl{padding:0 0 20px 65px;line-height:20px;color:#666}
+.operateBox .oTroubleDl dt{color:#e77817}
+.operateBox .oTroubleDl dt s{display:inline-block;background:url('../images/iconPng8.png') no-repeat -126px -119px;width:13px;height:13px;overflow:hidden;vertical-align:middle;margin:0 5px 0 0}
+/*转账*/
+.bindingBox{padding:0 0 0 45px}
+.bindingBox .colorS{color:#e77817}
+.bindingPayBox{padding:0 0 0 45px}
+.bindingPayBox .formBox{padding-left:0;margin:60px 55px 0 55px}
+.bindingPayBox .backP{margin:50px 0 0 10px}
+/*选择银行*/
+.chooseBankLayer{position:absolute;left:50%;top:120px;width:800px;margin-left:-400px;background:white;border:3px #ccc solid;padding:30px 30px 0 30px;z-index:1000;display:none}
+.chooseBankLayer h2{position:relative;font-size:14px;line-height:20px;padding:0 0 5px 80px;font-weight:normal;border-bottom:2px #0b8ab6 solid;margin-bottom:50px}
+.chooseBankLayer h2 s{position:absolute;left:0;_left:-80px;top:-10px;background:url('../images/iconPng8.png') no-repeat 0 -75px;width:70px;height:70px}
+.chooseBankLayer .closed{position:absolute;right:10px;_right:40px;top:-5px;background:url('../images/iconPng8.png') no-repeat -230px 0;width:67px;height:25px;overflow:hidden}
+/*订单列表*/
+.orderListLayer{position:absolute;left:50%;top:120px;width:860px;margin-left:-430px;background:white;border:3px #ccc solid;z-index:1000;display:none}
+.orderListLayer .olyInfo{padding:30px}
+.orderListLayer h2{position:relative;font-size:14px;line-height:20px;padding:0 0 5px 80px;font-weight:normal;border-bottom:2px #0b8ab6 solid;margin-bottom:50px}
+.orderListLayer h2 s{position:absolute;left:0;_left:-80px;top:-10px;background:url('../images/iconPng8.png') no-repeat 0 -447px;width:70px;height:70px}
+.orderListLayer .closed{position:absolute;right:10px;_right:40px;top:-5px;background:url('../images/iconPng8.png') no-repeat -230px 0;width:67px;height:25px;overflow:hidden}
+.olTable{padding:0;margin:0;border:1px #ccc solid;width:780px;margin:0 0 20px 10px}
+.olTable thead{background:#b5e0ef;border-bottom:1px #ccc solid;height:38px;line-height:38px}
+.olTable thead tr th{font-weight:normal;text-align:left;padding-left:20px}
+.olTable tbody tr{border-bottom:1px #ccc dashed}
+.olTable tbody tr td{padding:9px 0 9px 20px;line-height:22px}
+.olTable tbody tr.bg{background:#eee}
+.olTable .tdInfo{position:relative}
+.olTable .infoLayer{position:absolute;left:50px;top:30px;width:310px;background:#e2f0f9;padding:2px;display:none}
+.olTable .infoLayer p{border:1px #0b8ab6 solid;padding:8px 15px}
+.olTable .infoLayer s{position:absolute;left:40px;top:-9px;background:url('../images/iconPng8.png') no-repeat -145px -9px;width:17px;height:13px}
+/*浮层分页*/
+.layerPages{border-top:1px #ccc dashed;margin:0 10px;padding:15px 0 0 0;text-align:right;line-height:20px}
+.layerPages a{display:inline-block;padding:0 8px;font-size:14px}
+.layerPages a.on{color:black;font-weight:bold}
+/**/
+.layer-box{width:800px;position:relative; z-index:10000;overflow:hidden;background:white;padding:30px 30px 0 30px}
+.layer-box .layer-info{position:relative;}
+.layer-box h2{position:relative;font-size:14px;line-height:20px;padding:0 0 5px 80px;font-weight:normal;border-bottom:2px #0b8ab6 solid;margin-bottom:50px}
+.layer-box h2 s{position:absolute;left:0;_left:-80px;top:-10px;background:url('../images/iconPng8.png') no-repeat 0 -75px;width:70px;height:70px}
+.layer-box .closed{position:absolute;right:10px;_right:40px;top:-5px;background:url('../images/iconPng8.png') no-repeat -230px 0;width:67px;height:25px;overflow:hidden}
+.layer-box .liDiv{padding:0 0 0 10px}
+.layer-box .liDiv p{padding:0 0 10px 70px;line-height:20px}
+.layer-box .liDiv .operateDiv{float:right;padding:70px 0 15px 55px}
+.layer-box .liDiv .operateDiv a.grayBg{margin-left:50px}
+.layer-box .liDiv .operateDiv a.grayBg s{background-position:-80px -1px}
+.layer-box .liDiv .backLine{border-top:1px #ccc dashed;padding:20px 0 40px 0}
+.layerBox{width:800px;position:fixed;left:50%;top:50%;margin-left:-400px;margin-top:-200px;z-index:9999999;_position:absolute;_top:expression(eval(document.documentElement.scrollTop)+300+'px');display:none}
+/*实名无卡支付2013-4-10*/
+.addCard{padding:20px 0 0 87px;}
+.addCard span{display: inline-block;width: 130px;height: 50px;line-height: 50px;background: #f2f2f2;text-align: center;border: 1px #e7e7e7 solid;border-radius:6px;cursor: pointer;color: #333}
+.paddingReset{padding-left:29px}
+.grayP{padding: 3px 0 0 30px;color: #888}
+.cardBg{background: #eee;vertical-align:middle;margin-left: 10px;border-radius: 5px;float: left;width: 130px;overflow: hidden;}
+.cardBg p{height: 30px;line-height: 30px;text-align: center;overflow: hidden;}
+.bankList .cardBg img{margin-left: 0}
+.bankList .smPay li{padding: 15px 80px 15px 0;position: relative;}
+.bankList .smPay li input{float: left;margin-top: 30px;*margin-top: 25px}
+.bankList .smPay li .iDel{position: absolute;left: 165px;top:43px;width: 20px;height: 20px;background: url('../images/iconPng8.png') no-repeat -99px -24px;cursor: pointer;}
+.ddCardBg span{background: #f2f2f2;display: inline-block;height:52px;overflow: hidden;border-radius: 0 6px 6px 0}
+/*添加银行2013-4-10*/
+.chooseAddBankLayer{position:absolute;left:50%;top:120px;width:800px;margin-left:-400px;background:white;border:3px #ccc solid;padding:30px 30px 0 30px;z-index:1000;display:none}
+.chooseAddBankLayer h2{position:relative;font-size:14px;line-height:20px;padding:0 0 5px 80px;font-weight:normal;border-bottom:2px #0b8ab6 solid;margin-bottom:25px}
+.chooseAddBankLayer h2 s{position:absolute;left:0;_left:-80px;top:-10px;background:url('../images/iconPng8.png') no-repeat 0 -75px;width:70px;height:70px}
+.chooseAddBankLayer .closed{position:absolute;right:10px;_right:40px;top:-5px;background:url('../images/iconPng8.png') no-repeat -230px 0;width:67px;height:25px;overflow:hidden}
+.chooseAddBankLayer .formBox{margin: 20px 45px 0 60px}
+.chooseAddBankLayer .formBox .lfDiv{padding-bottom: 20px}
+.chooseAddBankLayer .inputCheckBox{vertical-align: middle;margin:0 5px 0 85px}
+/*删除银行2013-4-10*/
+.chooseDelBankLayer{position:absolute;left:50%;top:50%;width:800px;margin-left:-400px;margin-top:-180px;background:white;border:3px #ccc solid;padding:30px 30px 0 30px;z-index:1000;display:none}
+.chooseDelBankLayer h2{position:relative;font-size:14px;line-height:20px;padding:0 0 15px 10px;font-weight:normal;border-bottom:2px #0b8ab6 solid;margin-bottom:25px}
+.chooseDelBankLayer .closed{position:absolute;right:10px;_right:40px;top:-5px;background:url('../images/iconPng8.png') no-repeat -230px 0;width:67px;height:25px;overflow:hidden}
+.cdblBox{padding: 60px 0 80px 0;text-align: center;font-size: 14px}
+.cdblBox p{padding: 0 0 60px 0}
+.cdblBox a{display: inline-block;width: 181px;height: 63px;line-height: 63px;overflow: hidden;text-align: center;*display: inline;*zoom:1;background:url('../images/buttonPng8.png') no-repeat;color: #010101;font-size: 18px;font-family:Microsoft YaHei;text-shadow:1px 1px 1px #fff;margin:0 10px;}
+.cdblBox a.sure{background-position: 0 -111px }
+.cdblBox a.cancel{background-position: 0 -178px }
+.cdblBox a:hover{text-decoration: none;}
