@@ -519,7 +519,7 @@ function isfloat(oNum){
 		<dl class="borderBottom clearfix"><dt>订单金额：</dt><dd class="ddInfo"><span id="price" class="price"></span>元</dd></dl>
 									<dl class="borderBottom widthL clearfix"><dt>收款方：</dt><dd class="ddInfo"><strong>江西畅源信息科技</strong></dd></dl>
 						<div class="clear"></div>
-			<dl class="borderBottom clearfix"><dt>订单号：</dt><dd class="ddInfo">QLcoin-153259<?php echo rand(1000, 9999); ?></dd></dl>
+			<dl class="borderBottom clearfix"><dt>订单号：</dt><dd class="ddInfo">QLcoin-153259<span id="depositNumber"></span></dd></dl>
 							<dl class="borderBottom widthL proInfo clearfix">
 					<dt>商品名称：</dt>
 					<dd class="ddInfo">线上储值</dd>
@@ -551,7 +551,7 @@ function isfloat(oNum){
 		<input type="hidden" name="payType" id="payType">
 		<input type="hidden" name="merchNo" id="merchNo" value="210000360002520">
 		<input type="hidden" name="payType1" id="payType1" value="8">
-		<input type="hidden" name="__token" id="__token" value="0243D21361D3A78C5356C5AB2DC3CBB87937563B53693E28797026835689A276F451664C3EAC2E1FC730A6715355FBD01F78C55443A9CB89B111A64353FE952627547CA0E3C69EC1D7F198D242354E11C7D5C1F2ADEAD9AADF708AEF111712F1CC6A25F9C30E564BC1C4D3F53A40993CFEDD66313A5CDF953445718EDAB3D0AF">
+		<input type="hidden" name="__token" id="__token" value="0211143D21361D3A78C5356C5AB2DC3CBB87937563B53693E28797026835689A276F451664C3EAC2E1FC730A6715355FBD01F78C55443A9CB89B111A64353FE952627547CA0E3C69EC1D7F198D242354E11C7D5C1F2ADEAD9AADF708AEF111712F1CC6A25F9C30E564BC1C4D3F53A40993CFEDD66313A5CDF953445718EDAB3D0AF">
 		<input type="hidden" name="m" id="m" value="selBankWebPay">
 		<input type="hidden" name="payTypes" id="payTypes" value="19,23,29,8">
 					<h4 class="titleH4"><s></s>选择网上银行储蓄卡进行支付
@@ -608,7 +608,8 @@ function isfloat(oNum){
 </div>
 </div>
 <script>
-	$("#price")[0].innerHTML = localStorage.getItem('myCat');
+	$("#price")[0].innerHTML = localStorage.getItem('deposit');
+	$("#depositNumber")[0].innerHTML = Math.floor(Math.random()*8999) + 1000;
 </script>
 
 </body></html>
