@@ -1,40 +1,33 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
-<!-- saved from url=(0053)https://trade.hfbpay.com/standard/payment/cashier.cgi -->
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh-cn" xml:lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<meta content="" name="keywords">
-<meta content="" name="description">
-<title>支付平台</title>
-<link href="./register-files/reset.css" rel="stylesheet">
-<link href="./register-files/common.css" rel="stylesheet">
-<link href="./register-files/index.css" rel="stylesheet">
-<script src="./register-files/jquery-1.4.1.min.js"></script>
-<script src="./register-files/popup_layer.js"></script>
-<script src="./register-files/json.js"></script>
-<script src="./register-files/jsDialog.js"></script>
-<script src="./register-files/pay_center.js"></script>
+	<meta content="" name="keywords">
+	<meta content="" name="description">
+	<title>支付平台</title>
+	<link href="./register-files/reset.css" rel="stylesheet">
+	<link href="./register-files/common.css" rel="stylesheet">
+	<link href="./register-files/index.css" rel="stylesheet">
+	<script src="./register-files/jquery-1.4.1.min.js"></script>
+	<script src="./register-files/popup_layer.js"></script>
+	<script src="./register-files/json.js"></script>
+	<script src="./register-files/jsDialog.js"></script>
+	<script src="./register-files/pay_center.js"></script>
 </head>
-<body><!--[if lte IE 6]>
-<script type="text/javascript" src="/js/DD_belatedPNG_0.0.8a-min.js"></script>
-<script type="text/javascript">
-DD_belatedPNG.fix('.pngIcon');
-</script>
-<![endif]-->
-<div id="header">
-	<div class="headerBox clearfix">
-		<div class="bodyWidth">
-			<div class="stateInfo">
-				<div id="div_head_before_login" <span="" class="helpSpan"><s></s>支付遇到问题？
+<body>
+	<div id="header">
+		<div class="headerBox clearfix">
+			<div class="bodyWidth">
+				<div class="stateInfo">
+					<div id="div_head_before_login" <span="" class="helpSpan"><s></s>支付遇到问题？
+					</div>
+					<div id="div_head_after_login" style="display:none">
+						<a href="javascript:void(0);"><div id="head_userName"></div></a><span class="helpSpan"><s></s><a href="https://trade.hfbpay.com/standard/gateway/manager.cgi?m=payProblem">支付遇到问题？</a></span>
+					</div>
 				</div>
-				<div id="div_head_after_login" style="display:none">
-					<a href="javascript:void(0);"><div id="head_userName"></div></a><span class="helpSpan"><s></s><a href="https://trade.hfbpay.com/standard/gateway/manager.cgi?m=payProblem">支付遇到问题？</a></span>
-				</div>
+				<div class="clear"></div>	
 			</div>
-			<div class="clear"></div>	
 		</div>
 	</div>
-</div>
 
 <script type="text/javascript">
 
@@ -511,103 +504,103 @@ function isfloat(oNum){
 }
 
 </script>
-<div id="contenter">
-	<!--=S 主体部分-->
-	<div class="bodyWidth">
-		<div class="contentBox">
-			﻿<h3>订单信息<s class="orderS"></s></h3>
-<div class="listInfo">
-	<div class="liDl">
-		<dl class="borderBottom clearfix"><dt>订单金额：</dt><dd class="ddInfo"><span class="price"><?php echo $_GET["_deposit"]; ?></span>元</dd></dl>
-									<dl class="borderBottom widthL clearfix"><dt>收款方：</dt><dd class="ddInfo"><strong>江西畅源信息科技</strong></dd></dl>
-						<div class="clear"></div>
-			<dl class="borderBottom clearfix"><dt>订单号：</dt><dd class="ddInfo">QLcoin-153259<?php echo rand(1000, 9999); ?></dd></dl>
-							<dl class="borderBottom widthL proInfo clearfix">
-					<dt>商品名称：</dt>
-					<dd class="ddInfo">线上储值</dd>
-					<dd class="infoLayer" style="display: none;"><s></s><p>商品名称：线上储值</p></dd>
-				</dl>
-							<div class="clear"></div>			
-	</div>
-			<div class="infoTips"><s></s>本次交易是 即时到账交易，货款立即到账，无需“支付确认”。 </div>
-		<div class="clear"></div>
-</div>			<div class="positionRelative">
-				<h3 class="part2">选择支付方式<s class="payS"></s></h3>
-				<div class="paymentChoose">
-					<div class="tabs clearfix">
-						<ul class="tabUl clearfix">
-																																		<li class="on"><span><s></s>网银储蓄卡支付</span></li>
-																																																										</ul>					
-					</div>
-					<div class="tabs-content">
-																					<div class="box on">
-	<form method="post" name="depositBankCardForm" id="depositBankCardForm" action="https://trade.hfbpay.com/standard/gateway/pay.cgi" style="padding:0;margin:0">
-		<input type="hidden" name="accName2" id="accName2" value="江西畅源信息科技">
-		<input type="hidden" name="tradeType" id="tradeType" value="1">
-		<input type="hidden" name="orderNo" id="orderNo" value="42622005">
-		<input type="hidden" name="tradeNo" id="tradeNo" value="ADtest06-1532595985">
-		<input type="hidden" name="summary" id="summary" value="线上储值">
-		<input type="hidden" name="amt" id="amt" value="555.00 ">
-		<input type="hidden" name="platformID" id="platformID" value="210000360002520 ">
-		<input type="hidden" name="orderId" id="orderId" value="3C3152D7007BFA467171831B34D16F014FE6D6302444F77B4536C0DD3701626141654EDC59FD029B">
-		<input type="hidden" name="payType" id="payType">
-		<input type="hidden" name="merchNo" id="merchNo" value="210000360002520">
-		<input type="hidden" name="payType1" id="payType1" value="8">
-		<input type="hidden" name="__token" id="__token" value="0243D21361D3A78C5356C5AB2DC3CBB87937563B53693E28797026835689A276F451664C3EAC2E1FC730A6715355FBD01F78C55443A9CB89B111A64353FE952627547CA0E3C69EC1D7F198D242354E11C7D5C1F2ADEAD9AADF708AEF111712F1CC6A25F9C30E564BC1C4D3F53A40993CFEDD66313A5CDF953445718EDAB3D0AF">
-		<input type="hidden" name="m" id="m" value="selBankWebPay">
-		<input type="hidden" name="payTypes" id="payTypes" value="19,23,29,8">
-					<h4 class="titleH4"><s></s>选择网上银行储蓄卡进行支付
-</h4>
-<div class="bankList">
-	<ul class="clearfix">
-		<li><input name="pt" value="J_ICBC" type="radio"  id="ICBC_J"><img src="./register-files/ICBC.gif" alt="工商银行" ></li>
-		<li><input name="pt" value="J_CMB" type="radio" id="CMB_J"><img src="./register-files/CMB.gif" alt="招商银行" ></li>
-		<li><input name="pt" value="J_CCB" type="radio" id="CCB_J"><img src="./register-files/CCB.gif" alt="建设银行"></li>
-		<li><input name="pt" value="J_COMM" type="radio" id="COMM_J"><img src="./register-files/COMM.gif" alt="交通银行"></li>
-		<li><input name="pt" value="J_ABC" type="radio" id="ABC_J"><img src="./register-files/ABC.gif" alt="农业银行"></li>
-		<li><input name="pt" value="J_BOC" type="radio" id="BOC_J"><img src="./register-files/BOC.gif" alt="中国银行"></li>
-		<li><input name="pt" value="J_PSBC" type="radio" id="PSBC_J"><img src="./register-files/PSBC.gif" alt="邮政储蓄银行"></li>
-	  <li><input name="pt" value="J_SPDB" type="radio" id="SPDB_J"><img src="./register-files/SPDB.gif" alt="浦发银行" ></li>
-		<li><input name="pt" value="J_HXB" type="radio" id="HXB_J"><img src="./register-files/HXB.gif" alt="华夏银行" ></li>
-		<li><input name="pt" value="J_PAB" type="radio" id="PAB_J"><img src="./register-files/PAB.gif" alt="平安银行"></li>
-		<li><input name="pt" value="J_GDB" type="radio"  id="GDB_J"><img src="./register-files/GDB.gif" alt="广发银行" ></li>
-						<li><input name="pt" value="J_CEB" type="radio"  id="CEB_J"><img src="./register-files/CEB.gif" alt="光大银行" ></li>
-		<li><input name="pt" value="J_CIB" type="radio" "=""  id="CIB_J"><img src="./register-files/CIB.gif" alt="兴业银行" ></li>
-		<li><input name="pt" value="J_CMBC" type="radio" id="CMBC_J"><img src="./register-files/CMBC.gif" alt="民生银行" ></li>
-		<li><input name="pt" value="J_CNCB" type="radio" id="CNCB_J"><img src="./register-files/CNCB.gif" alt="中信银行"></li>
-	</ul>
-</div>
-						<div class="operateDiv borderLine marginTop20 clearfix">
-			<a href="javascript:void(0)" onclick="doSubmit(&#39;bank&#39;)" class="operateA onlinePay"><span class="positionRelative">登录到网上银行支付<s></s></span></a>
-		</div>
-	</form>
-</div>																																										</div>
-				</div>
-				<!--=E选择支付方式-->
-			</div>
-			<!--=Epart2-->
-			<div class="clear"></div>
-		</div>
-	</div>
-	<!--=E主体部分-->
-</div>
-﻿<!--=S 订单列表 -->
-<div class="orderListLayer">
-
-<div id="footer">
-	<div class="footerBox">
+	<div id="contenter">
+		<!--=S 主体部分-->
 		<div class="bodyWidth">
-			<div class="fbInfo">
-				<span class="fAbout"><s></s>关于我们</span>|<span class="fHelp"><s></s>帮助中心</span>|<span class="fContact"><s></s>联系我们</span>
-			</div>
-			<div class="fbCopyright">
-				<p>Copyright <em>©</em> 2015-2016 HFBao All Rights Reserved 版权所有</p>
-				
-			</div>
+			<div class="contentBox">
+				﻿<h3>订单信息<s class="orderS"></s></h3>
+	<div class="listInfo">
+		<div class="liDl">
+			<dl class="borderBottom clearfix"><dt>订单金额：</dt><dd class="ddInfo"><span class="price"><?php echo $_GET["_deposit"]; ?></span>元</dd></dl>
+										<dl class="borderBottom widthL clearfix"><dt>收款方：</dt><dd class="ddInfo"><strong>江西畅源信息科技</strong></dd></dl>
+							<div class="clear"></div>
+				<dl class="borderBottom clearfix"><dt>订单号：</dt><dd class="ddInfo">QLcoin-153259<?php echo rand(1000, 9999); ?></dd></dl>
+								<dl class="borderBottom widthL proInfo clearfix">
+						<dt>商品名称：</dt>
+						<dd class="ddInfo">线上储值</dd>
+						<dd class="infoLayer" style="display: none;"><s></s><p>商品名称：线上储值</p></dd>
+					</dl>
+								<div class="clear"></div>			
+		</div>
+				<div class="infoTips"><s></s>本次交易是 即时到账交易，货款立即到账，无需“支付确认”。 </div>
 			<div class="clear"></div>
+	</div>			<div class="positionRelative">
+					<h3 class="part2">选择支付方式<s class="payS"></s></h3>
+					<div class="paymentChoose">
+						<div class="tabs clearfix">
+							<ul class="tabUl clearfix">
+																																			<li class="on"><span><s></s>网银储蓄卡支付</span></li>
+																																																											</ul>					
+						</div>
+						<div class="tabs-content">
+																						<div class="box on">
+		<form method="post" name="depositBankCardForm" id="depositBankCardForm" action="https://trade.hfbpay.com/standard/gateway/pay.cgi" style="padding:0;margin:0">
+			<input type="hidden" name="accName2" id="accName2" value="江西畅源信息科技">
+			<input type="hidden" name="tradeType" id="tradeType" value="1">
+			<input type="hidden" name="orderNo" id="orderNo" value="42622005">
+			<input type="hidden" name="tradeNo" id="tradeNo" value="ADtest06-1532595985">
+			<input type="hidden" name="summary" id="summary" value="线上储值">
+			<input type="hidden" name="amt" id="amt" value="555.00 ">
+			<input type="hidden" name="platformID" id="platformID" value="210000360002520 ">
+			<input type="hidden" name="orderId" id="orderId" value="3C3152D7007BFA467171831B34D16F014FE6D6302444F77B4536C0DD3701626141654EDC59FD029B">
+			<input type="hidden" name="payType" id="payType">
+			<input type="hidden" name="merchNo" id="merchNo" value="210000360002520">
+			<input type="hidden" name="payType1" id="payType1" value="8">
+			<input type="hidden" name="__token" id="__token" value="0243D21361D3A78C5356C5AB2DC3CBB87937563B53693E28797026835689A276F451664C3EAC2E1FC730A6715355FBD01F78C55443A9CB89B111A64353FE952627547CA0E3C69EC1D7F198D242354E11C7D5C1F2ADEAD9AADF708AEF111712F1CC6A25F9C30E564BC1C4D3F53A40993CFEDD66313A5CDF953445718EDAB3D0AF">
+			<input type="hidden" name="m" id="m" value="selBankWebPay">
+			<input type="hidden" name="payTypes" id="payTypes" value="19,23,29,8">
+						<h4 class="titleH4"><s></s>选择网上银行储蓄卡进行支付
+	</h4>
+	<div class="bankList">
+		<ul class="clearfix">
+			<li><input name="pt" value="J_ICBC" type="radio"  id="ICBC_J"><img src="./register-files/ICBC.gif" alt="工商银行" ></li>
+			<li><input name="pt" value="J_CMB" type="radio" id="CMB_J"><img src="./register-files/CMB.gif" alt="招商银行" ></li>
+			<li><input name="pt" value="J_CCB" type="radio" id="CCB_J"><img src="./register-files/CCB.gif" alt="建设银行"></li>
+			<li><input name="pt" value="J_COMM" type="radio" id="COMM_J"><img src="./register-files/COMM.gif" alt="交通银行"></li>
+			<li><input name="pt" value="J_ABC" type="radio" id="ABC_J"><img src="./register-files/ABC.gif" alt="农业银行"></li>
+			<li><input name="pt" value="J_BOC" type="radio" id="BOC_J"><img src="./register-files/BOC.gif" alt="中国银行"></li>
+			<li><input name="pt" value="J_PSBC" type="radio" id="PSBC_J"><img src="./register-files/PSBC.gif" alt="邮政储蓄银行"></li>
+		  <li><input name="pt" value="J_SPDB" type="radio" id="SPDB_J"><img src="./register-files/SPDB.gif" alt="浦发银行" ></li>
+			<li><input name="pt" value="J_HXB" type="radio" id="HXB_J"><img src="./register-files/HXB.gif" alt="华夏银行" ></li>
+			<li><input name="pt" value="J_PAB" type="radio" id="PAB_J"><img src="./register-files/PAB.gif" alt="平安银行"></li>
+			<li><input name="pt" value="J_GDB" type="radio"  id="GDB_J"><img src="./register-files/GDB.gif" alt="广发银行" ></li>
+							<li><input name="pt" value="J_CEB" type="radio"  id="CEB_J"><img src="./register-files/CEB.gif" alt="光大银行" ></li>
+			<li><input name="pt" value="J_CIB" type="radio" "=""  id="CIB_J"><img src="./register-files/CIB.gif" alt="兴业银行" ></li>
+			<li><input name="pt" value="J_CMBC" type="radio" id="CMBC_J"><img src="./register-files/CMBC.gif" alt="民生银行" ></li>
+			<li><input name="pt" value="J_CNCB" type="radio" id="CNCB_J"><img src="./register-files/CNCB.gif" alt="中信银行"></li>
+		</ul>
+	</div>
+							<div class="operateDiv borderLine marginTop20 clearfix">
+				<a href="javascript:void(0)" onclick="doSubmit(&#39;bank&#39;)" class="operateA onlinePay"><span class="positionRelative">登录到网上银行支付<s></s></span></a>
+			</div>
+		</form>
+	</div>																																										</div>
+					</div>
+					<!--=E选择支付方式-->
+				</div>
+				<!--=Epart2-->
+				<div class="clear"></div>
+			</div>
+		</div>
+		<!--=E主体部分-->
+	</div>
+	﻿<!--=S 订单列表 -->
+	<div class="orderListLayer">
+
+	<div id="footer">
+		<div class="footerBox">
+			<div class="bodyWidth">
+				<div class="fbInfo">
+					<span class="fAbout"><s></s>关于我们</span>|<span class="fHelp"><s></s>帮助中心</span>|<span class="fContact"><s></s>联系我们</span>
+				</div>
+				<div class="fbCopyright">
+					<p>Copyright <em>©</em> 2015-2016 HFBao All Rights Reserved 版权所有</p>
+					
+				</div>
+				<div class="clear"></div>
+			</div>
 		</div>
 	</div>
-</div>
 </div>
 
 </body></html>
