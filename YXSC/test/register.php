@@ -511,8 +511,10 @@ function isfloat(oNum){
 				﻿<h3>订单信息<s class="orderS"></s></h3>
 	<div class="listInfo">
 		<div class="liDl">
-			<dl class="borderBottom clearfix"><dt>订单金额：</dt><dd class="ddInfo"><span class="price"><?php echo $_GET["_deposit"]; ?></span>元</dd></dl>
-										<dl class="borderBottom widthL clearfix"><dt>收款方：</dt><dd class="ddInfo"><strong>江西畅源信息科技</strong></dd></dl>
+			<dl class="borderBottom clearfix"><dt>订单金额：</dt><dd class="ddInfo"><span class="price"><?php echo $_GET["_deposit"]; ?></span>元</dd>
+			</dl>
+			<!-- <dl class="borderBottom widthL clearfix"><dt>收款方：</dt><dd class="ddInfo"><strong>omg i am good</strong></dd>
+			</dl> -->
 							<div class="clear"></div>
 				<dl class="borderBottom clearfix"><dt>订单号：</dt><dd class="ddInfo">QLcoin-153259<?php echo rand(1000, 9999); ?></dd></dl>
 								<dl class="borderBottom widthL proInfo clearfix">
