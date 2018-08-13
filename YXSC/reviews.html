@@ -1,84 +1,112 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Reviews</title>
-<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-<!-- jQuery (necessary JavaScript plugins) -->
-<script src="js/bootstrap.js"></script>
-<!-- Custom Theme files -->
-<link href="css/style.css" rel='stylesheet' type='text/css' />
-<!-- Custom Theme files -->
-<!--//theme-style-->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Game Box  Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-
-<script src="js/jquery.min.js"></script>
-
+	<title>攻略心得</title>
+	<!-- add all the script for the js we nedd -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery (necessary JavaScript plugins) -->
+	<script src="js/bootstrap.js"></script>
+	<!-- Custom Theme files -->
+	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<!-- Custom Theme files -->
+	<!--//theme-style-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- <meta name="keywords" content="Game Box  Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" /> -->
+	<!-- <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script> -->
+	<link rel="shortcut icon" href="images/qinglongicon.png" type="image/png" />
 </head>
 <body>
 <!-- header -->
 <div class="top-banner">
 	<div class="header">
-		 <div class="container">
-			 <div class="headr-left">
-				 <div class="social">							
-						<a href="#"><i class="facebook"></i></a>
-						<a href="#"><i class="twitter"></i></a>
-						<a href="#"><i class="gplus"></i></a>	
-						<a href="#"><i class="pin"></i></a>	
-						<a href="#"><i class="youtube"></i></a>	
-				 </div>
-				 <div class="search">
-					 <form>
-						 <input type="submit" value="">
-						 <input type="text" value="" placeholder="Search...">					 
-					 </form>
-				 </div>
-				 <div class="clearfix"></div>
-			 </div>
-			 <div class="headr-right">
-				 <div class="details">
-					 <ul>
-						 <li><a href="mailto@example.com"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>info(at)example.com</a></li>
-						 <li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>(+1)000 123 456789</li>
-					 </ul>
-				 </div>
-			 </div>
-			 <div class="clearfix"></div>
-		 </div>
+		<div class="container banner-container">
+			<div class="headr-left">
+				<div class="social">
+					<!-- <img src="images/qinglongicon.png" /> -->
+				</div>
+				<div class="search">
+					<form>
+						<input type="submit" value="" onclick="search()">
+						<input type="text" value="" placeholder="搜索...">					 
+					</form>
+				</div>
+			</div>
+			<div class="headr-right">
+				<div class="details">
+					<ul style="margin: 0px;">
+						<li>
+							<p style="margin: 0px;">
+								<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+								qlyx@qq.com
+							</p>
+						</li>
+						<li style="cursor: pointer;">
+							<a href="cart.html" style="font-weight: 600;">
+								<!-- <img src="images/cart.svg" width="25" height="25" style="margin-right: 8px;vertical-align: bottom;" /> -->
+								购物车
+							</a>
+						</li>
+						<li class="QLcoin">
+							<a href="single.html" style="font-weight: 600;">
+								青龙币储值
+							</a>
+						</li>
+						<li>
+							<p href="single.html" style="font-weight: 600;">
+								<span class="home_login">登录</span>
+								&nbsp;&nbsp;|&nbsp;&nbsp;
+								<span class="home_register">注册</span></p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 	</div>
-
 	<!--banner-info-->	
 	<div class="banner-info">
-		  <div class="container">
-			  <div class="logo">
-					 <h1><a href="index.html">GAME BOX</a></h1>
-			  </div>
-			 <div class="top-menu">
-				 <span class="menu"></span>
-				  <ul class="nav1">
-						 <li><a href="index.html">Home</a></li>
-						 <li><a href="about.html">About</a></li>
-						 <li class="active"><a href="reviews.html">Reviews</a></li>
-						 <li><a href="typo.html">News</a></li>
-						 <li><a href="gallery.html">Gallery</a></li>
-						 <li><a href="contact.html">Mail</a></li>
-				  </ul>
-			 </div>	
-	<!-- script-for-menu -->
-						<script>
-							 $( "span.menu" ).click(function() {
-							$( "ul.nav1" ).slideToggle( 300, function() {
-							// Animation complete.
-								});
-								});
-						</script>
-					<!-- /script-for-menu -->		 
-			 <div class="clearfix"></div>
-		 </div>
+		<div class="container bannerContainer">
+			<div class="logo">
+				<img src="images/qinglongicon.png" width="60" height="60"
+				style="margin-top: 17px;margin-right: 10px;" />
+				<h1>
+					<a href="#" onclick="donothing()">
+					青龙游戏
+					<p style="font-size: 16px;padding-left: 5px;">www.91chcf.com</p>
+				</a>
+				</h1>
+				
+			</div>
+			<div class="top-menu">
+				<span class="menu"></span>
+				<ul class="nav1">
+					<li><a href="index.html">首页</a></li>
+					<!-- 
+						<li><a href="about.html">About</a></li>
+						<li><a href="reviews.html">Reviews</a></li>
+						<li><a href="typo.html">News</a></li>
+						<li><a href="gallery.html">Gallery</a></li>
+						<li><a href="contact.html">Mail</a></li> 
+					-->
+					<li><a href="about.html">关于我们</a></li>
+					<li class="active"><a href="reviews.html">攻略心得</a></li>
+					<li><a href="gallery.html">精彩画面</a></li>
+					<li><a href="contact.html"">联络我们</a></li>
+				</ul>
+			</div>	
+	 		<!-- script-for-menu -->
+			<script>
+				$( "span.menu" ).click(function() {
+					$( "ul.nav1" ).slideToggle( 300, function() {
+						// Animation complete.
+					});
+				});
+			</script>
+			<!-- /script-for-menu -->
+			<div class="clearfix"></div>
+		</div>
 	</div>
 </div>
 <!-- banner -->
@@ -89,27 +117,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- content -->
 <div class="review">
 	 <div class="container">
-		 <h2 >Reviews</h2>
+		 <h2 >攻略青龙</h2>
 		 <div class="review-md1">
 				 <div class="col-md-4 sed-md">
 				 	 <div class=" col-1">
 						 <a href="single.html"><img class="img-responsive" src="images/re7.jpg" alt=""></a>
-					 	<h4><a href="single.html">Sed ut perspiciatis unde omnis</a></h4>
-						<p>Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature</p>
+					 	<h4><a href="single.html">机甲戰神</a></h4>
+						<p>人类与来自几万光年的幸存者一同抵抗宇宙的侵略帝国，地球上充满敌人觊觎的丰富的资源，我们该如何抵抗才能存活下去呢......</p>
 					 </div>
 				 </div>
 				  <div class="col-md-4 sed-md">
 				 	 <div class=" col-1">
 						 <a href="single.html"><img class="img-responsive" src="images/re1.jpg" alt=""></a>
-					 	<h4><a href="single.html">Sed ut perspiciatis unde omnis</a></h4>
-						<p>Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature</p>
+					 	<h4><a href="single.html">铁甲奇侠</a></h4>
+						<p>一个人的力量到底能够拥有多少，为了这个世界，铁甲奇侠不断研发最新武器，并且在过程中认识各路英雄好汉，究竟铁甲奇侠到底能不能够拯救打架呢...</p>
 					 </div>
 				 </div>
 				  <div class="col-md-4 sed-md">
 				 	 <div class=" col-1">
 						 <a href="single.html"><img class="img-responsive" src="images/re2.jpg" alt=""></a>
-					 	<h4><a href="single.html">Sed ut perspiciatis unde omnis</a></h4>
-						<p>Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature</p>
+					 	<h4><a href="single.html">变种的逆袭</a></h4>
+						<p>一位科学家的大胆实验，不小心造就了拥有强大体魄的战士，因为实验带来的永久副作用造成强大的痛苦，充满愤怒的战士又会如何报复呢......</p>
 					 </div>
 				 </div>
 				 <div class="clearfix"> </div>
@@ -118,102 +146,76 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				 <div class="col-md-4 sed-md">
 				 	 <div class=" col-1">
 						 <a href="single.html"><img class="img-responsive" src="images/re3.jpg" alt=""></a>
-					 	<h4><a href="single.html">Sed ut perspiciatis unde omnis</a></h4>
-						<p>Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature</p>
+					 	<h4><a href="single.html">神来飞踢</a></h4>
+						<p>想成为场上最耀眼的明星吗？来吧踢进这胜利的一球，用盡渾身所學，獲得全場的歡呼吧，全场焦点将聚焦你身上......</p>
 					 </div>
 				 </div>
 				  <div class="col-md-4 sed-md">
 				 	 <div class=" col-1">
 						 <a href="single.html"><img class="img-responsive" src="images/re4.jpg" alt=""></a>
-					 	<h4><a href="single.html">Sed ut perspiciatis unde omnis</a></h4>
-						<p>Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature</p>
-					 </div>
-				 </div>
-				  <div class="col-md-4 sed-md">
-				 	 <div class=" col-1">
-						 <a href="single.html"><img class="img-responsive" src="images/re5.jpg" alt=""></a>
-					 	<h4><a href="single.html">Sed ut perspiciatis unde omnis</a></h4>
-						<p>Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature</p>
-					 </div>
-				 </div>
-				 <div class="clearfix"> </div>
-		 </div>
-		 <div class="review-md1">
-				 <div class="col-md-4 sed-md">
-				 	 <div class=" col-1">
-						 <a href="single.html"><img class="img-responsive" src="images/re6.jpg" alt=""></a>
-					 	<h4><a href="single.html">Sed ut perspiciatis unde omnis</a></h4>
-						<p>Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature</p>
-					 </div>
-				 </div>
-				  <div class="col-md-4 sed-md">
-				 	 <div class=" col-1">
-						 <a href="single.html"><img class="img-responsive" src="images/re7.jpg" alt=""></a>
-					 	<h4><a href="single.html">Sed ut perspiciatis unde omnis</a></h4>
-						<p>Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature</p>
-					 </div>
-				 </div>
-				  <div class="col-md-4 sed-md">
-				 	 <div class=" col-1">
-						 <a href="single.html"><img class="img-responsive" src="images/re2.jpg" alt=""></a>
-					 	<h4><a href="single.html">Sed ut perspiciatis unde omnis</a></h4>
-						<p>Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature</p>
-					 </div>
-				 </div>
+					 	<h4><a href="single.html">愤怒的小鸟</a></h4>
+						<p>在一座与世隔绝的美丽小岛上，住着一群乐天知命但却不会飞的鸟。不过易怒的锐德、亢奋急速的恰克和容易爆炸的砰伯总是因为各自的怪性格而不被其他的鸟接纳......</p>
+					</div>
+				</div>
+				<div class="col-md-4 sed-md">
+				 	<div class=" col-1">
+						<a href="single.html"><img class="img-responsive" src="images/re5.jpg" alt=""></a>
+					 	<h4><a href="single.html">侠盗猎车手V</a></h4>
+						<p>2004年，银行大盗麥可·湯利和同伴崔佛·菲利普以及布萊德．史奈德在北扬克顿魯登道夫策划了一场拙劣的抢劫，结果造成同伴布萊德中彈，自己也受重傷......</p>
+					</div>
+				</div>
 				<div class="clearfix"> </div>
-		 </div>
-	 </div>
+		</div>
+	</div>
 </div>
 <!-- footer -->
-<div class="footer">
-	 <div class="container">
-		 <div class="footer-grids">
-			 <div class="col-md-3 ftr-info">
-				 <h3>About Us</h3>
-				 <p>Sed faucibus mollis laoreet. Sed vehicula faucibus tristique lectus a orci molestie finibus. 
-				 Suspendisse pharetra, metus sed rutrum pretium.</p>
-			 </div>
-			 <div class="col-md-3 ftr-grid">
-				 <h3>Categories</h3>
-				 <ul class="ftr-list">
-					 <li><a href="#">Action</a></li>
-					 <li><a href="#">Racing</a></li>
-					 <li><a href="#">Adventure</a></li>
-					 <li><a href="#">Simulation</a></li>
-					 <li><a href="#">Bike</a></li>
-				 </ul>				 
-			 </div>
-			 <div class="col-md-3 ftr-grid">
-				 <h3>Platform</h3>
-				 <ul class="ftr-list">
-					 <li><a href="#">Pc</a></li>
-					 <li><a href="#">Ps4</a></li>
-					 <li><a href="#">XBOX 360</a></li>					 
-					 <li><a href="#">XBOX ONE</a></li>
-					 <li><a href="#">PSP</a></li>
-				 </ul>				 
-			 </div>
-			 <div class="col-md-3 ftr-grid">
-				 <h3>Information</h3>
-				 <ul class="ftr-list">	
-					 <li><a href="#">Contact Us</a></li>
-					 <li><a href="#">Wish Lists</a></li>
-					 <li><a href="#">Site Map</a></li>
-					 <li><a href="#">Terms & Conditions</a></li>					 
-				 </ul>				 
-			 </div>		
-			 <div class="clearfix"></div>
-		 </div>
-	 </div>
+<div class="footer-index">
+	<div class="container">
+		<div class="footer-grids">
+			<div class="col-md-3 ftr-info">
+				<h3>客服中心</h3>
+				<p>客服在线时间：09:00 - 21:00</p>
+				<p style="margin-top: 1em;">商城网址：www.91chcf.com</p>
+			</div>
+			<div class="col-md-3 ftr-grid">
+				<h3>会员中心</h3>
+				<ul class="ftr-list">
+					<li><a href="#" onclick="donothing()">会员登录</a></li>
+					<li><a href="#" onclick="donothing()">会员注册</a></li>
+					<li><a href="#" onclick="donothing()">服务条款</a></li>
+					<li><a href="#" onclick="donothing()">联系我们</a></li>
+				</ul>				 
+			</div>
+			<div class="col-md-3 ftr-grid">
+				<h3>游戏平台</h3>
+				<ul class="ftr-list">
+				 	<li><a href="https://baike.baidu.com/item/%E4%B8%AA%E4%BA%BA%E8%AE%A1%E7%AE%97%E6%9C%BA/3731770?fromtitle=pc&fromid=107&fr=aladdin">PC</a></li>
+				 	<li><a href="http://www.playstation.com.cn/">Play Station</a></li>
+					<li><a href="https://www.xbox.com/en-US/games/xbox-360">XBOX 360</a></li>
+					<li><a href="https://www.xbox.com/en-US/">XBOX ONE</a></li>
+				</ul>				 
+			</div>
+			<div class="col-md-3 ftr-grid">
+				<h3>相关讯息</h3>
+				<ul class="ftr-list">	
+					<li><a href="index.html">首页</a></li>
+					<li><a href="about.html">关于我们</a></li>
+					<li><a href="gallery.html">精彩画面</a></li>
+					<li><a href="reviews.html">攻略心得</a></li> 
+				</ul>				 
+			</div>		
+		  <div class="clearfix"></div>
+		</div>
+	</div>
 </div>
 <!---->
-<div class="copywrite">
-	 <div class="container">
-		 <p>Copyright &copy; 2015.Company name All rights reserved.<a target="_blank" href="http://www.freemoban.com/">www.freemoban.com</a></p>
-	 </div>
-</div>
-<!---->
+<div class="copywrite" style="position: relative;">
+ 	<div class="container">
+	 	<p>粤网文〔2016〕1714-358号 粤ICP备18091202号  深圳市川海长丰网络科技有限公司 Copyright 2018© 青龙游戏 ,All Rights Reserved</p>
 
+ 	</div>
+</div>
+<!---->
 
 
 

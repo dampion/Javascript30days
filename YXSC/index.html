@@ -1,30 +1,31 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>青龙游戏</title>
-<!-- add all the script for the js we nedd -->
-<script src="js/jquery.min.js"></script>
-<!-- jQuery (necessary JavaScript plugins) -->
-<script src="js/bootstrap.js"></script>
-<!-- Custom Theme files -->
-<link href="css/style.css" rel='stylesheet' type='text/css' />
-<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-<!-- Custom Theme files -->
-<!--//theme-style-->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!-- <meta name="keywords" content="Game Box  Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" /> -->
-<!-- <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script> -->
-<link rel="shortcut icon" href="images/qinglongicon.png" type="image/png" />
+	<title>青龙游戏</title>
+	<!-- add all the script for the js we nedd -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery (necessary JavaScript plugins) -->
+	<script src="js/bootstrap.js"></script>
+	<!-- Custom Theme files -->
+	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<!-- Custom Theme files -->
+	<!--//theme-style-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- <meta name="keywords" content="Game Box  Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" /> -->
+	<!-- <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script> -->
+	<link rel="shortcut icon" href="images/qinglongicon.png" type="image/png" />
 </head>
 <body>
 <!-- header -->
 <div class="top-banner">
 	<div class="header">
-		<div class="container">
+		<div class="container banner-container">
 			<div class="headr-left">
 				<div class="social">
+					<!-- <img src="images/qinglongicon.png" /> -->
 				</div>
 				<div class="search">
 					<form>
@@ -32,15 +33,32 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<input type="text" value="" placeholder="搜索...">					 
 					</form>
 				</div>
-				<div class="clearfix"></div>
 			</div>
 			<div class="headr-right">
 				<div class="details">
 					<ul style="margin: 0px;">
-						<li><p style="margin: 0px;" href="mailto@example.com"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>qlyx@qq.com</p></li>
-						<li style="cursor: pointer;color: #000;"><a href="cart.html" style="color: #000;font-weight: 600;"><img src="images/cart.svg" width="25" height="25" style="margin-right: 8px;vertical-align: bottom;" />购物车</a></li>
+						<li>
+							<p style="margin: 0px;">
+								<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+								qlyx@qq.com
+							</p>
+						</li>
+						<li style="cursor: pointer;">
+							<a href="cart.html" style="font-weight: 600;">
+								<!-- <img src="images/cart.svg" width="25" height="25" style="margin-right: 8px;vertical-align: bottom;" /> -->
+								购物车
+							</a>
+						</li>
 						<li class="QLcoin">
-							<a href="single.html" style="color: #000;font-weight: 600;">青龙币储值</a>
+							<a href="single.html" style="font-weight: 600;">
+								青龙币储值
+							</a>
+						</li>
+						<li>
+							<p href="single.html" style="font-weight: 600;">
+								<span class="home_login">登录</span>
+								&nbsp;&nbsp;|&nbsp;&nbsp;
+								<span class="home_register">注册</span></p>
 						</li>
 					</ul>
 				</div>
@@ -51,8 +69,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="banner-info">
 		<div class="container bannerContainer">
 			<div class="logo">
-				<h1><a href="#" onclick="donothing()">青龙游戏</a></h1>
-				<p>www.91chcf.com</p>
+				<img src="images/qinglongicon.png" width="60" height="60"
+				style="margin-top: 17px;margin-right: 10px;" />
+				<h1>
+					<a href="#" onclick="donothing()">
+					青龙游戏
+					<p style="font-size: 16px;padding-left: 5px;">www.91chcf.com</p>
+				</a>
+				</h1>
+				
 			</div>
 			<div class="top-menu">
 				<span class="menu"></span>
@@ -65,11 +90,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li><a href="gallery.html">Gallery</a></li>
 						<li><a href="contact.html">Mail</a></li> 
 					-->
-					<li><a href="#" onclick="donothing()">关于我们</a></li>
-					<li><a href="#" onclick="donothing()">评论</a></li>
-					<li><a href="#" onclick="donothing()">新闻中心</a></li>
-					<li><a href="#" onclick="donothing()">会员中心</a></li>
-					<li><a href="#" onclick="donothing()">FAQ</a></li>
+					<li><a href="about.html">关于我们</a></li>
+					<li><a href="reviews.html">攻略心得</a></li>
+					<li><a href="gallery.html">精彩画面</a></li>
+					<li><a href="contact.html"">联络我们</a></li>
 				</ul>
 			</div>	
 	 		<!-- script-for-menu -->
@@ -266,7 +290,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<p>Raging Justice是一款史诗般的横版格斗闯关游戏，它将爲21 世纪带来充斥着击打和怒吼的野性魅力。
 			 这座城市一片溷乱！犯罪和腐败处于曆史最高水平，暴徒正在四处肆虐。在破败的街道上，你需要用铁拳和怒吼来将这些家伙绳之以法。</p>
 			<!-- <a class="hvr-bounce-to-bottom" href="reviews.html">前往 专区</a> -->
-			<a class="hvr-bounce-to-bottom" href="#" onclick="donothing()">前往 专区</a>
+			<a class="hvr-bounce-to-bottom" href="gallery.html">精彩画面</a>
 		</div>
 	</div>
 </div>
@@ -290,46 +314,43 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </div>
 <!-- footer -->
 <div class="footer-index">
-	 <div class="container">
-		 <div class="footer-grids">
-			 <div class="col-md-3 ftr-info">
-				 <h3>客服中心</h3>
-				 <p>客服在线时间：09:00 - 21:00</p>
-				 <p style="margin-top: 1em;">商城网址：www.91chcf.com</p>
-			 </div>
-			 <div class="col-md-3 ftr-grid">
-				 <h3>购物指南</h3>
-				 <ul class="ftr-list">
-					 <li><a href="#" onclick="donothing()">会员注册</a></li>
-					 <li><a href="#" onclick="donothing()">购物流程</a></li>
-					 <li><a href="#" onclick="donothing()">订单查询</a></li>
-					 <li><a href="#" onclick="donothing()">支付方式</a></li>
-					 <li><a href="#" onclick="donothing()">售后服务</a></li>
-				 </ul>				 
-			 </div>
-			 <div class="col-md-3 ftr-grid">
-				 <h3>游戏平台</h3>
-				 <ul class="ftr-list">
-					 <li><a href="#" onclick="donothing()">Pc</a></li>
-					 <li><a href="#" onclick="donothing()">Ps4</a></li>
-					 <li><a href="#" onclick="donothing()">XBOX 360</a></li>
-					 <li><a href="#" onclick="donothing()">XBOX ONE</a></li>
-					 <li><a href="#" onclick="donothing()">PSP</a></li>
-				 </ul>				 
-			 </div>
-			 <div class="col-md-3 ftr-grid">
-				 <h3>相关讯息</h3>
-				 <ul class="ftr-list">	
-					 <li><a href="#" onclick="donothing()">退换货政策</a></li>
-					 <li><a href="#" onclick="donothing()">收货说明</a></li>
-					 <li><a href="#" onclick="donothing()">在线客服</a></li>
-					 <li><a href="#" onclick="donothing()">常见问题</a></li> 
-				 </ul>				 
-			 </div>		
-			 <div class="clearfix"></div>
-		 </div>
-	 </div>
-	
+	<div class="container">
+		<div class="footer-grids">
+			<div class="col-md-3 ftr-info">
+				<h3>客服中心</h3>
+				<p>客服在线时间：09:00 - 21:00</p>
+				<p style="margin-top: 1em;">商城网址：www.91chcf.com</p>
+			</div>
+			<div class="col-md-3 ftr-grid">
+				<h3>会员中心</h3>
+				<ul class="ftr-list">
+					<li><a href="#" onclick="donothing()">会员登录</a></li>
+					<li><a href="#" onclick="donothing()">会员注册</a></li>
+					<li><a href="agreement.html">服务条款</a></li>
+					<li><a href="contact.html">联系我们</a></li>
+				</ul>				 
+			</div>
+			<div class="col-md-3 ftr-grid">
+				<h3>游戏平台</h3>
+				<ul class="ftr-list">
+				 	<li><a href="https://baike.baidu.com/item/%E4%B8%AA%E4%BA%BA%E8%AE%A1%E7%AE%97%E6%9C%BA/3731770?fromtitle=pc&fromid=107&fr=aladdin">PC</a></li>
+				 	<li><a href="http://www.playstation.com.cn/">Play Station</a></li>
+					<li><a href="https://www.xbox.com/en-US/games/xbox-360">XBOX 360</a></li>
+					<li><a href="https://www.xbox.com/en-US/">XBOX ONE</a></li>
+				</ul>				 
+			</div>
+			<div class="col-md-3 ftr-grid">
+				<h3>相关讯息</h3>
+				<ul class="ftr-list">	
+					<li><a href="index.html">首页</a></li>
+					<li><a href="about.html">关于我们</a></li>
+					<li><a href="gallery.html">精彩画面</a></li>
+					<li><a href="reviews.html">攻略心得</a></li> 
+				</ul>				 
+			</div>		
+		  <div class="clearfix"></div>
+		</div>
+	</div>
 </div>
 <!---->
 <div class="copywrite" style="position: relative;">
