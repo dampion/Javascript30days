@@ -1,11 +1,12 @@
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
-  font-family: sans-serif;
+  font-family: 'Microsoft-Yahei', sans-serif;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
 body {
   margin: 0;
+  font-family: 'Microsoft-Yahei', sans-serif;
 }
 article,
 aside,
@@ -257,6 +258,10 @@ th {
   .table-bordered td {
     border: 1px solid #ddd !important;
   }
+}
+@font-face {
+   font-family: 'Microsoft-Yahei';
+   src: url(../fonts/Microsoft-Yahei.ttf)format('truetype');
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
@@ -1080,7 +1085,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Microsoft-Yahei', sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333;
@@ -5836,7 +5841,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Microsoft-Yahei', sans-serif;;
   font-size: 12px;
   font-weight: normal;
   line-height: 1.4;
@@ -5943,7 +5948,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Microsoft-Yahei', sans-serif;;
   font-size: 14px;
   font-weight: normal;
   line-height: 1.42857143;

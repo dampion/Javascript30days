@@ -6,12 +6,17 @@
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
-  font-family: sans-serif;
+  font-family: 'Microsoft-Yahei', sans-serif;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
 body {
   margin: 0;
+  font-family: 'Microsoft-Yahei', sans-serif;
+}
+@font-face {
+   font-family: 'Microsoft-Yahei';
+   src: url(../fonts/Microsoft-Yahei.ttf)format('truetype');
 }
 article,
 aside,
