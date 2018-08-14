@@ -22,34 +22,33 @@
 <div>
 <div class="top-banner">
 	 <div class="header">
-		 <div class="container">
+		 <div class="container banner-container">
 			 <div class="headr-left">
 				 <div class="social">							
 				 </div>
 				 <div class="search">
 				 </div>
-				 <div class="clearfix"></div>
 			 </div>
 			 <div class="headr-right">
 				<div class="details">
 					<ul style="margin: 0px;">
-						<li>
+						<!-- <li>
 							<p style="margin: 0px;" href="mailto@example.com">
 								<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>qlyx@qq.com
 							</p>
-						</li>
-						<li style="cursor: pointer;">
+						</li> -->
+						<li style="cursor: pointer; margin-bottom: 10px;">
 							<a href="index.html">
 								<!-- <img src="images/home.svg" width="25" height="25" style="margin-right: 8px;vertical-align: bottom;" /> -->
 								首页
 							</a>
 						</li>
-						<li style="cursor: pointer;color: #000;">
+						<!-- <li style="cursor: pointer;color: #000;">
 							<a href="cart.html" style="font-weight: 600;">
-								<!-- <img src="images/cart.svg" width="25" height="25" style="margin-right: 8px;vertical-align: bottom;" /> -->
+								<img src="images/cart.svg" width="25" height="25" style="margin-right: 8px;vertical-align: bottom;" />
 								购物车
 							</a>
-						</li>
+						</li> -->
 					</ul>
 				</div>
 			</div>
@@ -123,7 +122,6 @@
 	 		alert("亲，网站还在建置中，咱再等会儿～");
 	 	}
 	 	function search() {
-	 		alert("亲，网站还在建置中，咱再等会儿～");
 	 	}
 		$(function () {
 		  $("#slider").responsiveSlides({
@@ -139,18 +137,19 @@
 <div class="footer-index">
 	<div class="container">
 		<div class="footer-grids">
-			<div class="col-md-3 ftr-info">
+			<div class="col-md-3 ftr-grid">
 				<h3>客服中心</h3>
-				<p>客服在线时间：09:00 - 21:00</p>
-				<p style="margin-top: 1em;">商城网址：www.91chcf.com</p>
+				<ul>
+          <li><a href="contact.html">联系我们</a></li>
+          <li><a href="index.html">商城网址：www.91chcf.com</a></li>
+				</ul>
 			</div>
 			<div class="col-md-3 ftr-grid">
 				<h3>会员中心</h3>
 				<ul class="ftr-list">
-					<li><a href="#" onclick="donothing()">会员登录</a></li>
-					<li><a href="#" onclick="donothing()">会员注册</a></li>
-					<li><a href="#" onclick="donothing()">服务条款</a></li>
-					<li><a href="#" onclick="donothing()">联系我们</a></li>
+					<li><a href="#">会员登录</a></li>
+					<li><a href="#">会员注册</a></li>
+					<li><a href="agreement.html">服务条款</a></li>
 				</ul>				 
 			</div>
 			<div class="col-md-3 ftr-grid">
