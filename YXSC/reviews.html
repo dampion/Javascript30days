@@ -36,7 +36,7 @@
 			</div>
 			<div class="headr-right">
 				<div class="details">
-					<ul style="margin: 0px;">
+					<ul style="margin: 0px;display: flex;">
 						<!-- <li>
 							<p style="margin: 0px;">
 								<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
@@ -54,17 +54,37 @@
 								青龙币储值
 							</a>
 						</li>
-						<li>
+						<li id="guest">
 							<p href="single.html" style="font-weight: 600;">
-								<span class="home_login">登录</span>
+								<span class="home_login"><a href="form-2/index.html">登录</a></span>
 								&nbsp;&nbsp;|&nbsp;&nbsp;
-								<span class="home_register">注册</span></p>
+								<span class="home_register"><a href="form-2/register.html">注册</a></span></p>
+						</li>
+						<li id="member" style="display: none;">
+							<p href="single.html" style="font-weight: 600;">
+								您好，<span class="home_login"><a href="form-2/index.html" id="accountName"></a></span>
+								&nbsp;&nbsp;|&nbsp;&nbsp;
+								<span class="home_register" onclick="logout()">退出 </span></p>
 						</li>
 					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
+	<script>
+		let userName = localStorage.getItem('userName');
+		if (userName !== null) {
+			$('#member')[0].style.display = 'block';
+			$('#guest')[0].style.display = 'none';
+			$('#accountName')[0].innerHTML = userName;
+		}
+
+		//LOGOUT
+		function logout() {
+			localStorage.removeItem('userName');
+			window.location.reload();
+		}
+	</script>
 	<!--banner-info-->	
 	<div class="banner-info">
 		<div class="container bannerContainer">
@@ -87,7 +107,7 @@
 					<li><a href="about.html">关于我们</a></li>
 					<li class="active"><a href="reviews.html">攻略心得</a></li>
 					<li><a href="gallery.html">精彩画面</a></li>
-					<li><a href="contact.html">联络我们</a></li>
+					<li><a href="contact.html">联系我们</a></li>
 				</ul>
 			</div>	
 	 		<!-- script-for-menu -->
@@ -115,22 +135,22 @@
 		 <div class="review-md1">
 				 <div class="col-md-4 sed-md">
 				 	 <div class=" col-1">
-						 <a href="single.html"><img class="img-responsive" src="images/re7.jpg" alt=""></a>
-					 	<h4><a href="single.html">机甲戰神</a></h4>
+						 <a href="intro.html?re7.jpg"><img class="img-responsive" src="images/re7.jpg" alt=""></a>
+					 	<h4><a href="intro.html?re7.jpg">机甲戰神</a></h4>
 						<p>人类与来自几万光年的幸存者一同抵抗宇宙的侵略帝国，地球上充满敌人觊觎的丰富的资源，我们该如何抵抗才能存活下去呢......</p>
 					 </div>
 				 </div>
 				  <div class="col-md-4 sed-md">
 				 	 <div class=" col-1">
-						 <a href="single.html"><img class="img-responsive" src="images/re1.jpg" alt=""></a>
-					 	<h4><a href="single.html">铁甲奇侠</a></h4>
+						 <a href="intro.html?re1.jpg"><img class="img-responsive" src="images/re1.jpg" alt=""></a>
+					 	<h4><a href="intro.html?re1.jpg">铁甲奇侠</a></h4>
 						<p>一个人的力量到底能够拥有多少，为了这个世界，铁甲奇侠不断研发最新武器，并且在过程中认识各路英雄好汉，究竟铁甲奇侠到底能不能够拯救打架呢...</p>
 					 </div>
 				 </div>
 				  <div class="col-md-4 sed-md">
 				 	 <div class=" col-1">
-						 <a href="single.html"><img class="img-responsive" src="images/re2.jpg" alt=""></a>
-					 	<h4><a href="single.html">变种的逆袭</a></h4>
+						 <a href="intro.html?re2.jpg"><img class="img-responsive" src="images/re2.jpg" alt=""></a>
+					 	<h4><a href="intro.html?re2.jpg">变种的逆袭</a></h4>
 						<p>一位科学家的大胆实验，不小心造就了拥有强大体魄的战士，因为实验带来的永久副作用造成强大的痛苦，充满愤怒的战士又会如何报复呢......</p>
 					 </div>
 				 </div>
@@ -139,23 +159,23 @@
 		 <div class="review-md1">
 				 <div class="col-md-4 sed-md">
 				 	 <div class=" col-1">
-						 <a href="single.html"><img class="img-responsive" src="images/re3.jpg" alt=""></a>
-					 	<h4><a href="single.html">神来飞踢</a></h4>
+						 <a href="intro.html?re3.jpg"><img class="img-responsive" src="images/re3.jpg" alt=""></a>
+					 	<h4><a href="intro.html?re3.jpg">神来飞踢</a></h4>
 						<p>想成为场上最耀眼的明星吗？来吧踢进这胜利的一球，用盡渾身所學，獲得全場的歡呼吧，全场焦点将聚焦你身上......</p>
 					 </div>
 				 </div>
 				  <div class="col-md-4 sed-md">
 				 	 <div class=" col-1">
-						 <a href="single.html"><img class="img-responsive" src="images/re4.jpg" alt=""></a>
-					 	<h4><a href="single.html">愤怒的小鸟</a></h4>
+						 <a href="intro.html?re4.jpg"><img class="img-responsive" src="images/re4.jpg" alt=""></a>
+					 	<h4><a href="intro.html?re4.jpg">愤怒的小鸟</a></h4>
 						<p>在一座与世隔绝的美丽小岛上，住着一群乐天知命但却不会飞的鸟。不过易怒的锐德、亢奋急速的恰克和容易爆炸的砰伯总是因为各自的怪性格而不被其他的鸟接纳......</p>
 					</div>
 				</div>
 				<div class="col-md-4 sed-md">
 				 	<div class=" col-1">
-						<a href="single.html"><img class="img-responsive" src="images/re5.jpg" alt=""></a>
-					 	<h4><a href="single.html">侠盗猎车手V</a></h4>
-						<p>2004年，银行大盗麥可·湯利和同伴崔佛·菲利普以及布萊德．史奈德在北扬克顿魯登道夫策划了一场拙劣的抢劫，结果造成同伴布萊德中彈，自己也受重傷......</p>
+						<a href="intro.html?re5.jpg"><img class="img-responsive" src="images/re5.jpg" alt=""></a>
+					 	<h4><a href="intro.html?re5.jpg">侠盗猎车手V</a></h4>
+						<p>在意大利移民遗留下来的古老传统的影响下，家族成为美国黑帮文化的一个重要组成部分，对那些无法无天的帮派份子来说，家族与亲人，在他们心中有着无法言谕的地位......</p>
 					</div>
 				</div>
 				<div class="clearfix"> </div>

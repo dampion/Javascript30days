@@ -36,7 +36,7 @@
 			</div>
 			<div class="headr-right">
 				<div class="details">
-					<ul style="margin: 0px;">
+					<ul style="margin: 0px;display: flex;">
 						<!-- <li>
 							<p style="margin: 0px;">
 								<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
@@ -54,17 +54,37 @@
 								青龙币储值
 							</a>
 						</li>
-						<li>
+						<li id="guest">
 							<p href="single.html" style="font-weight: 600;">
-								<span class="home_login">登录</span>
+								<span class="home_login"><a href="form-2/index.html">登录</a></span>
 								&nbsp;&nbsp;|&nbsp;&nbsp;
-								<span class="home_register">注册</span></p>
+								<span class="home_register"><a href="form-2/register.html">注册</a></span></p>
+						</li>
+						<li id="member" style="display: none;">
+							<p href="single.html" style="font-weight: 600;">
+								您好，<span class="home_login"><a href="form-2/index.html" id="accountName"></a></span>
+								&nbsp;&nbsp;|&nbsp;&nbsp;
+								<span class="home_register" onclick="logout()">退出 </span></p>
 						</li>
 					</ul>
 				</div>
 			</div>
 		</div>
 	</div>
+	<script>
+		let userName = localStorage.getItem('userName');
+		if (userName !== null) {
+			$('#member')[0].style.display = 'block';
+			$('#guest')[0].style.display = 'none';
+			$('#accountName')[0].innerHTML = userName;
+		}
+
+		//LOGOUT
+		function logout() {
+			localStorage.removeItem('userName');
+			window.location.reload();
+		}
+	</script>
 	<!--banner-info-->	
 	<div class="banner-info">
 		<div class="container bannerContainer">
@@ -86,7 +106,7 @@
 					<li class="active"><a href="about.html">关于我们</a></li>
 					<li><a href="reviews.html">攻略心得</a></li>
 					<li><a href="gallery.html">精彩画面</a></li>
-					<li><a href="contact.html">联络我们</a></li>
+					<li><a href="contact.html">联系我们</a></li>
 				</ul>
 			</div>	
 	 		<!-- script-for-menu -->

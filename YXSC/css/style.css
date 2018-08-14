@@ -989,7 +989,7 @@ border-color: #4dc47d;
   margin-right: 5px;
   width: 17px;
 }
-.comment-icons ul li a.like{
+.comment-icons ul li.like{
 	background: url(../images/iconsprite.png) no-repeat 2px -46px;
 	margin-right: 6px;
 	padding-left: 1.5em;

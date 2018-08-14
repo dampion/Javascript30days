@@ -1,0 +1,336 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Intro</title>
+	<!-- add all the script for the js we nedd -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery (necessary JavaScript plugins) -->
+	<script src="js/bootstrap.js"></script>
+	<!-- Custom Theme files -->
+	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+	<!-- Custom Theme files -->
+	<!--//theme-style-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<!-- <meta name="keywords" content="Game Box  Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" /> -->
+	<!-- <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script> -->
+	<link rel="shortcut icon" href="images/qinglongicon.png" type="image/png" />
+</head>
+<body>
+<!-- header -->
+<div class="top-banner">
+	<div class="header">
+		<div class="container banner-container">
+			<div class="headr-left">
+				<div class="social">
+					<!-- <img src="images/qinglongicon.png" /> -->
+				</div>
+				<!-- <div class="search">
+					<form>
+						<input type="submit" value="" onclick="search()">
+						<input type="text" value="" placeholder="搜索...">					 
+					</form>
+				</div> -->
+			</div>
+			<div class="headr-right">
+				<div class="details">
+					<ul style="margin: 0px;display: flex;">
+						<!-- <li>
+							<p style="margin: 0px;">
+								<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+								qlyx@qq.com
+							</p>
+						</li> -->
+						<!-- <li style="cursor: pointer;">
+							<a href="cart.html" style="font-weight: 600;">
+								<img src="images/cart.svg" width="25" height="25" style="margin-right: 8px;vertical-align: bottom;" />
+								购物车
+							</a>
+						</li> -->
+						<li class="QLcoin">
+							<a href="single.html" style="font-weight: 600;">
+								青龙币储值
+							</a>
+						</li>
+						<li id="guest">
+							<p href="single.html" style="font-weight: 600;">
+								<span class="home_login"><a href="form-2/index.html">登录</a></span>
+								&nbsp;&nbsp;|&nbsp;&nbsp;
+								<span class="home_register"><a href="form-2/register.html">注册</a></span></p>
+						</li>
+						<li id="member" style="display: none;">
+							<p href="single.html" style="font-weight: 600;">
+								您好，<span class="home_login"><a href="form-2/index.html" id="accountName"></a></span>
+								&nbsp;&nbsp;|&nbsp;&nbsp;
+								<span class="home_register" onclick="logout()">退出 </span></p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		let userName = localStorage.getItem('userName');
+		if (userName !== null) {
+			$('#member')[0].style.display = 'block';
+			$('#guest')[0].style.display = 'none';
+			$('#accountName')[0].innerHTML = userName;
+		}
+
+		//LOGOUT
+		function logout() {
+			localStorage.removeItem('userName');
+			window.location.reload();
+		}
+	</script>
+	<!--banner-info-->	
+	<div class="banner-info">
+		<div class="container bannerContainer">
+<!-- 			<div class="logo">
+				<img src="images/qinglongicon.png" width="60" height="60"
+				style="margin-top: 17px;margin-right: 10px;" />
+				<h1>
+					<a href="#">
+					青龙游戏
+					<p style="font-size: 16px;padding-left: 5px;">www.91chcf.com</p>
+				</a>
+				</h1>
+				
+			</div>
+ -->			<!-- <div class="top-menu">
+				<span class="menu"></span>
+				<ul class="nav1">
+					<li><a href="index.html">首页</a></li>
+					<li><a href="about.html">关于我们</a></li>
+					<li><a href="reviews.html">攻略心得</a></li>
+					<li><a href="gallery.html">精彩画面</a></li>
+					<li><a href="contact.html>">联系我们</a></li>
+				</ul>
+			</div>	 -->
+	 		<!-- script-for-menu -->
+			<script>
+				$( "span.menu" ).click(function() {
+					$( "ul.nav1" ).slideToggle( 300, function() {
+						// Animation complete.
+					});
+				});
+			</script>
+			<!-- /script-for-menu -->
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+<!---->
+<div class="blog">
+		<div class="container">
+			<div class="col-md-8 blog-left" >
+				<div class="blog-info">
+					<div class="blog-info-text">
+						<div class="blog-img">
+							<img id="introImage" alt=""/>
+						</div>						
+						<p class="snglp" id="snglp"></p>					
+					</div>
+					<div class="comment-icons">
+						<ul>
+							<li><span class="clndr"></span>Oct 13, 2016</li>
+							<li><span class="admin"></span> Admin</li>
+							<li><span class="cmnts"></span> 5 comments</li>
+							<li class="like" id="like"></li>
+							<script>
+								document.getElementById("like").innerHTML = Math.floor(Math.random()*(999),0);
+							</script>
+						</ul>
+					</div>
+					<script>
+						let image = location.search.replace(/\?/,'');
+						$('#introImage')[0].src = 'images/'+image
+						
+						switch(image) {
+							case 're7.jpg':
+								$('#snglp')[0].innerHTML = '人类与来自几万光年的幸存者一同抵抗宇宙的侵略帝国，地球上充满敌人觊觎的丰富的资源，我们该如何抵抗才能存活下去呢?<p>随着三十年前一种新型病毒的爆发，地球上一成的人口智力、精神、身体素质都出现了不同程度的明显提高，被称之为新人类！一个基因至上，天赋至上的时代随即诞生！而一位拥有着全球最优基因的少年，在一次变故之后，便是踏上了成为最强机师的道路！</p>';
+								break;
+							case 're1.jpg':
+								$('#snglp')[0].innerHTML = '一个人的力量到底能够拥有多少，为了这个世界，铁甲奇侠不断研发最新武器，并且在过程中认识各路英雄好汉，究竟铁甲奇侠到底能不能够拯救打架呢?<p>托尼·史塔克（小罗伯特·唐尼饰）出生在纽约一个富豪家庭，从小衣来伸手饭来张口的他，并未像所有的纨绔子弟那般只知道享乐胡闹。天生聪慧的史塔克却是个出奇的天才，17岁毕业于麻省理工大学电力工程系，并以傲人的成绩成功找到了自己的社会定位——其家族企业史塔克军火公司的新老板。父母的不幸去世反而更激发了托尼事业的前进动力。21岁时便开始掌控数百亿财产的他，逐渐确立了史塔克公司作为美军第一军火供应商的雄厚地位。不过托尼傲慢自大的性格以及为达到目的不择手段的做法常常为自己找来很多麻烦。还好，他身边还有一个精明能干、性感迷人的女助手维吉尼亚·波茨（格温妮斯·帕特洛饰）时刻给自己无微不至的关怀和帮助。</p><p>但不久后的一次绑架事件彻底改变了托尼·史塔克的一生。当托尼带领一班手下和军方观察员在荒无人烟的地界试验自己最新研制的成果时，不料遭遇一伙极其凶悍的恐怖分子的袭击。最终，混乱中被炮弹碎片击中心脏的托尼醒后发现胸口多了个奇怪的装置，正是这个仪器维系着自己的生命。原来是同为人质的英森博士用一块汽车电磁铁吸住了他体内的弹片，保住了托尼·史塔克的性命，当然，救活他的恐怖分子自然不会是只为单纯地抓住这个武器设计专家，而是早就慕其大名有意为之。于是，恐怖分子开始软硬兼施，要求托尼·史塔克为他们制造出威力更加巨大的武器。好汉不吃眼前亏，聪明的史塔克更不会坐以待毙。于是，他在英森帮助下利用恐怖分子为其提供的粗糙设备和原材料，在暗无天日的地下基地里为自己造出了钢铁盔甲，具备很强的战斗能力。在与恐怖分子的火拼当中，英森博士为史塔克争取时间不幸身亡，但却使逃脱的托尼改变了自己的以制造军火拯救世界的想法。</p><p>于是，预告海报预告海报他改进了钢铁盔甲，制造了另一块聚变能源，成为真正的钢铁侠</p>';
+								break;
+							case 're4.jpg':
+								$('#snglp')[0].innerHTML = '在一座与世隔绝的美丽小岛上，住着一群乐天知命但却不会飞的鸟。不过易怒的锐德、亢奋急速的恰克和容易爆炸的砰伯总是因为各自的怪性格而不被其他的鸟接纳。<p>为了报复偷走鸟蛋的肥猪们，鸟儿以自己的身体为武器，仿佛炮弹一样去攻击肥猪们的堡垒。愤怒的红色小鸟，奋不顾身的往绿色的肥猪的堡垒砸去。游戏的玩法很简单，将弹弓上的小鸟弹出去，砸到绿色的肥猪，将肥猪全部砸到就能过关。鸟儿的弹出角度和力度由玩家的手指来控制，要注意考虑好力度和角度的综合计算，这样才能更准确的砸到肥猪。而被弹出的鸟儿会留下弹射轨迹，可供参考角度和力度的调整。另外每个关卡的分数越多，评价将会越高。</p>';
+								break;
+							case 're5.jpg':
+								$('#snglp')[0].innerHTML ='在意大利移民遗留下来的古老传统的影响下，家族成为美国黑帮文化的一个重要组成部分，对那些无法无天的帮派份子来说，家族与亲人，在他们心中有着无法言谕的地位。<p>这次我们的主角天才罪犯卡尔·强森（朋友们都叫他CJ）在过了5年平静的生活之后，忽闻母亲在家乡遇害。这时他身体中的“帮派之血”再次熊熊燃烧起来，现在CJ便要重返圣安德列亚，在明争暗斗的几个地下势力之间再次掀起新一轮的腥风血雨。这次CJ将会投靠自己的哥哥，重振橙林家族。《侠盗猎车手圣安地列斯》游戏舞台由前作的佛罗里达移至加州，虚构的圣安德列亚市是由三个城市（Los Santos、以洛山矶为原型，San Fierro、以旧金山为原型，Las Venturra、以拉斯维加斯为原型）和绵延数里的高速公路、沙漠、山脉、河流湖泊组成，圣安地列斯范围会比以前的Vice City大上五六倍，在这里你可以找到各式风格不同的景观，事实上你将其称为一个微缩的世界亦不为过。</p>';
+								break;
+							case 're3.jpg':
+								$('#snglp')[0].innerHTML = '想成为场上最耀眼的明星吗？来吧踢进这胜利的一球，用盡渾身所學，獲得全場的歡呼吧，全场焦点将聚焦你身上<p>空翻并加旋身体借助下落的惯性和自身动势能输出后施展的踢技。威力可随意调节。艾斯并未在此招中注入能量【不同于电击踢】。属于艾斯的辅助技能而并非必杀技，其威力却不容小视。 中。能有效牵制削弱对手战斗力并控制敌方掌控不到的作战范围。</p>';
+								break;
+							case 're2.jpg':
+								$('#snglp')[0].innerHTML = '破坏死光，镭射眼升级版，不死传说，砖石豹，对应金刚狼，雷电法王，万剑归宗，至道核弹天王，三个都有万磁王的感觉，第一邪皇，天启。至道核弹天王，前期一拳一颗原子弹，中期一秒一百拳，后期可引发世界核爆炸，一个悲剧的英雄创建了变种人兄弟会。因为经历过二战的残酷，和人类对变种人的疯狂打击，使得万磁王极度憎恨人类，一番战争下绯红女巫，根据变种人无尽的仇恨，一句让最高统治者变成社会底层的贱 命，让变种人统治世界，化生一个新的世界，一个变种人统治地球的世界，各国领袖变成奴隶，万磁王一家成为最高统治者。然而英雄们还是觉醒过来，找到了工地上搬砖的灭霸，路边切西瓜的金刚狼，面包师罗伦，乡村女孩苏菲亚，爱莎，工厂发电机雷神托尔，，风力发电机聂风，无业游民步惊云，向他们的家族进行抗争。，绝望的旺达把一切痛苦归结于万磁王的极端理想。一切回到正轨后，独裁暴君万磁王，和主角团开始了最后的决战，一位科学家的大胆实验，不小心造就了拥有强大体魄的战士，因为实验带来的永久副作用造成强大的痛苦，充满愤怒的战士又会如何报复呢......?';
+								break;
+							default:
+						}
+					</script>
+<!-- 					<div class="response">
+						<h4>Responses</h4>
+						<div class="media response-info">
+							<div class="media-left response-text-left">
+								<a href="#">
+									<img class="media-object" src="images/icon1.png" alt=""/>
+								</a>
+								<h5><a href="#">Admin</a></h5>
+							</div>
+							<div class="media-body response-text-right">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,There are many variations of passages of Lorem Ipsum available, 
+									sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+								<ul>
+									<li>MARCH 21, 2013</li>
+									<li><a href="single.html">Reply</a></li>
+								</ul>
+								<div class="media response-info">
+									<div class="media-left response-text-left">
+										<a href="#">
+											<img class="media-object" src="images/icon1.png" alt=""/>
+										</a>
+										<h5><a href="#">Admin</a></h5>
+									</div>
+									<div class="media-body response-text-right">
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,There are many variations of passages of Lorem Ipsum available, 
+											sed do eiusmod tempor incididunt ut labore et.</p>
+										<ul>
+											<li>MARCH 21, 2014</li>
+											<li><a href="single.html">Reply</a></li>
+										</ul>		
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="media response-info">
+							<div class="media-left response-text-left">
+								<a href="#">
+									<img class="media-object" src="images/icon1.png" alt=""/>
+								</a>
+								<h5><a href="#">Admin</a></h5>
+							</div>
+							<div class="media-body response-text-right">
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,There are many variations of passages of Lorem Ipsum available, 
+									sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+								<ul>
+									<li>MARCH 21, 2013</li>
+									<li><a href="single.html">Reply</a></li>
+								</ul>		
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+					</div>
+ -->				</div>
+<!-- 				<div class="coment-form">
+					<h4>“网络留言板</h4>
+					<form>
+						<input type="text" value="姓名" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}" required="">
+						<input type="text" value="主题" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Subject';}" required="">
+						<input type="text" value="邮箱" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email (will not be published)*';}" required="">
+						<textarea type="text"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Comment...';}" required="">内容</textarea>
+						<input type="submit" value="送出" >
+					</form>
+				</div>
+ -->			</div>	
+			<div class="col-md-4 single-page-right">
+				<div class="category blog-ctgry">
+					<h4>热门游戏</h4>
+					<div class="list-group">
+						<a href="intro.html?re7.jpg" class="list-group-item">机甲戰神</a>
+						<a href="intro.html?re1.jpg" class="list-group-item">铁甲奇侠</a>
+						<a href="intro.html?re4.jpg" class="list-group-item">愤怒的小鸟</a>
+						<a href="intro.html?re5.jpg" class="list-group-item">侠盗猎车手V</a>
+						
+					</div>
+				</div>	
+<!-- 				<div class="recent-posts">
+					<h4>Recent posts</h4>
+					<div class="recent-posts-info">
+						<div class="posts-left sngl-img">
+							<a href="single.html"> <img src="images/img16.jpg" class="img-responsive zoom-img" alt=""/> </a>
+						</div>
+						<div class="posts-right">
+							<label>March 5, 2015</label>
+							<h5><a href="single.html">Finibus Bonorum</a></h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing incididunt.</p>
+							<a href="single.html" class="btn btn-primary hvr-rectangle-in">Read More</a>
+						</div>
+						<div class="clearfix"> </div>
+					</div>	
+					<div class="recent-posts-info">
+						<div class="posts-left sngl-img">
+							<a href="single.html"> <img src="images/img17.jpg" class="img-responsive zoom-img" alt=""/></a>
+						</div>
+						<div class="posts-right">
+							<label>March 1, 2015</label>
+							<h5><a href="single.html">Finibus Bonorum</a></h5>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing incididunt.</p>
+							<a href="single.html" class="btn btn-primary hvr-rectangle-in">Read More</a>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>				
+ -->			</div>
+			<div class="clearfix"> </div>
+		</div>	
+</div>	
+<!-- footer -->
+<div class="footer-index">
+	<div class="container">
+		<div class="footer-grids">
+			<div class="col-md-3 ftr-grid">
+				<h3>客服中心</h3>
+				<ul>
+          <li><a href="contact.html">联系我们</a></li>
+          <li><a href="index.html">商城网址：www.91chcf.com</a></li>
+				</ul>
+			</div>
+			<div class="col-md-3 ftr-grid">
+				<h3>会员中心</h3>
+				<ul class="ftr-list">
+					<li><a href="#">会员登录</a></li>
+					<li><a href="#">会员注册</a></li>
+					<li><a href="agreement.html">服务条款</a></li>
+				</ul>				 
+			</div>
+			<div class="col-md-3 ftr-grid">
+				<h3>游戏平台</h3>
+				<ul class="ftr-list">
+				 	<li><a href="https://baike.baidu.com/item/%E4%B8%AA%E4%BA%BA%E8%AE%A1%E7%AE%97%E6%9C%BA/3731770?fromtitle=pc&fromid=107&fr=aladdin">PC</a></li>
+				 	<li><a href="http://www.playstation.com.cn/">Play Station</a></li>
+					<li><a href="https://www.xbox.com/en-US/games/xbox-360">XBOX 360</a></li>
+					<li><a href="https://www.xbox.com/en-US/">XBOX ONE</a></li>
+				</ul>				 
+			</div>
+			<div class="col-md-3 ftr-grid">
+				<h3>相关讯息</h3>
+				<ul class="ftr-list">	
+					<li><a href="index.html">首页</a></li>
+					<li><a href="about.html">关于我们</a></li>
+					<li><a href="gallery.html">精彩画面</a></li>
+					<li><a href="reviews.html">攻略心得</a></li> 
+				</ul>				 
+			</div>		
+		  <div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+<!---->
+<div class="copywrite" style="position: relative;">
+ 	<div class="container">
+	 	<p>粤网文〔2016〕1714-358号 粤ICP备18091202号  深圳市川海长丰网络科技有限公司 Copyright 2018© 青龙游戏 ,All Rights Reserved</p>
+
+ 	</div>
+</div>
+<!---->
+
+ 
+
+
+</body>
+</html>
