@@ -78,6 +78,9 @@
                     <script src="assets/js/firebase.js"></script>
                     
                     <script>
+                      if (localStorage.getItem('userName') != null) {
+                        window.location.href = "../index.html";
+                      }
                       // Initialize Firebase
                       var config = {
                         apiKey: "AIzaSyCDqPVs6e1I1FJ29GkuXmzahRKSPff2yrQ",
