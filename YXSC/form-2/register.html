@@ -76,63 +76,69 @@
                     </div>
                     <!-- <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script> -->
                     <script src="assets/js/firebase.js"></script>
+                    <!-- 存储服务 -->
+                    <script src="assets/js/av-min.js"></script>
+                    <!-- 实时消息服务 -->
+                    <script src="assets/js/realtime.browser.min.js"></script>
+                    <!-- <script src="assets/js/av-live-query-min.js"></script> -->
                     
                     <script>
+                      var { Realtime, TextMessage } = AV;
+                      var APP_ID = '9neScXKQz4xvlVdiIzHIU1gB-gzGzoHsz';
+                      var APP_KEY = '80GjV1BaNFOTL0OU5e6ES4Qh';
+
+                      AV.init({
+                        appId: APP_ID,
+                        appKey: APP_KEY
+                      });
                       if (localStorage.getItem('userName') != null) {
                         window.location.href = "../index.html";
                       }
                       // Initialize Firebase
-                      var config = {
-                        apiKey: "AIzaSyCDqPVs6e1I1FJ29GkuXmzahRKSPff2yrQ",
-                        authDomain: "qinglongyx.firebaseapp.com",
-                        databaseURL: "https://qinglongyx.firebaseio.com",
-                        projectId: "qinglongyx",
-                        storageBucket: "qinglongyx.appspot.com",
-                        messagingSenderId: "77997953319"
-                      };
-                      firebase.initializeApp(config);
-                      const memData = firebase.database().ref('/memData/');
+                      // var config = {
+                      //   apiKey: "AIzaSyCDqPVs6e1I1FJ29GkuXmzahRKSPff2yrQ",
+                      //   authDomain: "qinglongyx.firebaseapp.com",
+                      //   databaseURL: "https://qinglongyx.firebaseio.com",
+                      //   projectId: "qinglongyx",
+                      //   storageBucket: "qinglongyx.appspot.com",
+                      //   messagingSenderId: "77997953319"
+                      // };
+                      // firebase.initializeApp(config);
+                      // const memData = firebase.database().ref('/memData/');
 
-                      let messages, userNameList, idNumberList;
-                      let userLogin, userNameSet;
-                      memData.on('value', function(snapshot) {
-                        const val = snapshot.val();
-                        userNameList = Object.values(val).map(item => item.account);
-                        idNumberList = Object.values(val).map(item => item.password); 
-                      }, function(error) {
-                        console.log(error);
-                      });
+                      // let messages, userNameList, idNumberList;
+                      // let userLogin, userNameSet;
+                      // memData.on('value', function(snapshot) {
+                      //   const val = snapshot.val();
+                      //   userNameList = Object.values(val).map(item => item.account);
+                      //   idNumberList = Object.values(val).map(item => item.password); 
+                      // }, function(error) {
+                      //   console.log(error);
+                      // });
                       
                       function signIn() {
                         let account = $('#form-username')[0].value;
                         let password = $('#form-password')[0].value;
+
                         if (account.length < 8 || password.length < 8) {
-                          window.alert("Something wrong with your ID number.");
+                          window.alert("Something wrong with your account or password .");
                           return false;
                         }
 
-                        if (account.trim() == '') { return; }
-                        const checkUserName = userNameList.findIndex(
-                          (item) => {
-                            return (item == account);
-                          });
-                        const checkNumberList = idNumberList.findIndex(
-                          (item) => {
-                            return (item == password);
-                          });
-                        const checkRegistered = (checkUserName == -1); 
-                        if (checkRegistered) {
-                          memData.push({
-                            account: account,
-                            type: 'text',
-                            password: password
-                            // timeStamp: vm.getTime()
-                          });
+                        if (account.trim() == '') { 
+                          window.alert("Something wrong with your account.");
+                          return false;
+                        }
+                        var user = new AV.User();
+                        user.setUsername(account);
+                        user.setPassword(password);
+                        user.signUp().then(function (loginedUser) {
                           localStorage.setItem('userName', account);
                           window.location.href = "../index.html";
-                        } else {
-                          window.alert("the userName or the ID Number is used.");
-                        }
+                          // 注册成功，跳转到商品 list 页面
+                        }, (function (error) {
+                          alert("Your account might be used already.");
+                        }));
                       }
                     </script>
                     <!-- <div class="row">
