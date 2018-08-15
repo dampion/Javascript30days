@@ -2,7 +2,7 @@
 html {
   font-family: 'Microsoft-Yahei', sans-serif;
   -webkit-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
+      -ms-text-size-adjust: 1200%;
 }
 body {
   margin: 0;
@@ -1274,10 +1274,10 @@ h2,
 .h2 {
   font-size: 30px;
 }
-h3,
+/* h3,
 .h3 {
   font-size: 24px;
-}
+} */
 h4,
 .h4 {
   font-size: 18px;
@@ -1468,12 +1468,12 @@ abbr[data-original-title] {
   font-size: 90%;
   text-transform: uppercase;
 }
-blockquote {
+/* blockquote {
   padding: 10px 20px;
   margin: 0 0 20px;
   font-size: 17.5px;
   border-left: 5px solid #eee;
-}
+} */
 blockquote p:last-child,
 blockquote ul:last-child,
 blockquote ol:last-child {
