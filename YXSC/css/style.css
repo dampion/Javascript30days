@@ -101,13 +101,6 @@ a#toTop{
   color: #fff;
   font-weight: bold;
 }
-.social i {
-width: 33px;
-height: 33px;
-background: url('../images/social.png') no-repeat 0px 0px;
-display: inline-block;
-margin:0 5px;
-}
 
 .search {
   position: relative;
@@ -1499,12 +1492,7 @@ display:block;
   margin: 0;
 }
 
-.social i {
-  background-size: 174px;
-  width: 28px;
-  height: 28px;
-  margin: 0 3px;
-}
+
 .Dp-container {
   width: 100%;
 }
@@ -1734,12 +1722,7 @@ ul.callbacks_tabs.callbacks1_tabs {
   margin: 0;
 }
 
-.social i {
-  background-size: 174px;
-  width: 28px;
-  height: 28px;
-  margin: 0 3px;
-}
+
 a i.facebook {
   background-position: -3px -5px;
 }
@@ -2330,26 +2313,6 @@ span.menu {
 }
 }
 @media(max-width:320px){
-.social i {
-  background-size: 130px;
-  width: 22px;
-  height: 20px;
-}
-a i.facebook {
-  background-position: -2px -4px;
-}
-a i.twitter {
-  background-position: -26px -4px;
-}
-a i.gplus {
-  background-position: -53px -4px;
-}
-a i.pin {
-  background-position: -78px -4px;
-}
-a i.youtube {
-  background-position: -104px -5px;
-}
 
 .glyphicon-earphone:before, .glyphicon-envelope:before {
   font-size: 14px;
