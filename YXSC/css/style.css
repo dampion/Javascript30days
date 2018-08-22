@@ -72,6 +72,7 @@ a#toTop{
   text-align: center;
   background: #d0021b;
   margin-bottom: 25px;
+  cursor: pointer;
 }
 .circleDivIntro p {
   color: #fff;
@@ -726,9 +727,9 @@ ul.callbacks_tabs.callbacks1_tabs {
   margin: 0;
 }
 .abt-info-pic p {
-  line-height: 1.7em;
+  line-height: 1.6em;
   margin-top: 1em;
-  font-size: 1em;
+  font-size: 16px;
   color: #777;
   font-weight: bold;
 }
@@ -739,7 +740,7 @@ ul.callbacks_tabs.callbacks1_tabs {
   list-style-image: url(../images/icon3.png);
   margin: 0 0 10px 20px;
   color: #9A9598;
-  font-size: 0.9em;
+  font-size: 14px;
   text-decoration: none;
 }
 .testimonals{
@@ -793,15 +794,15 @@ margin-top:3em;
 	margin: 0 3% 0% 0;
 }
 .team-grid p {
-  line-height: 1.8em;
+  line-height: 1.9em;
   color: #777;
 }
 .team-grid img {
 	width: 100%;
 }
 .team-grid h4{
-	  color:#69d2e8;
-  font-size: 1.3em;
+	color:#69d2e8;
+  font-size: 1.8em;
   margin:0.6em 0;
 }
 /*--reviews--*/
@@ -1653,7 +1654,7 @@ ul.callbacks_tabs.callbacks1_tabs {
   margin-top: 2em;
 }
 .testimonals h3, .team h3 {
-  font-size: 1.5em;
+  font-size: 2.3em;
 }
 .team-grid h4 {
   font-size: 0.95em;
@@ -2471,7 +2472,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 .team-grid h4 {
 }
 .team-grid p{
-	line-height:1.5em;
+	line-height:1.9em;
 }
 .ftr-info p {
   font-size: 0.75em;
