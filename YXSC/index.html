@@ -23,30 +23,22 @@
 <div class="top-banner">
 	<div class="header">
 		<div class="container banner-container">
-      <div class="headr-left">
-          <div class="social">
-            <!-- <img src="images/qinglongicon.png" /> -->
+      <div class="headr-left col-sm-6 col-3">
+          <div class="social active">
+          	<a href="index.html" id="homeUrl">首页 <span class="phone">www.91chcf.com</span></a>
           </div>
-          <p style="color: #fff;">请记住我们的网址 <a href="index.html" style="color: pink; ">www.91chcf.com</a>，以便您下次登录继续游戏。</p>
         </div>
-			<div class="headr-right">
+			<div class="headr-right col-sm-6 col-9">
 				<div class="details">
 					<ul style="margin: 0px;display: flex;">
-						<!-- <li>
-							<p style="margin: 0px;">
-								<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-								qlyx@qq.com
-							</p>
-						</li> -->
-						<!-- <li style="cursor: pointer;">
-							<a href="cart.html" style="font-weight: 600;">
-								<img src="images/cart.svg" width="25" height="25" style="margin-right: 8px;vertical-align: bottom;" />
-								购物车
-							</a>
-						</li> -->
-						<li class="QLcoin">
+						<li class="QLcoin" id="guestCoin">
 							<a href="single.html" style="font-weight: 600;">
 								青龙币储值
+							</a>
+						</li>
+						<li class="QLcoin" id="memberCoin" style="display: none;">
+							<a href="single.html" style="font-weight: 600;" id="QLcoin">
+								青龙币 0 元
 							</a>
 						</li>
 						<li id="guest">
@@ -56,8 +48,8 @@
 								<span class="home_register"><a href="form-2/register.html">注册</a></span></p>
 						</li>
 						<li id="member" style="display: none;">
-							<p href="single.html" style="font-weight: 600;">
-								您好，<span class="home_login"><a href="form-2/index.html" id="accountName"></a></span>
+							<p href="single.html" style="font-weight: 600;" id="loginMem">
+								您好，<span class="home_login"><a href="form-2/index.html" id="accountName" style="font-weight: 600;color: #fff;"></a></span>
 								&nbsp;&nbsp;|&nbsp;&nbsp;
 								<span class="home_register" onclick="logout()">退出 </span></p>
 						</li>
@@ -66,12 +58,19 @@
 			</div>
 		</div>
 	</div>
+	
 	<script>
 		let userName = localStorage.getItem('userName');
 		if (userName !== null) {
 			$('#member')[0].style.display = 'block';
 			$('#guest')[0].style.display = 'none';
 			$('#accountName')[0].innerHTML = userName;
+			$('#homeUrl')[0].style.fontWeight = 400;
+			$('#loginMem')[0].style.fontWeight = 400;
+			$('#accountName')[0].style.fontWeight = 400;
+			$('#QLcoin')[0].style.color = '#fff';
+			$('#guestCoin')[0].style.display = 'none';
+			$('#memberCoin')[0].style.display = 'block';
 		}
 
 		//LOGOUT
@@ -80,53 +79,46 @@
 			window.location.reload();
 		}
 	</script>
-	<!--banner-info-->	
-	<div class="banner-info">
-		<div class="container bannerContainer">
-			<div class="logo">
-				<img src="images/qinglongicon.png" width="60" height="60"
-				style="margin-top: 17px;margin-right: 10px;" />
-				<h1>
-					<a href="index.html">
+</div>
+<!--banner-info-->	
+<div class="banner-info">
+	<div class="container bannerContainer">
+		<div class="logo">
+			<img src="images/qinglongicon.png" width="60" height="60"
+			style="margin-top: 5px;margin-right: 10px;" />
+			<h2>
+				<a href="index.html">
 					青龙游戏
-					<p style="font-size: 16px;padding-left: 5px;">www.91chcf.com</p>
+					<p class="phone">www.91chcf.com</p>
 				</a>
-				</h1>
-				
-			</div>
-			<div class="top-menu">
-				<span class="menu"></span>
-				<ul class="nav1">
-					<li class="active"><a href="index.html">首页</a></li>
-					<li><a href="about.html">关于我们</a></li>
-					<li><a href="reviews.html">攻略心得</a></li>
-					<li><a href="gallery.html">精彩画面</a></li>
-					<li><a href="contact.html">联系我们</a></li>
-				</ul>
-			</div>	
-	 		<!-- script-for-menu -->
-			<script>
-				$( "span.menu" ).click(function() {
-					$( "ul.nav1" ).slideToggle( 300, function() {
-						// Animation complete.
-					});
-				});
-			</script>
-			<!-- /script-for-menu -->
-			<div class="clearfix"></div>
+			</h2>
 		</div>
+		<div class="top-menu">
+			<span class="menu"></span>
+			<ul class="nav1">
+				<li class="active"></li>
+				<li><a href="about.html">关于我们</a></li>
+				<li><a href="reviews.html">产品中心</a></li>
+				<!-- <li><a href="gallery.html">精美画面</a></li> -->
+				<li><a href="contact.html">联系我们</a></li>
+			</ul>
+		</div>	
+ 		<!-- script-for-menu -->
+		<script>
+			$( "span.menu" ).click(function() {
+				$( "ul.nav1" ).slideToggle( 300, function() {
+					// Animation complete.
+				});
+			});
+		</script>
+		<!-- /script-for-menu -->
 	</div>
 </div>
-<!-- banner -->
+
+	<!-- banner -->
 	 <!-- Slider-starts-Here -->
 	 <script src="js/responsiveslides.min.js"></script>
 	 <script>
-	 	function donothing() {
-	 		alert("亲，网站还在建置中，咱再等会儿～");
-	 	}
-	 	function search() {
-	 		alert("亲，网站还在建置中，咱再等会儿～");
-	 	}
 		$(function () {
 		  $("#slider").responsiveSlides({
 			auto:true,
@@ -141,7 +133,7 @@
 		  <div class="callbacks_container">
 			  <ul class="rslides" id="slider">
 				
-					<div class="slid banner1">
+					<div class="slid banner1" onclick="enterTrailer('golemgates.jpeg')" style="cursor: pointer;">
 						  <div class="caption">
 								<h3>准备好在游戏场上成为最强的领导者吗?</h3>
 								<p>游戏里面有着意想不到的剧情，想要获得最高的荣誉就赶紧加入我们,为诺克萨斯星球奋斗吧．</p>
@@ -149,7 +141,7 @@
 					</div>
 				
 				
-					<div class="slid banner2">	
+					<div class="slid banner2" onclick="enterTrailer('batman.jpg')" style="cursor: pointer;">	
 						<div class="caption">
 							<h3>超低价格，简单激活，蓝洞授权，闪电授权.</h3>
 							<p>现在购买既可以享有Steam国区95折优惠．</p>
@@ -157,7 +149,7 @@
 					</div>
 				
 				
-					<div class="slid banner3">	
+					<div class="slid banner3" onclick="enterTrailer('heaven.jpg')" style="cursor: pointer;">	
 						<div class="caption">
 							<h3>功夫老鼠：传奇重生 </h3>
 							<p>世界正处于灾难边缘。臭名昭着的恶魔控制了这个星球。隻有一个人可以拯救我们：一个叫沙飞鸿的可怜中国孤儿。我们的英雄必须前往遥远的地方，销毁这些一心想要搞破坏的流行偶像的锐气。他会成功吗？他当然会。他可是沙飞鸿。</p>
@@ -168,87 +160,18 @@
 		 </div>
 	 </div>
 
-<!-- content -->
-<div class="content">
-	 <div class="container">
-		 <div class="top-games">
-			 <h3>热卖 游戏</h3>
-			 <span></span>
-		 </div>
-		 <div class="top-game-grids">
-			 <ul id="flexiselDemo1">
-				 <li>
-					 <div class="game-grid">
-						 <h4>动作 游戏</h4>
-						 <p>绝地求生大逃杀 PC版</p>
-						 <img src="images/t1.jpg" class="img-responsive" alt=""/>
-					 </div>	
-				 </li>
-				 <li>
-					 <div class="game-grid">
-						 <h4>飙车 世界</h4>
-						 <p>侠盗猎车手3 PC版</p>
-						 <img src="images/t3.jpg" class="img-responsive" alt=""/>
-					 </div>
-				 </li>
-				 <li>
-					 <div class="game-grid">
-						 <h4>3D 游戏体验</h4>
-						 <p>深蓝色3D迷宫 PC版 中文版</p>
-						 <img src="images/t4.jpg" class="img-responsive" alt=""/>
-					 </div>
-				 </li>
-				 <li>
-					 <div class="game-grid">
-						 <h4>街机 游戏</h4>
-						 <p>终极街头霸王4 PC版 中文</p>
-						 <img src="images/t2.jpg" class="img-responsive" alt=""/>
-					 </div>	
-				 </li>				 				 	
-			 </ul>
-			 
-			 <script type="text/javascript">
-				 $(window).load(function() {			
-				  $("#flexiselDemo1").flexisel({
-					visibleItems: 4,
-					animationSpeed: 1000,
-					autoPlay: true,
-					autoPlaySpeed: 3000,    		
-					pauseOnHover:true,
-					enableResponsiveBreakpoints: true,
-					responsiveBreakpoints: { 
-						portrait: { 
-							changePoint:480,
-							visibleItems: 1
-						}, 
-						landscape: { 
-							changePoint:640,
-							visibleItems: 2
-						},
-						tablet: { 
-							changePoint:768,
-							visibleItems: 3
-						}
-					}
-				});
-				});
-			</script>
-			<script type="text/javascript" src="js/jquery.flexisel.js"></script>	
-		 </div>
-	 </div>
-</div>
 <!-- latest -->
 <div class="latest">
 	 <div class="container">
 		 <div class="latest-games">
-			 <h3>最新 上架</h3>
+			 <h3>最新 火热上架</h3>
 			 <span></span>
 		 </div>
 		 <div class="latest-top">				
 				<div class="col-md-5 trailer-text">
-				  <div class="sub-trailer">
+				  <div class="sub-trailer" onclick="enterTrailer('v2.jpg')">
 				    <div class="col-md-4 sub-img">
-							<img src="images/v2.jpg" alt="img07"/>
+							<img src="images/v2sub.png" alt="img07"/>
 					  </div>
 					  <div class="col-md-8 sub-text">
 					   	<a>僵尸杀手：重生 PC版</a>
@@ -256,9 +179,9 @@
 					  </div>
 					  <div class="clearfix"> </div>
 				  </div>
-				    <div class="sub-trailer">
+				    <div class="sub-trailer" onclick="enterTrailer('walkingdead.jpg')">
 				      <div class="col-md-4 sub-img">
-								<img src="images/v1.jpg" alt="img07"/>
+								<img src="images/the-walking-dead.jpg" alt=""/>
 					   	</div>
 					  	<div class="col-md-8 sub-text">
 					   		<a> 超杀：行尸走肉 PC版</a>
@@ -266,9 +189,9 @@
 					   	</div>
 					  <div class="clearfix"> </div>
 				  </div>
-				  <div class="sub-trailer">
+				  <div class="sub-trailer" onclick="enterTrailer('re5.jpg')">
 				    <div class="col-md-4 sub-img">
-							<img src="images/v3.jpg" alt="img07"/>
+							<img src="images/re5.jpg" alt=""/>
 					  </div>
 					  <div class="col-md-8 sub-text">
 					   	<a>怒火判官 PC版</a>
@@ -290,15 +213,93 @@
 			</div>
 	 </div>
 </div>
+<script>
+	function enterTrailer(image) {
+		let newlink = document.createElement('a');
+		newlink.setAttribute('href', 'intro.html?'+image);
+		newlink.click();
+	}
+</script>
+
+<!-- content -->
+<div class="content" style="margin-bottom: 80px;">
+	 <div class="container topGameContainer">
+		 <div class="top-games">
+			 <h3>热卖 游戏</h3>
+			 <span></span>
+		 </div>
+		 <div class="top-game-grids">
+			 <ul id="flexiselDemo1">
+				 <li onclick="enterTrailer('driving2.jpg')">
+					 <div class="game-grid">
+						 <h4>动作 游戏</h4>
+						 <p>绝地求生大逃杀 PC版</p>
+						 <img src="images/t1.jpg" class="img-responsive" alt=""/>
+					 </div>	
+				 </li>
+				 <li onclick="enterTrailer('driving.jpg')">
+					 <div class="game-grid">
+						 <h4>飙车 世界</h4>
+						 <p>侠盗猎车手3 PC版</p>
+						 <img src="images/t3.jpg" class="img-responsive" alt=""/>
+					 </div>
+				 </li>
+				 <li onclick="enterTrailer('piranda.jpg')">
+					 <div class="game-grid">
+						 <h4>3D 游戏体验</h4>
+						 <p>深蓝色3D迷宫 PC版 中文版</p>
+						 <img src="images/t4.jpg" class="img-responsive" alt=""/>
+					 </div>
+				 </li>
+				 <li onclick="enterTrailer('runaway.jpg')">
+					 <div class="game-grid">
+						 <h4>街机 游戏</h4>
+						 <p>终极街头霸王4 PC版 中文</p>
+						 <img src="images/t2.jpg" class="img-responsive" alt=""/>
+					 </div>	
+				 </li>				 				 	
+			 </ul>
+			 
+			 <script type="text/javascript">
+				 $(window).load(function() {			
+				  $("#flexiselDemo1").flexisel({
+					visibleItems: 4,
+					animationSpeed: 1000,
+					autoPlay: true,
+					autoPlaySpeed: 3000,    		
+					pauseOnHover:true,
+					enableResponsiveBreakpoints: true,
+						responsiveBreakpoints: { 
+							portrait: { 
+								changePoint:480,
+								visibleItems: 2
+							}, 
+							landscape: { 
+								changePoint:640,
+								visibleItems: 2
+							},
+							tablet: { 
+								changePoint:768,
+								visibleItems: 3
+							}
+						}
+					});
+				});
+			</script>
+			<script type="text/javascript" src="js/jquery.flexisel.js"></script>	
+		 </div>
+	 </div>
+</div>
+
 <!-- poster -->
-<div class="poster">
-	<div class="container">
+<div class="poster" onclick="enterTrailer('ghostgame.jpg')">
+	<div class="container" style="min-height:  500px;">
 		<div class="poster-info">
 			<h3>Raging Justice</h3>
 			<p>Raging Justice是一款史诗般的横版格斗闯关游戏，它将爲21 世纪带来充斥着击打和怒吼的野性魅力。
 			 这座城市一片溷乱！犯罪和腐败处于曆史最高水平，暴徒正在四处肆虐。在破败的街道上，你需要用铁拳和怒吼来将这些家伙绳之以法。</p>
 			<!-- <a class="hvr-bounce-to-bottom" href="reviews.html">前往 专区</a> -->
-			<a class="hvr-bounce-to-bottom" href="gallery.html">精彩画面</a>
+			<a class="hvr-bounce-to-bottom" href="intro.html?ghostgame.jpg">产品中心</a>
 		</div>
 	</div>
 </div>
@@ -307,16 +308,15 @@
 	 <div class="container">	
 		 <div class="x-box_sec">
 			 <div class="col-md-7 x-box-left">
-				 <h2>Xbox One X</h2>
-				 <h3>世界上最强大的控制台</h3>
-				 <p>比任何其他游戏主机强大 40%，让您体验真正的 4K 游戏享受。Xbox One X 让游戏变得更好玩。8 核心自订 AMD CPU 的测量结果为 2.3GHz，可将先进的 AI、逼真的细节和更顺畅的互动方式带到您的游戏中。12GB GDDR5 图形记忆体可提升游戏的速度和效能，带来更宽广的世界、更开阔的视野，以及更快的载入速度</p>
+				 <h2>PS4</h2>
+				 <h3>超乎想像的持续进化</h3>
+				 <p>比任何其他游戏主机强大 40%，让您体验真正的 4K 游戏享受。PS4 让游戏变得更好玩。8 核心自订 AMD CPU 的测量结果为 2.3GHz，可将先进的 AI、逼真的细节和更顺畅的互动方式带到您的游戏中。12GB GDDR5 图形记忆体可提升游戏的速度和效能，带来更宽广的世界、更开阔的视野，以及更快的载入速度</p>
 				 <!-- <a class="hvr-bounce-to-top" href="reviews.html">前往 专区</a> -->
-				 <a class="hvr-bounce-to-top" href="https://www.microsoftstore.com.cn/c/xbox?OCID%3dAID695938_SEM_W3G5MAAAAV@Nzefk:20180813170032:s&s_kwcid=AL!4559!88!23331838722!!70334934797&ef_id=W3G5MAAAAV@Nzefk:20180813170032:s">前往 专区</a>
+				 <a class="hvr-bounce-to-top" href="https://www.playstation.com/en-us/explore/ps4/" target="_blank">前往 专区</a>
 			 </div>
 			 <div class="col-md-5 x-box-right">
-				 <img src="images/xbox.jpg" class="img-responsive" alt=""/>
+				 <img src="images/ps4.png" class="img-responsive" alt=""/>
 			 </div>
-			 <div class="clearfix"></div>
 		 </div>
 	 </div>
 </div>
@@ -343,10 +343,10 @@
 			<div class="col-md-3 ftr-grid">
 				<h3>游戏平台</h3>
 				<ul class="ftr-list">
-				 	<li><a href="https://baike.baidu.com/item/%E4%B8%AA%E4%BA%BA%E8%AE%A1%E7%AE%97%E6%9C%BA/3731770?fromtitle=pc&fromid=107&fr=aladdin">PC</a></li>
-				 	<li><a href="http://www.playstation.com.cn/">Play Station</a></li>
-					<li><a href="https://www.xbox.com/en-US/games/xbox-360">XBOX 360</a></li>
-					<li><a href="https://www.xbox.com/en-US/">XBOX ONE</a></li>
+				 	<li><a href="https://baike.baidu.com/item/%E4%B8%AA%E4%BA%BA%E8%AE%A1%E7%AE%97%E6%9C%BA/3731770?fromtitle=pc&fromid=107&fr=aladdin" target="_blank">PC</a></li>
+				 	<li><a href="http://www.playstation.com.cn/" target="_blank">Play Station</a></li>
+					<li><a href="https://www.xbox.com/en-US/games/xbox-360" target="_blank">XBOX 360</a></li>
+					<li><a href="https://www.xbox.com/en-US/" target="_blank">XBOX ONE</a></li>
 				</ul>				 
 			</div>
 			<div class="col-md-3 ftr-grid">
@@ -354,8 +354,8 @@
 				<ul class="ftr-list">	
 					<li><a href="index.html">首页</a></li>
 					<li><a href="about.html">关于我们</a></li>
-					<li><a href="gallery.html">精彩画面</a></li>
-					<li><a href="reviews.html">攻略心得</a></li> 
+					<!-- <li><a href="gallery.html">精美画面</a></li> -->
+					<li><a href="reviews.html">产品中心</a></li> 
 				</ul>				 
 			</div>		
 		  <div class="clearfix"></div>

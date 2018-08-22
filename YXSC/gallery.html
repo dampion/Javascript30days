@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<title>精彩画面</title>
+	<title>精美画面</title>
 	<!-- add all the script for the js we nedd -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery (necessary JavaScript plugins) -->
@@ -24,30 +24,22 @@
 <div class="top-banner">
 	<div class="header">
 		<div class="container banner-container">
-      <div class="headr-left">
-        <div class="social">
-          <!-- <img src="images/qinglongicon.png" /> -->
+      <div class="headr-left col-sm-6 col-3">
+          <div class="social active">
+          	<a href="index.html" id="homeUrl">首页 <span class="phone">www.91chcf.com</span></a>
+          </div>
         </div>
-        <p style="color: #fff;">请记住我们的网址 <a href="index.html" style="color: pink; ">www.91chcf.com</a>，以便您下次登录继续游戏。</p>
-      </div>
-			<div class="headr-right">
+			<div class="headr-right col-sm-6 col-9">
 				<div class="details">
 					<ul style="margin: 0px;display: flex;">
-						<!-- <li>
-							<p style="margin: 0px;">
-								<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-								qlyx@qq.com
-							</p>
-						</li>
-						<li style="cursor: pointer;">
-							<a href="cart.html" style="font-weight: 600;">
-								<img src="images/cart.svg" width="25" height="25" style="margin-right: 8px;vertical-align: bottom;" />
-								购物车
-							</a>
-						</li> -->
-						<li class="QLcoin">
+						<li class="QLcoin" id="guestCoin">
 							<a href="single.html" style="font-weight: 600;">
 								青龙币储值
+							</a>
+						</li>
+						<li class="QLcoin" id="memberCoin" style="display: none;">
+							<a href="single.html" style="font-weight: 600;" id="QLcoin">
+								青龙币 0 元
 							</a>
 						</li>
 						<li id="guest">
@@ -57,8 +49,8 @@
 								<span class="home_register"><a href="form-2/register.html">注册</a></span></p>
 						</li>
 						<li id="member" style="display: none;">
-							<p href="single.html" style="font-weight: 600;">
-								您好，<span class="home_login"><a href="form-2/index.html" id="accountName"></a></span>
+							<p href="single.html" style="font-weight: 600;" id="loginMem">
+								您好，<span class="home_login"><a href="form-2/index.html" id="accountName" style="font-weight: 600;color: #fff;"></a></span>
 								&nbsp;&nbsp;|&nbsp;&nbsp;
 								<span class="home_register" onclick="logout()">退出 </span></p>
 						</li>
@@ -67,12 +59,19 @@
 			</div>
 		</div>
 	</div>
+	
 	<script>
 		let userName = localStorage.getItem('userName');
 		if (userName !== null) {
 			$('#member')[0].style.display = 'block';
 			$('#guest')[0].style.display = 'none';
 			$('#accountName')[0].innerHTML = userName;
+			$('#homeUrl')[0].style.fontWeight = 400;
+			$('#loginMem')[0].style.fontWeight = 400;
+			$('#accountName')[0].style.fontWeight = 400;
+			$('#QLcoin')[0].style.color = '#fff';
+			$('#guestCoin')[0].style.display = 'none';
+			$('#memberCoin')[0].style.display = 'block';
 		}
 
 		//LOGOUT
@@ -86,22 +85,20 @@
 		<div class="container bannerContainer">
 			<div class="logo">
 				<img src="images/qinglongicon.png" width="60" height="60"
-				style="margin-top: 17px;margin-right: 10px;" />
-				<h1>
+				style="margin-top: 5px;margin-right: 10px;" />
+				<h2>
 					<a href="index.html">
-					青龙游戏
-					<p style="font-size: 16px;padding-left: 5px;">www.91chcf.com</p>
-				</a>
-				</h1>
-				
+						青龙游戏
+						<p>www.91chcf.com</p>
+					</a>
+				</h2>
 			</div>
 			<div class="top-menu">
 				<span class="menu"></span>
 				<ul class="nav1">
-					<li><a href="index.html">首页</a></li>
 					<li><a href="about.html">关于我们</a></li>
-					<li><a href="reviews.html">攻略心得</a></li>
-					<li class="active"><a href="gallery.html">精彩画面</a></li>
+					<li><a href="reviews.html">产品中心</a></li>
+					<li class="active"><a href="gallery.html">精美画面</a></li>
 					<li><a href="contact.html">联系我们</a></li>
 				</ul>
 			</div>	
@@ -119,14 +116,16 @@
 	</div>
 </div>
 <!-- banner -->
-<div class="banner">		  			
+<!-- <div class="banner">		  			
 		<div class="bnr2">						  
 	   </div>			 
-</div>
+</div> -->
 <!----> 
 <div class="gallery">
 		<div class="container">
-			<h2>精彩画面</h2>
+			<div class="circleDiv">
+				<h2>精美 画面</h2>
+			</div>
 			<div class="gallery-bottom">
 				<div class="gallery-1">
 					<div class="col-md-3 gallery-grid">
@@ -210,8 +209,8 @@
 				<ul class="ftr-list">	
 					<li><a href="index.html">首页</a></li>
 					<li><a href="about.html">关于我们</a></li>
-					<li><a href="gallery.html">精彩画面</a></li>
-					<li><a href="reviews.html">攻略心得</a></li> 
+					<li><a href="gallery.html">精美画面</a></li>
+					<li><a href="reviews.html">产品中心</a></li> 
 				</ul>				 
 			</div>		
 		  <div class="clearfix"></div>

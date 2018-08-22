@@ -24,7 +24,7 @@
     		responsiveBreakpoints: { 
 	    		portrait: { 
 	    			changePoint:480,
-	    			visibleItems: 1
+	    			visibleItems: 2
 	    		}, 
 	    		landscape: { 
 	    			changePoint:640,

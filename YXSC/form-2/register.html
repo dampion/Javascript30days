@@ -34,44 +34,63 @@
 
         <!-- Top content -->
         <div class="top-content">
-        	
+          
             <div class="inner-bg">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-8 col-sm-offset-2 text">
                             <h1><strong>注册 </strong> 青龙游戏</h1>
                             <div class="description">
-                            	<p>
-	                            	注册青龙游戏，享有最新、疯狂又刺激的游戏世界
-	                            	定时签到即可享有  <strong>独代游戏体验</strong>, 你还在等啥呢!
-                            	</p>
+                              <p>
+                                注册青龙游戏，享有最新、疯狂又刺激的游戏世界
+                                定时签到即可享有  <strong>独代游戏体验</strong>, 你还在等啥呢!
+                              </p>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-sm-6 col-sm-offset-3 form-box">
-                        	<div class="form-top">
-                        		<div class="form-top-left">
-                        			<h3>注册</h3>
-                            		<p>输入账号密码信息:</p>
-                        		</div>
-                        		<div class="form-top-right">
-                        			<i class="fa fa-lock"></i>
-                        		</div>
+                          <div class="form-top">
+                            <div class="form-top-left">
+                              <h3>注册</h3>
+                                <p>输入账号密码信息:</p>
+                            </div>
+                            <div class="form-top-right">
+                              <i class="fa fa-lock"></i>
+                            </div>
                             </div>
                             <div class="form-bottom">
-			                    <!-- <form role="form"  class="login-form"> -->
-			                    	<div class="form-group">
-			                    		<label class="sr-only" for="form-username">账号</label>
-			                        	<input type="text" name="form-username" placeholder="账号(至少大于8码)" class="form-username form-control" id="form-username">
-			                        </div>
-			                        <div class="form-group">
-			                        	<label class="sr-only" for="form-password">密码</label>
-			                        	<input type="password" name="form-password" placeholder="密码(至少大于8码)" class="form-password form-control" id="form-password">
-			                        </div>
-			                        <button type="text" class="btn" onclick="signIn()">送出!</button>
-			                    <!-- </form> -->
-		                    </div>
+                          <!-- <form role="form"  class="login-form"> -->
+                            <div class="form-group">
+                              <label class="sr-only" for="form-username">账号</label>
+                              <input type="text" name="form-username" placeholder="账号 ( 至少大于8码 )" class="form-username form-control" id="form-username">
+                            </div>
+                            <div class="form-group">
+                              <label class="sr-only" for="form-password">设置电子邮箱</label>
+                              <input type="text" name="form-email" placeholder="设置电子邮箱" class="form-password form-control" id="form-email">
+                            </div>
+                            <div class="form-group">
+                              <label class="sr-only" for="form-password">设置密码</label>
+                              <input type="password" name="form-password" placeholder="设置密码 ( 至少大于8码 )" class="form-password form-control" id="form-password">
+                            </div>
+                            <div class="form-group">
+                              <label class="sr-only" for="form-password">确认密码</label>
+                              <input type="password" name="form-checkPassword" placeholder="确认密码" class="form-password form-control" id="form-checkPassword">
+                            </div>
+                            <div class="form-group">
+                              <label class="sr-only" for="form-password">真实姓名</label>
+                              <input type="text" name="form-name" placeholder="真实姓名( 请填写真实姓名,2-4个汉字(例如：张三) )" class="form-password form-control" id="form-name">
+                            </div>
+                            <div class="form-group">
+                              <label class="sr-only" for="form-password">身份证号</label>
+                              <input type="password" name="form-id" placeholder="请准确填写身份证号码" class="form-password form-control" id="form-id">
+                            </div>
+                            <div style="display: flex;justify-content: space-between;">
+                              <button type="text" class="btn" onclick="signIn()">送出!</button>
+                              <p style="margin:0;padding-top: 10px;">已有青龙账号? <a href="./index.html">立即登录</a></p>
+                            </div>
+                          <!-- </form> -->
+                        </div>
                         </div>
                     </div>
                     <!-- <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script> -->
@@ -119,14 +138,42 @@
                       function signIn() {
                         let account = $('#form-username')[0].value;
                         let password = $('#form-password')[0].value;
+                        let id = $('#form-id')[0].value;
+                        let name = $('#form-name')[0].value;
+                        let email = $('#form-email')[0].value;
+                        let checkPassword = $('#form-checkPassword')[0].value;
+                        let mem = [account, password, id, name, email, checkPassword];
+                        let findEmpty = mem.find( (item) => {
+                          return item.length == 0;
+                        })
+                        if (findEmpty == '') {
+                          window.alert("亲，忘了填资料了吗，列表不能为空哦！");
+                          return false;
+                        }
+                        if (name.length > 4 || name.length < 2) {
+                          window.alert("亲，您的名字出了点问题呢！");
+                          return false;
+                        }
+                        if (email.includes('@')) {
+                          window.alert("亲，您的邮箱出了点问题呢！");
+                          return false;
+                        }
+                        if (password != checkPassword) {
+                          window.alert("亲，您的密码不一致呢！");
+                          return false;
+                        }
+                        if (name.length > 4 || name.length < 2) {
+                          window.alert("亲，您的名字出了点问题呢！");
+                          return false;
+                        }
 
                         if (account.length < 8 || password.length < 8) {
-                          window.alert("Something wrong with your account or password .");
+                          window.alert("亲，您的账号或者密码不对哦！");
                           return false;
                         }
 
                         if (account.trim() == '') { 
-                          window.alert("Something wrong with your account.");
+                          window.alert("亲，您的账号可能要再修改哦！");
                           return false;
                         }
                         var user = new AV.User();
@@ -137,24 +184,24 @@
                           window.location.href = "../index.html";
                           // 注册成功，跳转到商品 list 页面
                         }, (function (error) {
-                          alert("Your account might be used already.");
+                          alert("此账号已经被注册啦~亲！");
                         }));
                       }
                     </script>
                     <!-- <div class="row">
                         <div class="col-sm-6 col-sm-offset-3 social-login">
-                        	<h3>...or login with:</h3>
-                        	<div class="social-login-buttons">
-	                        	<a class="btn btn-link-2" href="#">
-	                        		<i class="fa fa-facebook"></i> Facebook
-	                        	</a>
-	                        	<a class="btn btn-link-2" href="#">
-	                        		<i class="fa fa-twitter"></i> Twitter
-	                        	</a>
-	                        	<a class="btn btn-link-2" href="#">
-	                        		<i class="fa fa-google-plus"></i> Google Plus
-	                        	</a>
-                        	</div>
+                          <h3>...or login with:</h3>
+                          <div class="social-login-buttons">
+                            <a class="btn btn-link-2" href="#">
+                              <i class="fa fa-facebook"></i> Facebook
+                            </a>
+                            <a class="btn btn-link-2" href="#">
+                              <i class="fa fa-twitter"></i> Twitter
+                            </a>
+                            <a class="btn btn-link-2" href="#">
+                              <i class="fa fa-google-plus"></i> Google Plus
+                            </a>
+                          </div>
                         </div>
                     </div> -->
                 </div>

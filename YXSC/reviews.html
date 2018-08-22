@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<title>攻略心得</title>
+	<title>产品中心</title>
 	<!-- add all the script for the js we nedd -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery (necessary JavaScript plugins) -->
@@ -23,30 +23,22 @@
 <div class="top-banner">
 	<div class="header">
 		<div class="container banner-container">
-      <div class="headr-left">
-        <div class="social">
-          <!-- <img src="images/qinglongicon.png" /> -->
+      <div class="headr-left col-sm-6 col-3">
+          <div class="social active">
+          	<a href="index.html" id="homeUrl">首页 <span class="phone">www.91chcf.com</span></a>
+          </div>
         </div>
-        <p style="color: #fff;">请记住我们的网址 <a href="index.html" style="color: pink; ">www.91chcf.com</a>，以便您下次登录继续游戏。</p>
-      </div>
-			<div class="headr-right">
+			<div class="headr-right col-sm-6 col-9">
 				<div class="details">
 					<ul style="margin: 0px;display: flex;">
-						<!-- <li>
-							<p style="margin: 0px;">
-								<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-								qlyx@qq.com
-							</p>
-						</li>
-						<li style="cursor: pointer;">
-							<a href="cart.html" style="font-weight: 600;">
-								<img src="images/cart.svg" width="25" height="25" style="margin-right: 8px;vertical-align: bottom;" />
-								购物车
-							</a>
-						</li> -->
-						<li class="QLcoin">
+						<li class="QLcoin" id="guestCoin">
 							<a href="single.html" style="font-weight: 600;">
 								青龙币储值
+							</a>
+						</li>
+						<li class="QLcoin" id="memberCoin" style="display: none;">
+							<a href="single.html" style="font-weight: 600;" id="QLcoin">
+								青龙币 0 元
 							</a>
 						</li>
 						<li id="guest">
@@ -56,8 +48,8 @@
 								<span class="home_register"><a href="form-2/register.html">注册</a></span></p>
 						</li>
 						<li id="member" style="display: none;">
-							<p href="single.html" style="font-weight: 600;">
-								您好，<span class="home_login"><a href="form-2/index.html" id="accountName"></a></span>
+							<p href="single.html" style="font-weight: 600;" id="loginMem">
+								您好，<span class="home_login"><a href="form-2/index.html" id="accountName" style="font-weight: 600;color: #fff;"></a></span>
 								&nbsp;&nbsp;|&nbsp;&nbsp;
 								<span class="home_register" onclick="logout()">退出 </span></p>
 						</li>
@@ -66,12 +58,19 @@
 			</div>
 		</div>
 	</div>
+	
 	<script>
 		let userName = localStorage.getItem('userName');
 		if (userName !== null) {
 			$('#member')[0].style.display = 'block';
 			$('#guest')[0].style.display = 'none';
 			$('#accountName')[0].innerHTML = userName;
+			$('#homeUrl')[0].style.fontWeight = 400;
+			$('#loginMem')[0].style.fontWeight = 400;
+			$('#accountName')[0].style.fontWeight = 400;
+			$('#QLcoin')[0].style.color = '#fff';
+			$('#guestCoin')[0].style.display = 'none';
+			$('#memberCoin')[0].style.display = 'block';
 		}
 
 		//LOGOUT
@@ -85,23 +84,20 @@
 		<div class="container bannerContainer">
 			<div class="logo">
 				<img src="images/qinglongicon.png" width="60" height="60"
-				style="margin-top: 17px;margin-right: 10px;" />
-				<h1>
+				style="margin-top: 5px;margin-right: 10px;" />
+				<h2>
 					<a href="index.html">
-					青龙游戏
-					<p style="font-size: 16px;padding-left: 5px;">www.91chcf.com</p>
-				</a>
-				</h1>
-				
+						青龙游戏
+						<p>www.91chcf.com</p>
+					</a>
+				</h2>
 			</div>
 			<div class="top-menu">
 				<span class="menu"></span>
 				<ul class="nav1">
-					<li><a href="index.html">首页</a></li>
-
 					<li><a href="about.html">关于我们</a></li>
-					<li class="active"><a href="reviews.html">攻略心得</a></li>
-					<li><a href="gallery.html">精彩画面</a></li>
+					<li class="active"><a href="reviews.html">产品中心</a></li>
+					<!-- <li><a href="gallery.html">精美画面</a></li> -->
 					<li><a href="contact.html">联系我们</a></li>
 				</ul>
 			</div>	
@@ -119,31 +115,31 @@
 	</div>
 </div>
 <!-- banner -->
-<div class="banner">		  			
+<!-- <div class="banner">		  			
 		<div class="bnr2">						  
 	   </div>			 
-</div>
+</div> -->
 <!-- content -->
 <div class="review">
 	 <div class="container">
-		 <h2 >攻略青龙</h2>
+		 <div class="circleDiv"><h2 >攻略 青龙</h2></div>
 		 <div class="review-md1">
 				 <div class="col-md-4 sed-md">
-				 	 <div class=" col-1">
+				 	 <div class=" col-1 fixHeight">
 						 <a href="intro.html?re7.jpg"><img class="img-responsive" src="images/re7.jpg" alt=""></a>
-					 	<h4><a href="intro.html?re7.jpg">机甲戰神</a></h4>
+					 	<h4><a href="intro.html?re7.jpg">机甲战神</a></h4>
 						<p>人类与来自几万光年的幸存者一同抵抗宇宙的侵略帝国，地球上充满敌人觊觎的丰富的资源，我们该如何抵抗才能存活下去呢......</p>
 					 </div>
 				 </div>
 				  <div class="col-md-4 sed-md">
-				 	 <div class=" col-1">
+				 	 <div class=" col-1 fixHeight">
 						 <a href="intro.html?re1.jpg"><img class="img-responsive" src="images/re1.jpg" alt=""></a>
 					 	<h4><a href="intro.html?re1.jpg">铁甲奇侠</a></h4>
 						<p>一个人的力量到底能够拥有多少，为了这个世界，铁甲奇侠不断研发最新武器，并且在过程中认识各路英雄好汉，究竟铁甲奇侠到底能不能够拯救打架呢...</p>
 					 </div>
 				 </div>
 				  <div class="col-md-4 sed-md">
-				 	 <div class=" col-1">
+				 	 <div class=" col-1 fixHeight">
 						 <a href="intro.html?re2.jpg"><img class="img-responsive" src="images/re2.jpg" alt=""></a>
 					 	<h4><a href="intro.html?re2.jpg">变种的逆袭</a></h4>
 						<p>一位科学家的大胆实验，不小心造就了拥有强大体魄的战士，因为实验带来的永久副作用造成强大的痛苦，充满愤怒的战士又会如何报复呢......</p>
@@ -153,27 +149,26 @@
 		 </div>
 		 <div class="review-md1">
 				 <div class="col-md-4 sed-md">
-				 	 <div class=" col-1">
+				 	 <div class=" col-1 fixHeight">
 						 <a href="intro.html?re3.jpg"><img class="img-responsive" src="images/re3.jpg" alt=""></a>
 					 	<h4><a href="intro.html?re3.jpg">神来飞踢</a></h4>
-						<p>想成为场上最耀眼的明星吗？来吧踢进这胜利的一球，用盡渾身所學，獲得全場的歡呼吧，全场焦点将聚焦你身上......</p>
+						<p>想成为场上最耀眼的明星吗？来吧踢进这胜利的一球，用尽浑身所学，获得全场的欢呼吧，全场焦点将聚焦你身上......</p>
 					 </div>
 				 </div>
 				  <div class="col-md-4 sed-md">
-				 	 <div class=" col-1">
+				 	 <div class=" col-1 fixHeight">
 						 <a href="intro.html?re4.jpg"><img class="img-responsive" src="images/re4.jpg" alt=""></a>
 					 	<h4><a href="intro.html?re4.jpg">愤怒的小鸟</a></h4>
 						<p>在一座与世隔绝的美丽小岛上，住着一群乐天知命但却不会飞的鸟。不过易怒的锐德、亢奋急速的恰克和容易爆炸的砰伯总是因为各自的怪性格而不被其他的鸟接纳......</p>
 					</div>
 				</div>
 				<div class="col-md-4 sed-md">
-				 	<div class=" col-1">
+				 	<div class=" col-1 fixHeight">
 						<a href="intro.html?re5.jpg"><img class="img-responsive" src="images/re5.jpg" alt=""></a>
 					 	<h4><a href="intro.html?re5.jpg">侠盗猎车手V</a></h4>
 						<p>在意大利移民遗留下来的古老传统的影响下，家族成为美国黑帮文化的一个重要组成部分，对那些无法无天的帮派份子来说，家族与亲人，在他们心中有着无法言谕的地位......</p>
 					</div>
 				</div>
-				<div class="clearfix"> </div>
 		</div>
 	</div>
 </div>
@@ -210,8 +205,8 @@
 					<ul class="ftr-list">	
 						<li><a href="index.html">首页</a></li>
 						<li><a href="about.html">关于我们</a></li>
-						<li><a href="gallery.html">精彩画面</a></li>
-						<li><a href="reviews.html">攻略心得</a></li> 
+						<!-- <li><a href="gallery.html">精美画面</a></li> -->
+						<li><a href="reviews.html">产品中心</a></li> 
 					</ul>				 
 				</div>		
 			  <div class="clearfix"></div>

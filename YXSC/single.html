@@ -21,32 +21,29 @@
 	<script>
 		if (localStorage.getItem('userName') == null) {
 			window.alert("请先登录再储值，谢谢！");
-      window.location.href = "index.html";
+			window.location.href = "form-2/index.html";
     }
 	</script>
 <!-- header -->
-
 <div class="top-banner">
 	<div class="header">
 		<div class="container banner-container">
-      <div class="headr-left">
-        <div class="social">
-          <!-- <img src="images/qinglongicon.png" /> -->
+      <div class="headr-left col-sm-6 col-3">
+          <div class="social active">
+          	<a href="index.html" id="homeUrl">首页 <span class="phone">www.91chcf.com</span></a>
+          </div>
         </div>
-        <p style="color: #fff;">请记住我们的网址 <a href="index.html" style="color: pink; ">www.91chcf.com</a>，以便您下次登录继续游戏。</p>
-      </div>
-			 <div class="headr-right">
+			<div class="headr-right col-sm-6 col-9">
 				<div class="details">
 					<ul style="margin: 0px;display: flex;">
-						<!-- <li>
-							<p style="margin: 0px;" href="mailto@example.com">
-								<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>qlyx@qq.com
-							</p>
-						</li> -->
-						<li style="cursor: pointer; margin-bottom: 10px;">
-							<a href="index.html">
-								<!-- <img src="images/home.svg" width="25" height="25" style="margin-right: 8px;vertical-align: bottom;" /> -->
-								首页
+						<li class="QLcoin" id="guestCoin">
+							<a href="single.html" style="font-weight: 600;">
+								青龙币储值
+							</a>
+						</li>
+						<li class="QLcoin" id="memberCoin" style="display: none;">
+							<a href="single.html" style="font-weight: 600;" id="QLcoin">
+								青龙币 0 元
 							</a>
 						</li>
 						<li id="guest">
@@ -56,21 +53,15 @@
 								<span class="home_register"><a href="form-2/register.html">注册</a></span></p>
 						</li>
 						<li id="member" style="display: none;">
-							<p href="single.html" style="font-weight: 600;">
-								您好，<span class="home_login"><a href="form-2/index.html" id="accountName"></a></span>
+							<p href="single.html" style="font-weight: 600;" id="loginMem">
+								您好，<span class="home_login"><a href="form-2/index.html" id="accountName" style="font-weight: 600;color: #fff;"></a></span>
 								&nbsp;&nbsp;|&nbsp;&nbsp;
 								<span class="home_register" onclick="logout()">退出 </span></p>
 						</li>
-						<!-- <li style="cursor: pointer;color: #000;">
-							<a href="cart.html" style="font-weight: 600;">
-								<img src="images/cart.svg" width="25" height="25" style="margin-right: 8px;vertical-align: bottom;" />
-								购物车
-							</a>
-						</li> -->
 					</ul>
 				</div>
 			</div>
-		 </div>
+		</div>
 	</div>
 	
 	<script>
@@ -79,6 +70,12 @@
 			$('#member')[0].style.display = 'block';
 			$('#guest')[0].style.display = 'none';
 			$('#accountName')[0].innerHTML = userName;
+			$('#homeUrl')[0].style.fontWeight = 400;
+			$('#loginMem')[0].style.fontWeight = 400;
+			$('#accountName')[0].style.fontWeight = 400;
+			$('#QLcoin')[0].style.color = '#fff';
+			$('#guestCoin')[0].style.display = 'none';
+			$('#memberCoin')[0].style.display = 'block';
 		}
 
 		//LOGOUT
@@ -137,6 +134,9 @@
 			<div class="Dp-amountBox">
 				<p class="Dp-amount"><span class="color-red">*</span>存款金额</p>
 				<input id="price" class="Dp-amountInput" type="text" placeholder="￥100~10000" name="_deposit">
+			</div>
+			<div class="notesQL">
+				<span>备注: ￥1 = 1 青龙币</span>
 			</div>
 			<div class="submit-btn">
 				<button onclick="deposit()">确认送出</button>
@@ -198,8 +198,8 @@
 				<ul class="ftr-list">	
 					<li><a href="index.html">首页</a></li>
 					<li><a href="about.html">关于我们</a></li>
-					<li><a href="gallery.html">精彩画面</a></li>
-					<li><a href="reviews.html">攻略心得</a></li> 
+					<!-- <li><a href="gallery.html">精美画面</a></li> -->
+					<li><a href="reviews.html">产品中心</a></li> 
 				</ul>				 
 			</div>		
 		  <div class="clearfix"></div>

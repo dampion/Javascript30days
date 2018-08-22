@@ -8,10 +8,6 @@ body {
     text-align: center;
 }
 
-@font-face {
-   font-family: 'Microsoft-Yahei';
-   src: url(../fonts/Microsoft-Yahei.ttf)format('truetype');
-}
 strong { font-weight: 500; }
 
 a, a:hover, a:focus {
