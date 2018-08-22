@@ -1,0 +1,6 @@
+html, body {
+  font-family: "微软雅黑", "Microsoft Yahei", sans-serif;
+  margin: 0;
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 1200%;
+}

@@ -1,5 +1,4 @@
 body {
-	font: 12px/26px 'Microsoft YaHei', sans-serif;
 	color: #333;
 	_backgournd: url(about: blank);
 	_background-attachment:fixed
@@ -134,7 +133,6 @@ h2, h3, h4, td {
 
 .nav-dir {
 	color: #999;
-	font-family: "å®‹ä½“";
 }
 
 .article {
@@ -356,7 +354,6 @@ margin-left: 600px;
 	text-align: center;
 	background: #03b4f5;
 	color: #FFF;
-	font-family: "å®‹ä½“";
 }
 .aside-left-qr span {
 	right: 40px;

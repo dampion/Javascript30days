@@ -3,26 +3,10 @@ h1, h2, h3 {margin: 0;}
 ul, ol {margin: 0; padding:0;}
 p {margin: 0;}
 html, body{
-	font-family: "微软雅黑", "Microsoft Yahei", sans-serif;
 	font-size: 100%;
 	background: #ffffff;
 }
-/*@font-face {
-   font-family: 'Microsoft-Yahei';
-   src: url(../fonts/Microsoft-Yahei.ttf)format('truetype');
-}*/
-/*@font-face {
-   font-family: 'OpenSans-Regular';
-   src: url(../fonts/OpenSans-Regular.ttf)format('truetype');
-}*/
-@font-face {
-   font-family: 'Play-Bold';
-   src: url(../fonts/Play-Bold.ttf) format('truetype');
-}
-@font-face {
-   font-family: 'Play-Regular';
-   src: url(../fonts/Play-Regular.ttf) format('truetype');
-}
+
 h1.b1, h2.b2, h3.b3 {
   margin-bottom: 25px;
   display: block;
@@ -260,7 +244,6 @@ background-position:-180px -9px;
 }
 .logo h2 a, .logo p{
 	color:#fff;
-	font-family: 'Microsoft-Yahei';
 	text-decoration:none;
 }
 .logo h2 a p {
@@ -283,7 +266,6 @@ background-position:-180px -9px;
 	color:#fff;
 	padding:0.5em 1em;
 	text-decoration:none;
-	font-family: 'Microsoft-Yahei';
 	font-size:1.1em;
 }
 span.menu {
@@ -362,7 +344,6 @@ color:#fff !important;
 .caption h3{
   color: #ffffff;
   font-size: 2.8em;
-   font-family: 'Microsoft-Yahei';
 }
 .caption p{
 	line-height: 1.8em;
@@ -375,7 +356,6 @@ color:#fff !important;
 .callbacks_tabs a:after {
 	content: "\f111";
 	font-size: 0;
-	font-family: FontAwesome;
 	visibility: visible;
 	display: block;
 	height: 15px;
@@ -446,7 +426,6 @@ ul.callbacks_tabs.callbacks1_tabs {
 .top-games h3,.latest-games h3{
 	color:#f43c60;
 	font-size:2.4em;
-	font-family: 'Microsoft-Yahei';
 	text-align:center;
   font-weight: 600;
  }
@@ -457,7 +436,6 @@ ul.callbacks_tabs.callbacks1_tabs {
 	margin-top:4em;
 }
 .game-grid h4{
-	font-family: 'Microsoft-Yahei';
   font-weight: 600;
 	font-size:1.3em;
  }
@@ -484,7 +462,6 @@ ul.callbacks_tabs.callbacks1_tabs {
   text-align: center;
   font-size: 2em;
   color: #5bb2fc;
-  font-family: 'Microsoft-Yahei';
     margin-bottom: 2em;
 }
 .latest-top{
@@ -511,7 +488,6 @@ ul.callbacks_tabs.callbacks1_tabs {
   background-color: #F4F4F4;
   font-size:1.2em;
   color: #5bb2fc;
-  font-family: 'Microsoft-Yahei';
     line-height: 1.4em;
 	text-decoration:none;
 	  display: block;
@@ -531,13 +507,11 @@ ul.callbacks_tabs.callbacks1_tabs {
 	padding:4em 0;
 }
 .x-box-left h2{
-	font-family: 'Microsoft-Yahei';
   font-weight: 600;
 	font-size:4em;
 	color: #f43c60;
 }
 .x-box-left h3{
-	font-family: 'Microsoft-Yahei';
 	font-size:2em;
 	margin-top:8px;
 	color:#69d2e8;
@@ -658,7 +632,6 @@ ul.callbacks_tabs.callbacks1_tabs {
 	margin-top:5em;
 }
 .poster-info h3{
-	 font-family: 'Microsoft-Yahei';
    font-weight: 600;
 	color:#fff;
 	font-size:2.2em;
@@ -716,7 +689,6 @@ ul.callbacks_tabs.callbacks1_tabs {
   margin-top: 100px;
 }
 .ftr-grid h3,.ftr-info h3{
-	font-family: 'Microsoft-Yahei';
 	font-size:1.7em;
 	margin-bottom:0.8em;
 	color:#69d2e8;
@@ -758,7 +730,6 @@ ul.callbacks_tabs.callbacks1_tabs {
 	padding:3em 0;
 }
 .about h2,.review h2,h2.top,.gallery h2,.contact h2{
-	font-family: 'Microsoft-Yahei';
   font-weight: 600;
   font-size: 2.5em;
   color: #f43c60;
@@ -774,7 +745,6 @@ ul.callbacks_tabs.callbacks1_tabs {
 	padding-right:0;
 }
 .abt-info-pic h3 {
-  font-family: 'Microsoft-Yahei';
   font-size: 2em;
   color: #69d2e8;
   margin: 0;
@@ -800,7 +770,6 @@ ul.callbacks_tabs.callbacks1_tabs {
 	margin-top:4em;
 }
 .testimonals h3,.team h3{
-	font-family: 'Microsoft-Yahei';
   font-weight: 600;
   font-size: 1.8em;
   color: #f43c60;
@@ -870,7 +839,6 @@ margin-top:3em;
 .col-1 h4{
 	font-size:1.2em;
 	 margin: 0.8em 0 0.5em;
-	 font-family: 'Microsoft-Yahei';
    font-weight: 600;
 }
 .col-1 h4 a{
@@ -913,7 +881,6 @@ p.snglp, .snglp{
   color: #777;
 }
 .recent-posts h4,.category h4,.coment-form h4,.response h4{
-  font-family: 'Microsoft-Yahei';
   font-size: 1.6em;
   color: #f43c60;
   margin-bottom: 0.7em;
@@ -1350,7 +1317,6 @@ border-top:1px solid #eee;
 margin-top:2em;
 }
 .address h3{
-	font-family: 'Microsoft-Yahei';
   font-size: 1.8em;
   color: #f43c60;
   margin-bottom: 0.7em;
