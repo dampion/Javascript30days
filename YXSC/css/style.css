@@ -2221,9 +2221,6 @@ span.menu {
 .x-box-left h2 {
   font-size: 2em;
 }
-.x-box-left h3 {
-  font-size: 1.1em;
-}
 .abt-pic {
   width: 100%;
   padding: 0;
@@ -2411,12 +2408,8 @@ ul.callbacks_tabs.callbacks1_tabs {
   position: absolute;
   bottom: 65px;
 }
-.x-box-left h2 {
-  font-size: 1.7em;
-}
-.x-box-left h3 {
-  font-size: 1em;
-}
+
+
 .x-box-right{
 	padding:0;
 }
