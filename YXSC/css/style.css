@@ -418,7 +418,7 @@ ul.callbacks_tabs.callbacks1_tabs {
  }
 .game-grid p{
 	color:#777;
-	font-size:0.9em;
+	font-size:1.2em;
 	margin:0.7em 0;
 	line-height:1.8em;
  }
@@ -470,7 +470,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 	  display: block;
 }
 .sub-text p {
-    font-size: 0.9em;
+    font-size: 1em;
   line-height: 1.8em;
   color: #888;
   font-weight: 400;
@@ -2370,13 +2370,13 @@ ul.callbacks_tabs.callbacks1_tabs {
   padding: 2em 0;
 }
 .top-games h3, .latest-games h3 {
-  font-size: 1.4em;
+  font-size: 2.4em;
 }
 .top-game-grids {
   margin-top: 1.5em;
 }
 .game-grid h4 {
-  font-size: 1em;
+  font-size: 1.8em;
 }
 .game-grid p {
   margin: 0.4em 0;
@@ -2391,7 +2391,7 @@ ul.callbacks_tabs.callbacks1_tabs {
   width: 68%;
 }
 .sub-text a {
-  font-size: 0.8em;
+  font-size: 1.2em;
 }
 .sub-text p {
    margin-top: 0;
