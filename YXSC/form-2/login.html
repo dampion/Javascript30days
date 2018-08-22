@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>青龙登陆</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/form-elements.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+  </head>
+
+    <body>
+
+        <!-- Top content -->
+        <div class="top-content">
+          
+            <div class="inner-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 text">
+                            <h1><strong>登录 </strong> 青龙游戏</h1>
+                            <div class="description">
+                              <p>
+                                登录青龙游戏，享有最新、疯狂又刺激的游戏世界
+                                定时签到即可享有  <strong>独代游戏体验</strong>, 你还在等啥呢!
+                              </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3 form-box">
+                          <div class="form-top">
+                            <div class="form-top-left">
+                              <h3>登录</h3>
+                                <p>输入账号密码信息:</p>
+                            </div>
+                            <div class="form-top-right">
+                              <i class="fa fa-lock"></i>
+                            </div>
+                            </div>
+                            <div class="form-bottom">
+                          <!-- <form role="form"  class="login-form"> -->
+                            <div class="form-group">
+                              <label class="sr-only" for="form-username">账号</label>
+                                <input type="text" name="form-username" placeholder="账号" class="form-username form-control" id="form-username">
+                              </div>
+                              <div class="form-group">
+                                <label class="sr-only" for="form-password">密码</label>
+                                <input type="password" name="form-password" placeholder="密码" class="form-password form-control" id="form-password">
+                              </div>
+                              <div style="display: flex;justify-content: space-between;">
+                                <button type="text" class="btn" onclick="signIn()">送出!</button>
+                                <p style="margin:0;padding-top:10px;"><a href="../contact.html">忘记密码?</a></p>
+                                <p style="margin:0;padding-top: 10px;"><a href="./register.html">立即注册</a></p>
+                              </div>
+                          <!-- </form> -->
+                        </div>
+                        </div>
+                    </div>
+                    <!-- <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script> -->
+                    <script src="assets/js/firebase.js"></script>
+                    <!-- 存储服务 -->
+                    <script src="assets/js/av-min.js"></script>
+                    <!-- 实时消息服务 -->
+                    <script src="assets/js/realtime.browser.min.js"></script>
+                    <!-- <script src="assets/js/av-live-query-min.js"></script> -->
+                    <script>
+                      var { Realtime, TextMessage } = AV;
+                      var APP_ID = '9neScXKQz4xvlVdiIzHIU1gB-gzGzoHsz';
+                      var APP_KEY = '80GjV1BaNFOTL0OU5e6ES4Qh';
+
+                      AV.init({
+                        appId: APP_ID,
+                        appKey: APP_KEY
+                      });
+                      // console.log(Realtime);
+                      if (localStorage.getItem('userName') != null) {
+                        window.location.href = "../index.html";
+                      }
+                      // Initialize Firebase
+                      // var config = {
+                      //   apiKey: "AIzaSyCDqPVs6e1I1FJ29GkuXmzahRKSPff2yrQ",
+                      //   authDomain: "qinglongyx.firebaseapp.com",
+                      //   databaseURL: "https://qinglongyx.firebaseio.com",
+                      //   projectId: "qinglongyx",
+                      //   storageBucket: "qinglongyx.appspot.com",
+                      //   messagingSenderId: "77997953319"
+                      // };
+                      // firebase.initializeApp(config);
+                      // const memData = firebase.database().ref('/memData/');
+
+                      // let messages, userNameList, idNumberList;
+                      // let userLogin, userNameSet;
+                      // memData.on('value', function(snapshot) {
+                      //   const val = snapshot.val();
+                      //   userNameList = Object.values(val).map(item => item.account);
+                      //   idNumberList = Object.values(val).map(item => item.password); 
+                      // }, function(error) {
+                      //   console.log(error);
+                      // });
+                      
+                      function signIn() {
+                        let account = $('#form-username')[0].value;
+                        let password = $('#form-password')[0].value;
+
+                        if (account.length < 8 || password.length < 8) {
+                          window.alert("Something wrong with your account or password .");
+                          return false;
+                        }
+
+                        if (account.trim() == '') { 
+                          window.alert("Something wrong with your account.");
+                          return false;
+                        }
+                        // AV.User.logIn(account, password).then(function (loginedUser) {
+                        //   // 登录成功，跳转到商品 list 页面
+                        //   console.log("login works;");
+                        // }, function (error) {
+                        //   alert(JSON.stringify(error));
+                        // });
+                        // LeanCloud - 注册
+                        // https://leancloud.cn/docs/leanstorage_guide-js.html#注册
+                        var user = new AV.User();
+                        user.setUsername(account);
+                        user.setPassword(password);
+                        AV.User.logIn(account, password).then(function (loggedInUser) {
+                          localStorage.setItem('userName', account);
+                          window.location.href = "../index.html";
+                        }, function (error) {
+                          window.alert("the userName or the ID Number is wrong.");
+                        });
+                        
+                        // const checkUserName = userNameList.findIndex(
+                        //   (item) => {
+                        //     return (item == account);
+                        //   });
+                        // const checkNumberList = idNumberList[checkUserName] == password;
+                        // const checkLogin = (checkUserName != -1 && checkNumberList);
+                        // if (checkLogin) {
+                        //   memData.push({
+                        //     account: account,
+                        //     type: 'text',
+                        //     password: password
+                        //     // timeStamp: vm.getTime()
+                        //   });
+                        //   localStorage.setItem('userName', account);
+                        //   window.location.href = "../index.html";
+                        // } else {
+                        //   window.alert("the userName or the ID Number is wrong.");
+                        // }
+                      }
+                    </script>
+                    <!-- <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3 social-login">
+                          <h3>...or login with:</h3>
+                          <div class="social-login-buttons">
+                            <a class="btn btn-link-2" href="#">
+                              <i class="fa fa-facebook"></i> Facebook
+                            </a>
+                            <a class="btn btn-link-2" href="#">
+                              <i class="fa fa-twitter"></i> Twitter
+                            </a>
+                            <a class="btn btn-link-2" href="#">
+                              <i class="fa fa-google-plus"></i> Google Plus
+                            </a>
+                          </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            
+        </div>
+
+
+        <!-- Javascript -->
+        <script src="assets/js/jquery-1.11.1.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.backstretch.min.js"></script>
+        <script src="assets/js/scripts.js"></script>
+        
+        <!--[if lt IE 10]>
+            <script src="assets/js/placeholder.js"></script>
+        <![endif]-->
+
+    </body>
+
+</html>
