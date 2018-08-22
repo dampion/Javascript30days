@@ -23,7 +23,38 @@
 <body>
 <!-- header -->
 <div class="top-banner">
-	<div w3-include-html="./header.html"></div>
+	<div class="header">
+		<div class="container banner-container">
+	    <div class="headr-left col-sm-6 col-3">
+	      <div class="social active">
+	        <a href="index.html" id="homeUrl">首页 <span class="phone">Home</span></a>
+	      </div>
+	    </div>
+			<div class="headr-right col-sm-6 col-9">
+				<div class="details">
+					<ul style="margin: 0px;display: flex;">
+						<li class="QLcoin" id="memberCoin" style="display: none;">
+							<a href="deposit.html" style="font-weight: 600;" id="QLcoin">
+								青龙币 0 元
+							</a>
+						</li>
+						<li id="guest">
+							<p href="deposit.html" style="font-weight: 600;">
+								<span class="home_login"><a href="form-2/login.html">登录</a></span>
+								&nbsp;&nbsp;|&nbsp;&nbsp;
+								<span class="home_register"><a href="form-2/register.html">注册</a></span></p>
+						</li>
+						<li id="member" style="display: none;">
+							<p style="font-weight: 600;" id="loginMem">
+								您好，<span class=""><span id="accountName" style="font-weight: 600;color: #fff;margin: 0;padding:0;"></span></span>
+								&nbsp;&nbsp;|&nbsp;&nbsp;
+								<span class="home_register" onclick="logout()">退出 </span></p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 	
 	<script>
 		let userName = localStorage.getItem('userName');
@@ -134,32 +165,33 @@
 				</div>
 		   </div> -->
 		   <div class="team">
-			  <h3>我们的优势</h3>	  
-			  <div class="grid_4">
-				<div class="team-grid">
-						  <h4>团队优势</h4>
-						  <p>青龙游戏由一支热血，有想法，敢为自己梦想拼搏的专业团队组成，在市场调研、产品营运、客户服务等方面有着深厚的积累，凭借高效的执行，以及通过专业化运作，将每个细节做到极致，致力于将打造全国最优秀的网页游戏运营商。</p>
-					  </div>
-			  </div>
-			  <div class="grid_4">
-				 <div class="team-grid">
-						  <h4>渠道优势</h4>
-						  <p>青龙游戏采取独家代理、代理合作、联合运营三者结合的方式，在旗下自研产品的同时，还与国内众多知名厂商展开合作，通过多线优质的产品渠道，可源源不断地为玩家提供时下市场最热门的游戏。</p>
-					  </div>
-			  </div>
-			  <div class="grid_4 span66">
-				<div class="team-grid">
-						  <h4>服务优势</h4>
-						  <p>青龙游戏网以“用户体验”为核心，专业化的客服团队将在第一时间针对每位用户的需求，为玩家带来最舒适的客服体验。不仅如此，平台率先提出“轻娱乐互动”概念，在传统游戏服务的基础上，融入休闲、娱乐、交互等元素，让玩家在体验游戏的同时，还可以从中获得更多乐趣。</p>
-					  </div>
-			  </div>      
-			  <div class="grid_4">				 
-					  <div class="team-grid">
-						   <h4>平台优势</h4>
-						  <p>青龙游戏拥有独代代理的产业平台，运营拥有最新活动消息，并且密切与游戏开发商研发部门更新最新资讯。</p>
-					  </div>					  
-			 </div>
-			 <div class="clearfix"></div> 
+			  <h3>我们的优势</h3>
+			  <div class="flexdiv">	  
+				  <div class="grid_4">
+					<div class="team-grid">
+							  <h4>团队优势</h4>
+							  <p>青龙游戏由一支热血，有想法，敢为自己梦想拼搏的专业团队组成，在市场调研、产品营运、客户服务等方面有着深厚的积累，凭借高效的执行，以及通过专业化运作，将每个细节做到极致，致力于将打造全国最优秀的网页游戏运营商。</p>
+						  </div>
+				  </div>
+				  <div class="grid_4">
+					 <div class="team-grid">
+							  <h4>渠道优势</h4>
+							  <p>青龙游戏采取独家代理、代理合作、联合运营三者结合的方式，在旗下自研产品的同时，还与国内众多知名厂商展开合作，通过多线优质的产品渠道，可源源不断地为玩家提供时下市场最热门的游戏。</p>
+						  </div>
+				  </div>
+				  <div class="grid_4 span66">
+					<div class="team-grid">
+							  <h4>服务优势</h4>
+							  <p>青龙游戏网以“用户体验”为核心，专业化的客服团队将在第一时间针对每位用户的需求，为玩家带来最舒适的客服体验。不仅如此，平台率先提出“轻娱乐互动”概念，在传统游戏服务的基础上，融入休闲、娱乐、交互等元素，让玩家在体验游戏的同时，还可以从中获得更多乐趣。</p>
+						  </div>
+				  </div>      
+				  <div class="grid_4">				 
+						  <div class="team-grid">
+							   <h4>平台优势</h4>
+							  <p>青龙游戏拥有独代代理的产业平台，运营拥有最新活动消息，并且密切与游戏开发商研发部门更新最新资讯。</p>
+						  </div>					  
+				 </div>
+				</div>
 		  </div>
 	 </div>
 </div>

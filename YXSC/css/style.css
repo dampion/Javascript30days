@@ -2080,9 +2080,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 .col-1 h4 {
   font-size: 0.9em;
 }
-.review-md1 {
-  padding: 3em 0 0;
-}
+
 .gallery {
   padding: 2em 0;
 }
@@ -2118,6 +2116,13 @@ a.list-group-item {
 }
 
 @media(max-width:480px){
+  .flexdiv {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .flexdiv div.grid_4 {
+    width: 47%;
+  }
   .circleDiv, .circleDivIntro, .circleDivIntroPrice {
     width: 100%;
   }
@@ -2467,7 +2472,7 @@ ul.callbacks_tabs.callbacks1_tabs {
   font-size: 0.6em;
 }
 .testimonals h3, .team h3 {
-  font-size: 1.3em;
+  font-size: 2em;
 }
 .team-grid h4 {
 }
@@ -2527,7 +2532,6 @@ ul.callbacks_tabs.callbacks1_tabs {
   padding:1.5em 0 1em 0;
 }
 .review-md1 {
-  padding: 3em 0 0;
 }
 .response {
   margin-top: 0px;

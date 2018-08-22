@@ -21,8 +21,40 @@
   <body>
     <div class="wrapper">
       <!-- header -->
-<div class="top-banner">
-    <div w3-include-html="./header.html"></div>
+    <div class="top-banner">
+        <div class="header">
+            <div class="container banner-container">
+            <div class="headr-left col-sm-6 col-3">
+              <div class="social active">
+                <a href="index.html" id="homeUrl">首页 <span class="phone">Home</span></a>
+              </div>
+            </div>
+                <div class="headr-right col-sm-6 col-9">
+                    <div class="details">
+                        <ul style="margin: 0px;display: flex;">
+                            <li class="QLcoin" id="memberCoin" style="display: none;">
+                                <a href="deposit.html" style="font-weight: 600;" id="QLcoin">
+                                    青龙币 0 元
+                                </a>
+                            </li>
+                            <li id="guest">
+                                <p href="deposit.html" style="font-weight: 600;">
+                                    <span class="home_login"><a href="form-2/login.html">登录</a></span>
+                                    &nbsp;&nbsp;|&nbsp;&nbsp;
+                                    <span class="home_register"><a href="form-2/register.html">注册</a></span></p>
+                            </li>
+                            <li id="member" style="display: none;">
+                                <p style="font-weight: 600;" id="loginMem">
+                                    您好，<span class=""><span id="accountName" style="font-weight: 600;color: #fff;margin: 0;padding:0;"></span></span>
+                                    &nbsp;&nbsp;|&nbsp;&nbsp;
+                                    <span class="home_register" onclick="logout()">退出 </span></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
       <script>
         let userName = localStorage.getItem('userName');
         if (userName !== null) {
@@ -523,7 +555,7 @@
 
     <div w3-include-html="./footer.html"></div>
     <script>
-    includeHTML();
+        includeHTML();
     </script>
 
     <style>

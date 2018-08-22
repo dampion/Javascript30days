@@ -92,31 +92,9 @@
                         appId: APP_ID,
                         appKey: APP_KEY
                       });
-                      // console.log(Realtime);
                       if (localStorage.getItem('userName') != null) {
                         window.location.href = "../index.html";
                       }
-                      // Initialize Firebase
-                      // var config = {
-                      //   apiKey: "AIzaSyCDqPVs6e1I1FJ29GkuXmzahRKSPff2yrQ",
-                      //   authDomain: "qinglongyx.firebaseapp.com",
-                      //   databaseURL: "https://qinglongyx.firebaseio.com",
-                      //   projectId: "qinglongyx",
-                      //   storageBucket: "qinglongyx.appspot.com",
-                      //   messagingSenderId: "77997953319"
-                      // };
-                      // firebase.initializeApp(config);
-                      // const memData = firebase.database().ref('/memData/');
-
-                      // let messages, userNameList, idNumberList;
-                      // let userLogin, userNameSet;
-                      // memData.on('value', function(snapshot) {
-                      //   const val = snapshot.val();
-                      //   userNameList = Object.values(val).map(item => item.account);
-                      //   idNumberList = Object.values(val).map(item => item.password); 
-                      // }, function(error) {
-                      //   console.log(error);
-                      // });
                       
                       function signIn() {
                         let account = $('#form-username')[0].value;

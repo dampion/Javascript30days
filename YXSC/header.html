@@ -1,8 +1,13 @@
+<html>
+<head>
+<script src="js/jquery.min.js"></script>
+</head>
+<body>
 <div class="header">
 	<div class="container banner-container">
     <div class="headr-left col-sm-6 col-3">
       <div class="social active">
-        <a href="index.html" id="homeUrl">首页 <span class="phone">www.91chcf.com</span></a>
+        <a href="index.html" id="homeUrl">首页 <span class="phone">Home</span></a>
       </div>
     </div>
 		<div class="headr-right col-sm-6 col-9">
@@ -30,3 +35,24 @@
 		</div>
 	</div>
 </div>
+<script>
+		let userName = localStorage.getItem('userName');
+		if (userName !== null) {
+			$('#member')[0].style.display = 'block';
+			$('#guest')[0].style.display = 'none';
+			$('#accountName')[0].innerHTML = userName;
+			$('#homeUrl')[0].style.fontWeight = 400;
+			$('#loginMem')[0].style.fontWeight = 400;
+			$('#accountName')[0].style.fontWeight = 400;
+			$('#QLcoin')[0].style.color = '#fff';
+			$('#memberCoin')[0].style.display = 'block';
+		}
+
+		//LOGOUT
+		function logout() {
+			localStorage.removeItem('userName');
+			window.location.reload();
+		}
+	</script>
+</body>
+</html>

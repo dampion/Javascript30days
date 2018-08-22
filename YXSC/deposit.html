@@ -27,8 +27,39 @@
 <!-- header -->
 <div class="top-banner">
 	<!-- header -->
-<div class="top-banner">
-	<div w3-include-html="./header.html"></div>
+	<div class="top-banner">
+		<div class="header">
+		<div class="container banner-container">
+	    <div class="headr-left col-sm-6 col-3">
+	      <div class="social active">
+	        <a href="index.html" id="homeUrl">首页 <span class="phone">Home</span></a>
+	      </div>
+	    </div>
+			<div class="headr-right col-sm-6 col-9">
+				<div class="details">
+					<ul style="margin: 0px;display: flex;">
+						<li class="QLcoin" id="memberCoin" style="display: none;">
+							<a href="deposit.html" style="font-weight: 600;" id="QLcoin">
+								青龙币 0 元
+							</a>
+						</li>
+						<li id="guest">
+							<p href="deposit.html" style="font-weight: 600;">
+								<span class="home_login"><a href="form-2/login.html">登录</a></span>
+								&nbsp;&nbsp;|&nbsp;&nbsp;
+								<span class="home_register"><a href="form-2/register.html">注册</a></span></p>
+						</li>
+						<li id="member" style="display: none;">
+							<p style="font-weight: 600;" id="loginMem">
+								您好，<span class=""><span id="accountName" style="font-weight: 600;color: #fff;margin: 0;padding:0;"></span></span>
+								&nbsp;&nbsp;|&nbsp;&nbsp;
+								<span class="home_register" onclick="logout()">退出 </span></p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 	
 	<script>
 		let userName = localStorage.getItem('userName');
@@ -52,7 +83,28 @@
 	<!--banner-info-->	
 	<div class="banner-info">
 		<div class="container bannerContainer">
+			<div class="logo">
+				<img src="images/qinglongicon.png" width="60" height="60"
+				style="margin-top: 5px;margin-right: 10px;" />
+				<h2>
+					<a href="index.html">
+						青龙游戏
+						<p class="phone">www.91chcf.com</p>
+					</a>
+				</h2>
+			</div>
+			<div class="top-menu">
+				<span class="menu"></span>
+				<ul class="nav1">
+					<li class="active"></li>
+					<li><a href="about.html">关于我们</a></li>
+					<li><a href="reviews.html">产品中心</a></li>
+					<li class="active"><a href="deposit.html">充值中心</a></li>
 
+					<!-- <li><a href="gallery.html">精美画面</a></li> -->
+					<li><a href="contact.html">联系我们</a></li>
+				</ul>
+			</div>	
 	 		<!-- script-for-menu -->
 			<script>
 				$( "span.menu" ).click(function() {
@@ -61,6 +113,7 @@
 					});
 				});
 			</script>
+			<!-- /script-for-menu -->
 		</div>
 	</div>
 </div>
