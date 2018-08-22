@@ -108,24 +108,7 @@ background: url('../images/social.png') no-repeat 0px 0px;
 display: inline-block;
 margin:0 5px;
 }
-a i.facebook:hover,a i.twitter:hover,a i.gplus:hover,a i.pin:hover,a i.youtube:hover{
-	opacity:0.8;
-}
-a i.facebook{
-background-position:-5px -6px;
-}
-a i.twitter{
-background-position:-46px -7px;
-}
-a i.gplus{
-background-position:-92px -8px;
-}
-a i.pin{
-background-position:-135px -8px;
-}
-a i.youtube{
-background-position:-180px -9px;
-}
+
 .search {
   position: relative;
   float: left;
