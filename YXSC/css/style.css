@@ -2399,9 +2399,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 .trailer iframe {
   height: 175px;
 }
-.poster-info h3 {
-  font-size: 1.1em;
-}
+
 .poster-info {
   margin-top: 2em;
   width: 50%;
@@ -2451,9 +2449,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 }
 .sub-text p, .poster-info p, .x-box-left p, .abt-info-pic p, .team-grid p {
 }
-.poster-info p {
-  line-height: 1.5em;
-}
+
 .abt-info-pic li {
   margin: 0 0 5px 19px;
 }
