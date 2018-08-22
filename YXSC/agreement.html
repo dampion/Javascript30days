@@ -22,51 +22,45 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="header">
+      <!-- header -->
+<div class="top-banner">
+    <div class="header">
         <div class="container banner-container">
-          <div class="headr-left">
-            <div class="social">
-              <!-- <img src="images/qinglongicon.png" /> -->
-            </div>
-            <p style="color: #fff;">请记住我们的网址 <a href="index.html" style="color: pink; ">www.91chcf.com</a>，以便您下次登录继续游戏。</p>
-          </div>
-          <div class="headr-right">
-            <div class="details">
-              <ul style="margin: 0px;display: flex;">
-                <!-- <li>
-                  <p style="margin: 0px;">
-                    <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-                    qlyx@qq.com
-                  </p>
-                </li>
-                <li style="cursor: pointer;">
-                  <a href="cart.html" style="font-weight: 600;">
-                    <img src="images/cart.svg" width="25" height="25" style="margin-right: 8px;vertical-align: bottom;" />
-                    购物车
-                  </a>
-                </li> -->
-                <li class="QLcoin">
-                  <a href="single.html" style="font-weight: 600;">
-                    青龙币储值
-                  </a>
-                </li>
-                <li id="guest">
-                    <p href="single.html" style="font-weight: 600;">
-                        <span class="home_login"><a href="form-2/index.html">登录</a></span>
-                        &nbsp;&nbsp;|&nbsp;&nbsp;
-                        <span class="home_register"><a href="form-2/register.html">注册</a></span></p>
-                </li>
-                <li id="member" style="display: none;">
-                    <p href="single.html" style="font-weight: 600;">
-                        您好，<span class="home_login"><a href="form-2/index.html" id="accountName"></a></span>
-                        &nbsp;&nbsp;|&nbsp;&nbsp;
-                        <span class="home_register" onclick="logout()">退出 </span></p>
-                </li>
-              </ul>
-            </div>
+      <div class="headr-left col-sm-6 col-3">
+          <div class="social active">
+            <a href="index.html" id="homeUrl">首页 <span class="phone">www.91chcf.com</span></a>
           </div>
         </div>
-      </div>
+            <div class="headr-right col-sm-6 col-9">
+                <div class="details">
+                    <ul style="margin: 0px;display: flex;">
+                        <!-- <li class="QLcoin" id="guestCoin">
+                            <a href="single.html" style="font-weight: 600;">
+                                青龙币储值
+                            </a>
+                        </li> -->
+                        <li class="QLcoin" id="memberCoin" style="display: none;">
+                            <a href="single.html" style="font-weight: 600;" id="QLcoin">
+                                青龙币 0 元
+                            </a>
+                        </li>
+                        <li id="guest">
+                            <p href="single.html" style="font-weight: 600;">
+                                <span class="home_login"><a href="form-2/index.html">登录</a></span>
+                                &nbsp;&nbsp;|&nbsp;&nbsp;
+                                <span class="home_register"><a href="form-2/register.html">注册</a></span></p>
+                        </li>
+                        <li id="member" style="display: none;">
+                            <p style="font-weight: 600;" id="loginMem">
+                                您好，<span class=""><span id="accountName" style="font-weight: 600;color: #fff;margin: 0;padding:0;"></span></span>
+                                &nbsp;&nbsp;|&nbsp;&nbsp;
+                                <span class="home_register" onclick="logout()">退出 </span></p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
       <script>
         let userName = localStorage.getItem('userName');
         if (userName !== null) {

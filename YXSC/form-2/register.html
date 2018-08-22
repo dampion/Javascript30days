@@ -77,14 +77,14 @@
                               <label class="sr-only" for="form-password">确认密码</label>
                               <input type="password" name="form-checkPassword" placeholder="确认密码" class="form-password form-control" id="form-checkPassword">
                             </div>
-                            <div class="form-group">
+                            <!-- <div class="form-group">
                               <label class="sr-only" for="form-password">真实姓名</label>
                               <input type="text" name="form-name" placeholder="真实姓名( 请填写真实姓名,2-4个汉字(例如：张三) )" class="form-password form-control" id="form-name">
                             </div>
                             <div class="form-group">
                               <label class="sr-only" for="form-password">身份证号</label>
                               <input type="password" name="form-id" placeholder="请准确填写身份证号码" class="form-password form-control" id="form-id">
-                            </div>
+                            </div> -->
                             <div style="display: flex;justify-content: space-between;">
                               <button type="text" class="btn" onclick="signIn()">送出!</button>
                               <p style="margin:0;padding-top: 10px;">已有青龙账号? <a href="./index.html">立即登录</a></p>
@@ -138,20 +138,16 @@
                       function signIn() {
                         let account = $('#form-username')[0].value;
                         let password = $('#form-password')[0].value;
-                        let id = $('#form-id')[0].value;
-                        let name = $('#form-name')[0].value;
+                        // let id = $('#form-id')[0].value;
+                        // let name = $('#form-name')[0].value;
                         let email = $('#form-email')[0].value;
                         let checkPassword = $('#form-checkPassword')[0].value;
-                        let mem = [account, password, id, name, email, checkPassword];
+                        let mem = [account, password, email, checkPassword];
                         let findEmpty = mem.find( (item) => {
                           return item.length == 0;
                         })
                         if (findEmpty == '') {
                           window.alert("亲，忘了填资料了吗，列表不能为空哦！");
-                          return false;
-                        }
-                        if (name.length > 4 || name.length < 2) {
-                          window.alert("亲，您的名字出了点问题呢！");
                           return false;
                         }
                         if (email.includes('@')) {
@@ -160,10 +156,6 @@
                         }
                         if (password != checkPassword) {
                           window.alert("亲，您的密码不一致呢！");
-                          return false;
-                        }
-                        if (name.length > 4 || name.length < 2) {
-                          window.alert("亲，您的名字出了点问题呢！");
                           return false;
                         }
 

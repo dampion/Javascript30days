@@ -32,11 +32,11 @@
 			<div class="headr-right col-sm-6 col-9">
 				<div class="details">
 					<ul style="margin: 0px;display: flex;">
-						<li class="QLcoin" id="guestCoin">
+						<!-- <li class="QLcoin" id="guestCoin">
 							<a href="single.html" style="font-weight: 600;">
 								青龙币储值
 							</a>
-						</li>
+						</li> -->
 						<li class="QLcoin" id="memberCoin" style="display: none;">
 							<a href="single.html" style="font-weight: 600;" id="QLcoin">
 								青龙币 0 元
@@ -49,8 +49,8 @@
 								<span class="home_register"><a href="form-2/register.html">注册</a></span></p>
 						</li>
 						<li id="member" style="display: none;">
-							<p href="single.html" style="font-weight: 600;" id="loginMem">
-								您好，<span class="home_login"><a href="form-2/index.html" id="accountName" style="font-weight: 600;color: #fff;"></a></span>
+							<p style="font-weight: 600;" id="loginMem">
+								您好，<span class=""><span id="accountName" style="font-weight: 600;color: #fff;margin: 0;padding:0;"></span></span>
 								&nbsp;&nbsp;|&nbsp;&nbsp;
 								<span class="home_register" onclick="logout()">退出 </span></p>
 						</li>
@@ -70,7 +70,6 @@
 			$('#loginMem')[0].style.fontWeight = 400;
 			$('#accountName')[0].style.fontWeight = 400;
 			$('#QLcoin')[0].style.color = '#fff';
-			$('#guestCoin')[0].style.display = 'none';
 			$('#memberCoin')[0].style.display = 'block';
 		}
 
@@ -98,6 +97,7 @@
 				<ul class="nav1">
 					<li><a href="about.html">关于我们</a></li>
 					<li><a href="reviews.html">产品中心</a></li>
+					<li><a href="single.html">充值中心</a></li>
 					<!-- <li><a href="gallery.html">精美画面</a></li> -->
 					<li class="active"><a href="contact.html">联络我们</a></li>
 				</ul>
