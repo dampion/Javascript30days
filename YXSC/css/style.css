@@ -3,7 +3,7 @@ h1, h2, h3 {margin: 0;}
 ul, ol {margin: 0; padding:0;}
 p {margin: 0;}
 html, body{
-	font-family: 'Microsoft-Yahei', 'OpenSans-Regular';
+	font-family: "微软雅黑", "Microsoft Yahei", sans-serif;
 	font-size: 100%;
 	background: #ffffff;
 }
@@ -11,10 +11,10 @@ html, body{
    font-family: 'Microsoft-Yahei';
    src: url(../fonts/Microsoft-Yahei.ttf)format('truetype');
 }*/
-@font-face {
+/*@font-face {
    font-family: 'OpenSans-Regular';
    src: url(../fonts/OpenSans-Regular.ttf)format('truetype');
-}
+}*/
 @font-face {
    font-family: 'Play-Bold';
    src: url(../fonts/Play-Bold.ttf) format('truetype');
