@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>QLcoin</title>
+	<!-- jQuery (necessary JavaScript plugins) -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/include.js"></script>
+	<!-- Custom Theme files -->
+	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+		<link href="css/font.css" rel='stylesheet' type='text/css' />
+	<!-- Custom Theme files -->
+	<!--//theme-style-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<link rel="shortcut icon" href="images/qinglongicon.png" type="image/png" />
+</head>
+<body>
+	<script>
+		if (localStorage.getItem('userName') == null) {
+			window.alert("请先登录再储值，谢谢！");
+			window.location.href = "form-2/login.html";
+    }
+	</script>
+<!-- header -->
+<div class="top-banner">
+	<!-- header -->
+<div class="top-banner">
+	<div w3-include-html="./header.html"></div>
+	
+	<script>
+		let userName = localStorage.getItem('userName');
+		if (userName !== null) {
+			$('#member')[0].style.display = 'block';
+			$('#guest')[0].style.display = 'none';
+			$('#accountName')[0].innerHTML = userName;
+			$('#homeUrl')[0].style.fontWeight = 400;
+			$('#loginMem')[0].style.fontWeight = 400;
+			$('#accountName')[0].style.fontWeight = 400;
+			$('#QLcoin')[0].style.color = '#fff';
+			$('#memberCoin')[0].style.display = 'block';
+		}
+
+		//LOGOUT
+		function logout() {
+			localStorage.removeItem('userName');
+			window.location.reload();
+		}
+	</script>
+	<!--banner-info-->	
+	<div class="banner-info">
+		<div class="container bannerContainer">
+
+	 		<!-- script-for-menu -->
+			<script>
+				$( "span.menu" ).click(function() {
+					$( "ul.nav1" ).slideToggle( 300, function() {
+						// Animation complete.
+					});
+				});
+			</script>
+		</div>
+	</div>
+</div>
+<!-- section -->
+
+<div>
+	<div class="Dp-container">
+		<h1 class="Dp-title">安全保密 存款认证</h1>
+		<div class="flexBox">
+			<div class="YuEBaoZhang">
+				<img src="images/YuEBaoZhang.png" width="50" height="60" />
+				<p class="Dp-charac">余额保障</p>
+			</div>
+			<div class="GeLiZhangHu">
+				<img src="images/GeLiZhangHu.png" width="50" height="60" />
+				<p class="Dp-charac">隔离账户</p>
+			</div>
+		</div>
+		<div class="flexBox">
+			<div class="XianShangKeFu">
+				<img src="images/XianShangKeFu.png" width="50" height="50" />
+				<p class="Dp-charac">线上客服</p>
+			</div>	
+			<div class="YouXiangZiXun">
+				<img src="images/YouXiangZiXun.png" width="60" height="50" />
+				<p class="Dp-charac">邮箱咨询</p>
+			</div>
+		</div>	
+		<form action="register.html">
+			<div class="Dp-amountBox">
+				<p class="Dp-amount"><span class="color-red">*</span>支付方式</p>
+				<select class="Dp-select">
+				  <option value="volvo"> 银联支付 </option>
+				</select>
+			</div>
+			<div class="Dp-amountBox">
+				<p class="Dp-amount"><span class="color-red">*</span>存款金额</p>
+				<input id="price" class="Dp-amountInput" type="text" placeholder="￥100~10000" name="_deposit">
+			</div>
+			<div class="notesQL">
+				<span>备注: ￥1 = 1 青龙币</span>
+			</div>
+			<div class="submit-btn">
+				<button onclick="deposit()">确认送出</button>
+			</div>
+		</form>
+	</div>
+</div>
+<script src="js/responsiveslides.min.js"></script>
+
+<script>
+	function deposit() {
+		localStorage.setItem('deposit', $("#price")[0].value);
+	}
+	$(function () {
+	  $("#slider").responsiveSlides({
+			auto:true,
+			nav: false,
+			speed: 500,
+			namespace: "callbacks",
+			pager:true,
+	  });
+	});
+</script>
+
+
+<div w3-include-html="./footer.html"></div>
+<script>
+includeHTML();
+</script>
+
+ 
+
+
+</body>
+</html>

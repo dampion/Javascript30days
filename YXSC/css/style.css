@@ -42,14 +42,14 @@ a#toTop{
 .circleDiv {
   border: 1px solid #d0021b;
   /*display: inline-block;*/
-  width: 250px;
+  width: 285px;
   margin: 0 auto;
   padding: 1px 60px;
   border-radius: 50px;
 }
 .circleDivIntroPrice {
   border: 1px solid #d0021b;
-  width: 250px;
+  width: 285px;
   margin: 0 auto;
   padding: 1px 60px;
   border-radius: 50px;
@@ -58,14 +58,14 @@ a#toTop{
 }
 .circleDivIntroPrice p {
   color: #d0021b;
-  font-size: 16px;
+  font-size: 20px;
   margin: 0;
   padding: 10px 0;
 }
 .circleDivIntro {
   margin-top: 23px;
   border: 1px solid #d0021b;
-  width: 250px;
+  width: 285px;
   margin: 0 auto;
   padding: 1px 60px;
   border-radius: 50px;
@@ -75,7 +75,7 @@ a#toTop{
 }
 .circleDivIntro p {
   color: #fff;
-  font-size: 16px;
+  font-size: 20px;
   margin: 0;
   padding: 10px 0;
 }
@@ -854,7 +854,8 @@ margin-top:3em;
   color: #777;
 }
 .review-md1 {
-  padding: 3em 0 0;
+  margin: 3em 0 0;
+  height: 375px;
 }
 /*--//reviews--*/
 /*----blog----*/

@@ -6,6 +6,7 @@
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery (necessary JavaScript plugins) -->
 	<script src="js/bootstrap.js"></script>
+	<script src="js/include.js"></script>
 	<!-- Custom Theme files -->
 	<link href="css/style.css" rel='stylesheet' type='text/css' />
 	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
@@ -23,103 +24,67 @@
 <!-- header -->
 <div class="top-banner">
 	<!-- header -->
-<div class="top-banner">
-	<div class="header">
-		<div class="container banner-container">
-      <div class="headr-left col-sm-6 col-3">
-          <div class="social active">
-          	<a href="index.html" id="homeUrl">首页 <span class="phone">www.91chcf.com</span></a>
-          </div>
-        </div>
-			<div class="headr-right col-sm-6 col-9">
-				<div class="details">
-					<ul style="margin: 0px;display: flex;">
-						<!-- <li class="QLcoin" id="guestCoin">
-							<a href="single.html" style="font-weight: 600;">
-								青龙币储值
-							</a>
-						</li> -->
-						<li class="QLcoin" id="memberCoin" style="display: none;">
-							<a href="single.html" style="font-weight: 600;" id="QLcoin">
-								青龙币 0 元
-							</a>
-						</li>
-						<li id="guest">
-							<p href="single.html" style="font-weight: 600;">
-								<span class="home_login"><a href="form-2/index.html">登录</a></span>
-								&nbsp;&nbsp;|&nbsp;&nbsp;
-								<span class="home_register"><a href="form-2/register.html">注册</a></span></p>
-						</li>
-						<li id="member" style="display: none;">
-							<p style="font-weight: 600;" id="loginMem">
-								您好，<span class=""><span id="accountName" style="font-weight: 600;color: #fff;margin: 0;padding:0;"></span></span>
-								&nbsp;&nbsp;|&nbsp;&nbsp;
-								<span class="home_register" onclick="logout()">退出 </span></p>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<script>
-		let userName = localStorage.getItem('userName');
-		if (userName !== null) {
-			$('#member')[0].style.display = 'block';
-			$('#guest')[0].style.display = 'none';
-			$('#accountName')[0].innerHTML = userName;
-			$('#homeUrl')[0].style.fontWeight = 400;
-			$('#loginMem')[0].style.fontWeight = 400;
-			$('#accountName')[0].style.fontWeight = 400;
-			$('#QLcoin')[0].style.color = '#fff';
-			$('#guestCoin')[0].style.display = 'none';
-			$('#memberCoin')[0].style.display = 'block';
-		}
+	<div class="top-banner">
+		<div w3-include-html="./header.html"></div>
+		
+		<script>
+			let userName = localStorage.getItem('userName');
+			if (userName !== null) {
+				$('#member')[0].style.display = 'block';
+				$('#guest')[0].style.display = 'none';
+				$('#accountName')[0].innerHTML = userName;
+				$('#homeUrl')[0].style.fontWeight = 400;
+				$('#loginMem')[0].style.fontWeight = 400;
+				$('#accountName')[0].style.fontWeight = 400;
+				$('#QLcoin')[0].style.color = '#fff';
+				$('#guestCoin')[0].style.display = 'none';
+				$('#memberCoin')[0].style.display = 'block';
+			}
 
-		//LOGOUT
-		function logout() {
-			localStorage.removeItem('userName');
-			window.location.reload();
-		}
-	</script>
-	<!--banner-info-->	
-	<div class="banner-info">
-		<div class="container bannerContainer">
-<!-- 			<div class="logo">
-				<img src="images/qinglongicon.png" width="60" height="60"
-				style="margin-top: 17px;margin-right: 10px;" />
-				<h1>
-					<a href="#">
-					青龙游戏
-					<p style="font-size: 16px;padding-left: 5px;">www.91chcf.com</p>
-				</a>
-				</h1>
-				
-			</div>
- -->			<!-- <div class="top-menu">
-				<span class="menu"></span>
-				<ul class="nav1">
-					<li><a href="index.html">首页</a></li>
-					<li><a href="about.html">关于我们</a></li>
-					<li><a href="reviews.html">产品中心</a></li>
-					<li><a href="gallery.html">精美画面</a></li>
-					<li><a href="contact.html>">联系我们</a></li>
-				</ul>
-			</div>	 -->
-	 		<!-- script-for-menu -->
-			<script>
-				$( "span.menu" ).click(function() {
-					$( "ul.nav1" ).slideToggle( 300, function() {
-						// Animation complete.
+			//LOGOUT
+			function logout() {
+				localStorage.removeItem('userName');
+				window.location.reload();
+			}
+		</script>
+		<!--banner-info-->	
+		<div class="banner-info">
+			<div class="container bannerContainer">
+				<div class="logo">
+					<img src="images/qinglongicon.png" width="60" height="60"
+					style="margin-top: 5px;margin-right: 10px;" />
+					<h2>
+						<a href="index.html">
+							青龙游戏
+							<p class="phone">www.91chcf.com</p>
+						</a>
+					</h2>
+				</div>
+				<div class="top-menu">
+					<span class="menu"></span>
+					<ul class="nav1">
+						<li class="active"></li>
+						<li><a href="about.html">关于我们</a></li>
+						<li class="active"><a href="reviews.html">产品中心</a></li>
+						<li><a href="deposit.html">充值中心</a></li>
+
+						<!-- <li><a href="gallery.html">精美画面</a></li> -->
+						<li><a href="contact.html">联系我们</a></li>
+					</ul>
+				</div>	
+		 		<!-- script-for-menu -->
+				<script>
+					$( "span.menu" ).click(function() {
+						$( "ul.nav1" ).slideToggle( 300, function() {
+							// Animation complete.
+						});
 					});
-				});
-			</script>
-			<!-- /script-for-menu -->
-			<div class="clearfix"></div>
+				</script>
+				<!-- /script-for-menu -->
+			</div>
 		</div>
 	</div>
-</div>
-<!---->
+	<!---->
 <div class="blog">
 		<div class="container">
 			<div class="col-md-8 blog-left" >
@@ -142,8 +107,22 @@
 						</ul>
 					</div>
 					
-<!-- 					<div class="response">
-						<h4>Responses</h4>
+			<!-- <div class="response">
+				<h4>Responses</h4>
+				<div class="media response-info">
+					<div class="media-left response-text-left">
+						<a href="#">
+							<img class="media-object" src="images/icon1.png" alt=""/>
+						</a>
+						<h5><a href="#">Admin</a></h5>
+					</div>
+					<div class="media-body response-text-right">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,There are many variations of passages of Lorem Ipsum available, 
+							sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<ul>
+							<li>MARCH 21, 2013</li>
+							<li><a href="deposit.html">Reply</a></li>
+						</ul>
 						<div class="media response-info">
 							<div class="media-left response-text-left">
 								<a href="#">
@@ -153,50 +132,36 @@
 							</div>
 							<div class="media-body response-text-right">
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,There are many variations of passages of Lorem Ipsum available, 
-									sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+									sed do eiusmod tempor incididunt ut labore et.</p>
 								<ul>
-									<li>MARCH 21, 2013</li>
-									<li><a href="single.html">Reply</a></li>
-								</ul>
-								<div class="media response-info">
-									<div class="media-left response-text-left">
-										<a href="#">
-											<img class="media-object" src="images/icon1.png" alt=""/>
-										</a>
-										<h5><a href="#">Admin</a></h5>
-									</div>
-									<div class="media-body response-text-right">
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,There are many variations of passages of Lorem Ipsum available, 
-											sed do eiusmod tempor incididunt ut labore et.</p>
-										<ul>
-											<li>MARCH 21, 2014</li>
-											<li><a href="single.html">Reply</a></li>
-										</ul>		
-									</div>
-									<div class="clearfix"> </div>
-								</div>
-							</div>
-							<div class="clearfix"> </div>
-						</div>
-						<div class="media response-info">
-							<div class="media-left response-text-left">
-								<a href="#">
-									<img class="media-object" src="images/icon1.png" alt=""/>
-								</a>
-								<h5><a href="#">Admin</a></h5>
-							</div>
-							<div class="media-body response-text-right">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,There are many variations of passages of Lorem Ipsum available, 
-									sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-								<ul>
-									<li>MARCH 21, 2013</li>
-									<li><a href="single.html">Reply</a></li>
+									<li>MARCH 21, 2014</li>
+									<li><a href="deposit.html">Reply</a></li>
 								</ul>		
 							</div>
 							<div class="clearfix"> </div>
 						</div>
 					</div>
- -->				</div>
+					<div class="clearfix"> </div>
+				</div>
+				<div class="media response-info">
+					<div class="media-left response-text-left">
+						<a href="#">
+							<img class="media-object" src="images/icon1.png" alt=""/>
+						</a>
+						<h5><a href="#">Admin</a></h5>
+					</div>
+					<div class="media-body response-text-right">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,There are many variations of passages of Lorem Ipsum available, 
+							sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						<ul>
+							<li>MARCH 21, 2013</li>
+							<li><a href="deposit.html">Reply</a></li>
+						</ul>		
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div> -->
+				</div>
 <!-- 				<div class="coment-form">
 					<h4>“网络留言板</h4>
 					<form>
@@ -206,12 +171,12 @@
 						<textarea type="text"  onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Comment...';}" required="">内容</textarea>
 						<input type="submit" value="送出" >
 					</form>
-				</div>
- -->			</div>	
+				</div> -->
+			</div>	
 			<div class="col-md-4 single-page-right">
 				<div class="category blog-ctgry">
-					<h4>热门游戏</h4>
-					<div class="list-group">
+					<h4 style="font-size: 32px;">热门游戏</h4>
+					<div class="list-group" style="font-size: 26px;">
 						<a href="intro.html?re7.jpg" class="list-group-item">机甲战神</a>
 						<a href="intro.html?re1.jpg" class="list-group-item">铁甲奇侠</a>
 						<a href="intro.html?re4.jpg" class="list-group-item">愤怒的小鸟</a>
@@ -228,12 +193,12 @@
 					function book() {
 						if (localStorage.getItem('userName') == null) {
 							window.alert("请先登录再储值，谢谢！");
-				      window.location.href = "form-2/index.html";
+				      window.location.href = "form-2/login.html";
 				      return;
 				    }
 				    window.alert("亲，您的青龙币不足，请先充值后再购买，谢谢");
 				    let newlink = document.createElement('a');
-						newlink.setAttribute('href', 'single.html');
+						newlink.setAttribute('href', 'deposit.html');
 						newlink.click();
 					}
 				</script>	
@@ -245,7 +210,7 @@
 								$('#snglp')[0].innerHTML = '人类与来自几万光年的幸存者一同抵抗宇宙的侵略帝国，地球上充满敌人觊觎的丰富的资源，我们该如何抵抗才能存活下去呢?<p>随着三十年前一种新型病毒的爆发，地球上一成的人口智力、精神、身体素质都出现了不同程度的明显提高，被称之为新人类！一个基因至上，天赋至上的时代随即诞生！而一位拥有着全球最优基因的少年，在一次变故之后，便是踏上了成为最强机师的道路！</p>';
 								$('#circleDivIntroPrice')[0].innerHTML = 229;
 								break;
-							case 'ghostgame.jpg':
+							case 'ghostgame-square.jpg':
 								$('#snglp')[0].innerHTML = '人类与来自几万光年的幸存者一同抵抗宇宙的侵略帝国，地球上充满敌人觊觎的丰富的资源，我们该如何抵抗才能存活下去呢?<p>随着三十年前一种新型病毒的爆发，地球上一成的人口智力、精神、身体素质都出现了不同程度的明显提高，被称之为新人类！一个基因至上，天赋至上的时代随即诞生！而一位拥有着全球最优基因的少年，在一次变故之后，便是踏上了成为最强机师的道路！</p>';
 								$('#circleDivIntroPrice')[0].innerHTML = 499;
 								break;
@@ -268,125 +233,53 @@
 								$('#snglp')[0].innerHTML = '破坏死光，镭射眼升级版，不死传说，砖石豹，对应金刚狼，雷电法王，万剑归宗，至道核弹天王，三个都有万磁王的感觉，第一邪皇，天启。至道核弹天王，前期一拳一颗原子弹，中期一秒一百拳，后期可引发世界核爆炸，一个悲剧的英雄创建了变种人兄弟会。因为经历过二战的残酷，和人类对变种人的疯狂打击，使得万磁王极度憎恨人类，一番战争下绯红女巫，根据变种人无尽的仇恨，一句让最高统治者变成社会底层的贱 命，让变种人统治世界，化生一个新的世界，一个变种人统治地球的世界，各国领袖变成奴隶，万磁王一家成为最高统治者。然而英雄们还是觉醒过来，找到了工地上搬砖的灭霸，路边切西瓜的金刚狼，面包师罗伦，乡村女孩苏菲亚，爱莎，工厂发电机雷神托尔，，风力发电机聂风，无业游民步惊云，向他们的家族进行抗争。，绝望的旺达把一切痛苦归结于万磁王的极端理想。一切回到正轨后，独裁暴君万磁王，和主角团开始了最后的决战，一位科学家的大胆实验，不小心造就了拥有强大体魄的战士，因为实验带来的永久副作用造成强大的痛苦，充满愤怒的战士又会如何报复呢......?';
 								$('#circleDivIntroPrice')[0].innerHTML = 225;
 								break;
-							case 'golemgates.jpeg':
-								$('#snglp')[0].innerHTML = '破坏死光，镭射眼升级版，不死传说，砖石豹，对应金刚狼，雷电法王，万剑归宗，至道核弹天王，三个都有万磁王的感觉，第一邪皇，天启。至道核弹天王，前期一拳一颗原子弹，中期一秒一百拳，后期可引发世界核爆炸，一个悲剧的英雄创建了变种人兄弟会。因为经历过二战的残酷，和人类对变种人的疯狂打击，使得万磁王极度憎恨人类，一番战争下绯红女巫，根据变种人无尽的仇恨，一句让最高统治者变成社会底层的贱 命，让变种人统治世界，化生一个新的世界，一个变种人统治地球的世界，各国领袖变成奴隶，万磁王一家成为最高统治者。然而英雄们还是觉醒过来，找到了工地上搬砖的灭霸，路边切西瓜的金刚狼，面包师罗伦，乡村女孩苏菲亚，爱莎，工厂发电机雷神托尔，，风力发电机聂风，无业游民步惊云，向他们的家族进行抗争。，绝望的旺达把一切痛苦归结于万磁王的极端理想。一切回到正轨后，独裁暴君万磁王，和主角团开始了最后的决战，一位科学家的大胆实验，不小心造就了拥有强大体魄的战士，因为实验带来的永久副作用造成强大的痛苦，充满愤怒的战士又会如何报复呢......?';
+							case 'golemgates-square.jpg':
+								$('#snglp')[0].innerHTML = '《傀儡之门,Golem Gates》融合了即时策略(RTS)和卡牌战斗的元素，收集可强化部队的卡牌(称为雕文)组成套牌，在即时战场上使用它们激励作战单位去击败敌人。《傀儡之门,Golem Gates》是一款快节奏的RTS游戏，无需采集资源，让玩家的注意力聚焦于战场，将侦查兵升级为战士，设置紧急防御以应对敌人的突袭，在敌方设置隐蔽哨所，使用正确的雕文，战争情势在于你的选择，同时瞬息万变。......?';
 								$('#circleDivIntroPrice')[0].innerHTML = 225;
 								break;
-							case 'heaven.jpg':
+							case 'heaven-square.jpg':
 								$('#snglp')[0].innerHTML = '游戏剧本以申一淑的原作为底本，同时採用奇幻小说和经典角色扮演游戏的基本规则，使它具有区别于原着的独特之处。天堂的原作漫画在台湾译为「红狮传说」，最初由大然文化代理中文版。后来版权转移，更名为「天堂」，但皆出版至第7册为止。<br>故事以主角特罗斯王子为报杀父之仇并夺回丧失的王权而率领一群守护骑士回到自己的出生地「亚丁王国」为开始。《天堂：The Blood Pledge（血盟）》以特罗斯王子打败反王，重新登上王座为故事情节。《天堂：The Cross Rancor（交织的仇恨）》则把反王与地下世界的黑暗精灵联手挑起复仇之战作为主要内容。?';
 								$('#circleDivIntroPrice')[0].innerHTML = 225;
 								break;
-							case 'batman.jpg':
+							case 'batman-square.jpg':
 								$('#snglp')[0].innerHTML = '二战后，除了超人、蝙蝠侠、神奇女侠和少数依附于三巨头的周边角色之外，DC的所有超级英雄连载都遭遇了停刊。虽然蝙蝠侠的漫画没有停刊，不过也仅仅是勉强维持，编剧引入魔法、时间旅行、外星人等超现实元素，剧情越来越离奇，脱离了原本的特色，蝙蝠洞中的机械恐龙、巨型扑克牌和硬币就是这一时期的产物，出于怀旧情节被一直保留到今天。在超人76期（1952年六月）名为“世上最强组合”的故事中，蝙蝠侠首次与超人搭档合作，两人并互相发现对方的真实身分。鑑于此故事的受欢迎程度，《世界最佳拍档漫画》因此进行改版，开始连载两位英雄人物合作的故事，取代原本该系列漫画中蝙蝠侠与超人分别当主角的故事形式。这个组合是“取得的销售成功在当时是极为罕见的”；两人合作的连载故事一直持续至1986该系列漫画休刊为止。<br>超蝙合作依然无法让超级英雄在50年代走出低谷，1940年代晚期至1950年代早期晦暗的犯罪与恐怖漫画的兴起。当时的漫画没有分级制度，放在报刊亭任意销售。之前的漫画大都内容健康，这样的模式并无问题，但随着重口味的漫画越来越流行，缺乏分级制度成为了公众指责漫画的焦点。心理学家弗雷德里克·魏特汉写了一本名为《引诱无辜》的书，书中认为漫画会导致文盲，增加犯罪率，引导青少年犯罪心理。[22]魏特汉打着反对犯罪漫画的旗号，然而他对犯罪漫画的定义却过于宽泛——带有任何暴力形式的漫画都是犯罪漫画。在他的眼中，讲述战争和冲突的历史漫画，甚至米老鼠和兔八哥这种搞笑作品也属于犯罪漫画的范畴，因为它们都包含广义的暴力成分。';
 								$('#circleDivIntroPrice')[0].innerHTML = 225;
 								break;
-							case 'v2.jpg':
+							case 'v2-square.jpg':
 								$('#snglp')[0].innerHTML = '进入一个刺激的僵尸末日世界，尽力收集物资枪械，全副武装，通过快速的移动，风骚的走位来保护自己。击杀殭尸，疯狂扫射！！我们提供了各式各样的军事武器，考究的画面和精美的风格，你总能找到自己锺爱的一款武器和战斗管道！<div><p><strong>——高品质的真实影像环境画面</strong><p>丰富的关卡密室等你来探索，譬如空旷迂回的别墅密室、荒废老旧的汽车修理厂，充满各种机关陷阱的科学实验室……和各种形态各异的变异僵尸</div><div><p><strong>——故事情节实时发展</strong></p>随机发佈的战斗事件，紧张的游戏情节，营救被困的市民，体验各种突击行动带来的刺激，追求的不仅仅是开枪的爽快感；震撼的视听效果描绘紧张的战斗，感受可怕的僵尸末日世界！</div><div><p><strong>——趣味的战斗互动</strong></p>桌子，椅子，汽车，到处存在趣味的互动，助你掩护躲避，救援人质，全身而退；面对堆积如山的怪物，尝试使用手雷或者减速弹；这些小智慧能帮助你更顺利的过关！</div><div><p><strong>——强大的武器补给军火库</strong></p>我们提供了超多的枪支军火，任你是军事爱好者、武器收藏爱好者，都能在此收集拥有你的专属枪！军事迷的天堂！</div>';
 								$('#circleDivIntroPrice')[0].innerHTML = 225;
 								break;
-							case 'walkingdead.jpg':
+							case 'walkingdead-square.jpg':
 								$('#snglp')[0].innerHTML = '在第五季已亮相的Morgan于第六季中，正式与Rick来个正面交锋。而在上一季中，曾向 Deanna Monroe打小报告的神父Gabriel 也会加入 Morgan的队伍，一同煽动Alexandria Safe-Zone馀下的生还者。而我最喜欢的弓箭手 Daryl将被掳走，到底一路走来的核心成员会成安然无恙呢？那真的要等到Walking Dead 回归才知晓了～';
 									$('#circleDivIntroPrice')[0].innerHTML = 225;
 								break;
-							case 'driving2.jpg':
+							case 'driving2-square.jpg':
 								$('#snglp')[0].innerHTML ='在意大利移民遗留下来的古老传统的影响下，家族成为美国黑帮文化的一个重要组成部分，对那些无法无天的帮派份子来说，家族与亲人，在他们心中有着无法言谕的地位。<p>这次我们的主角天才罪犯卡尔·强森（朋友们都叫他CJ）在过了5年平静的生活之后，忽闻母亲在家乡遇害。这时他身体中的“帮派之血”再次熊熊燃烧起来，现在CJ便要重返圣安德列亚，在明争暗斗的几个地下势力之间再次掀起新一轮的腥风血雨。这次CJ将会投靠自己的哥哥，重振橙林家族。《侠盗猎车手圣安地列斯》游戏舞台由前作的佛罗里达移至加州，虚构的圣安德列亚市是由三个城市（Los Santos、以洛山矶为原型，San Fierro、以旧金山为原型，Las Venturra、以拉斯维加斯为原型）和绵延数里的高速公路、沙漠、山脉、河流湖泊组成，圣安地列斯范围会比以前的Vice City大上五六倍，在这里你可以找到各式风格不同的景观，事实上你将其称为一个微缩的世界亦不为过。</p>';
 								$('#circleDivIntroPrice')[0].innerHTML = 275;
 								break;
-							case 'runaway.jpg':
+							case 'runaway-square.jpg':
 								$('#snglp')[0].innerHTML ='杰克一直都是《地铁跑酷》的封面人物，从北京版本到奥尔良版再到如今的伦敦版，一直都是他冲在最前面不顾警察大叔的追捕勇往直前，一身蓝白的休闲外套、洗白的牛仔裤，再加上标示性的小书包整个就是个朝气蓬勃的小正太，可是在奥尔良版中确变身为僵尸杰克，连休闲外套都变成非常帅气的黑色夹克，皮肤则是标准的丧尸绿，依旧顶着一脸灿烂笑容是不是很萌呢?<p>红色的圣诞帽、俏皮的小短裙、靓丽的条纹袜，可爱又俏皮的精灵琪琪就这样出现在大家眼前。相比于经典造型中一副黑框眼镜、一件白色背心、一条洗白的嘻哈牛仔裤和标志性的围巾帽是不是更增添了一分灵动的气质呢?当然了精灵琪琪也是伦敦版中限量人物哦，喜爱收集的玩家千万别错过了。</p><p>现在小伙伴们在欣赏《地铁跑酷》在深圳地铁上播放的TVC同时，也可以在游戏中尽情打造属于自己的个性化角色。</p>';
 								$('#circleDivIntroPrice')[0].innerHTML = 299;
 								break;
-							case 'driving.jpg':
+							case 'driving-square.jpg':
 								$('#snglp')[0].innerHTML ='《侠盗猎车手3：罪恶城市》的游戏背景设定在一个黑暗残酷的犯罪世界裡。在邋遢且黑暗的自由城中有着来自来行各业的人们，残酷黑暗的黑社会生活将触手可及！在游戏中你需要随着游戏提示揭开一个个黑色幽默的故事情节，游戏拥有着令人震惊的配乐和十分开放性的游戏世界，你可以在游戏中获得超高的自由度，体验到更多的游戏乐趣！<p>游戏当中，玩家将扮演主角「Claude」，在「Liberty City」中，进行各项犯罪和黑帮计画，在一次的任务当中，主角被陷害入狱，所以一开始玩家会从监狱裡出来，谁知道主角出狱后，反而被黑帮纳入组织内，要主角进行各种非法交易，而主角也会以自己的能力，慢慢往上爬，接着干掉黑帮老大，而自己登上老大的地位，操控整个城市。游戏的背景捨定在虚拟的城市「Liberty City」(自由都市)，而这个都市相当庞大，又分为三个地区住宅区、商业地区、工业地区，每个地区都相当广大，几乎是和真实生活的城市一样，而且有各种商店、地铁、生活的居民等等，和现实都是一般，而玩家就在都市当中，进行各项非法的交易和犯罪。 </p>';
 								$('#circleDivIntroPrice')[0].innerHTML = 339;
 								break;
-							case 'piranda.jpg':
+							case 'piranda-square.jpg':
 								$('#snglp')[0].innerHTML ='暑假即将到来，美国的大学生选择去度假胜地维多利亚湖玩耍，杰克是当地人，熟悉当地环境，他的母亲是当地警员，他还有一个弟弟和一个妹妹，他喜欢一个叫凯莉的女孩。德里克是从外地度假来的，他带着几个美女，打算去维多利亚湖拍摄美女在水中裸泳的写真和视频，但是导游突然有事跑了。他只得找了杰克做导游。<p>一日，当地一个老头钓鱼离奇失踪，杰克的母亲和同事经过搜索找到了他的渔船，而他已经死了。警方穿着泳衣在湖底搜寻，找到了一条食人鲳，带到动物学家古德曼那里，经过验证才知道事情的严重性。杰克的母亲和警员来到湖边，喊停正在游水嬉戏的青年男女，但是他们都不听，并没有按照警方的要求回到岸边，结果食人鱼成群结队的攻击，咬死了大群的人员。杰克此时和德里克一起坐在观光船在湖中嬉戏，但是他们的船只不幸触角，德里克掉入水中，被鱼咬死，杰克也被困，这时候他打电话给母亲求救，母亲和警员迅速驰援，最终将他们救出。在影片结尾处，动物学家古德曼一边望着鱼缸中体型已变大的食人鱼，一边打电话告知主角们有一个更大的麻烦才刚刚开始，即他们先前对付的食人鱼群都只是未完全长大的幼体。电话刚挂断，船上参与救援的一位同行警员还在纳闷成年的大鱼会出现在哪里，就被突然跳出水面的大型食人鱼一口吞掉了。像多数惊悚电影一样，本片末尾埋下了这样一个略带喜剧感的伏笔。</p>';
 								$('#circleDivIntroPrice')[0].innerHTML = 399;
 								break;
 							default:
 						}
-					</script>
-<!-- 				<div class="recent-posts">
-					<h4>Recent posts</h4>
-					<div class="recent-posts-info">
-						<div class="posts-left sngl-img">
-							<a href="single.html"> <img src="images/img16.jpg" class="img-responsive zoom-img" alt=""/> </a>
-						</div>
-						<div class="posts-right">
-							<label>March 5, 2015</label>
-							<h5><a href="single.html">Finibus Bonorum</a></h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing incididunt.</p>
-							<a href="single.html" class="btn btn-primary hvr-rectangle-in">Read More</a>
-						</div>
-						<div class="clearfix"> </div>
-					</div>	
-					<div class="recent-posts-info">
-						<div class="posts-left sngl-img">
-							<a href="single.html"> <img src="images/img17.jpg" class="img-responsive zoom-img" alt=""/></a>
-						</div>
-						<div class="posts-right">
-							<label>March 1, 2015</label>
-							<h5><a href="single.html">Finibus Bonorum</a></h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing incididunt.</p>
-							<a href="single.html" class="btn btn-primary hvr-rectangle-in">Read More</a>
-						</div>
-						<div class="clearfix"> </div>
-					</div>
-					<div class="clearfix"> </div>
-				</div>				
- -->			</div>
-			<div class="clearfix"> </div>
+				</script>
+			</div>
 		</div>	
 </div>	
-<!-- footer -->
-<div class="footer-index">
-	<div class="container">
-		<div class="footer-grids">
-			<div class="col-md-3 ftr-grid">
-				<h3>客服中心</h3>
-				<ul>
-          <li><a href="contact.html">联系我们</a></li>
-          <li><a href="index.html">商城网址：www.91chcf.com</a></li>
-				</ul>
-			</div>
-			<div class="col-md-3 ftr-grid">
-				<h3>会员中心</h3>
-				<ul class="ftr-list">
-					<li><a href="form-2/index.html">会员登录</a></li>
-					<li><a href="form-2/register.html">会员注册</a></li>
-					<li><a href="agreement.html">服务条款</a></li>
-				</ul>				 
-			</div>
-			<div class="col-md-3 ftr-grid">
-				<h3>游戏平台</h3>
-				<ul class="ftr-list">
-				 	<li><a href="https://baike.baidu.com/item/%E4%B8%AA%E4%BA%BA%E8%AE%A1%E7%AE%97%E6%9C%BA/3731770?fromtitle=pc&fromid=107&fr=aladdin">PC</a></li>
-				 	<li><a href="http://www.playstation.com.cn/">Play Station</a></li>
-					<li><a href="https://www.xbox.com/en-US/games/xbox-360">XBOX 360</a></li>
-					<li><a href="https://www.xbox.com/en-US/">XBOX ONE</a></li>
-				</ul>				 
-			</div>
-			<div class="col-md-3 ftr-grid">
-				<h3>相关讯息</h3>
-				<ul class="ftr-list">	
-					<li><a href="index.html">首页</a></li>
-					<li><a href="about.html">关于我们</a></li>
-					<!-- <li><a href="gallery.html">精美画面</a></li> -->
-					<li><a href="reviews.html">产品中心</a></li> 
-				</ul>				 
-			</div>		
-		  <div class="clearfix"></div>
-		</div>
-	</div>
-</div>
-<!---->
-<div class="copywrite" style="position: relative;">
- 	<div class="container">
-	 	<p>粤网文〔2016〕1714-358号 粤ICP备18091202号  深圳市川海长丰网络科技有限公司 Copyright 2018© 青龙游戏 ,All Rights Reserved</p>
- 	</div>
-</div>
-<!---->
+
+<div w3-include-html="./footer.html"></div>
+<script>
+includeHTML();
+</script>
 
  
 

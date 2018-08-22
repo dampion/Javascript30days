@@ -24,43 +24,7 @@
 <body>
 <!-- header -->
 <div class="top-banner">
-	<div class="header">
-		<div class="container banner-container">
-      <div class="headr-left col-sm-6 col-3">
-          <div class="social active">
-          	<a href="index.html" id="homeUrl">首页 <span class="phone">www.91chcf.com</span></a>
-          </div>
-        </div>
-			<div class="headr-right col-sm-6 col-9">
-				<div class="details">
-					<ul style="margin: 0px;display: flex;">
-						<!-- <li class="QLcoin" id="guestCoin">
-							<a href="single.html" style="font-weight: 600;">
-								青龙币储值
-							</a>
-						</li> -->
-						<li class="QLcoin" id="memberCoin" style="display: none;">
-							<a href="single.html" style="font-weight: 600;" id="QLcoin">
-								青龙币 0 元
-							</a>
-						</li>
-						<li id="guest">
-							<p href="single.html" style="font-weight: 600;">
-								<span class="home_login"><a href="form-2/index.html">登录</a></span>
-								&nbsp;&nbsp;|&nbsp;&nbsp;
-								<span class="home_register"><a href="form-2/register.html">注册</a></span></p>
-						</li>
-						<li id="member" style="display: none;">
-							<p style="font-weight: 600;" id="loginMem">
-								您好，<span class=""><span id="accountName" style="font-weight: 600;color: #fff;margin: 0;padding:0;"></span></span>
-								&nbsp;&nbsp;|&nbsp;&nbsp;
-								<span class="home_register" onclick="logout()">退出 </span></p>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
+	<div w3-include-html="./header.html"></div>
 	
 	<script>
 		let userName = localStorage.getItem('userName');
@@ -101,7 +65,7 @@
 				<li class="active"></li>
 				<li><a href="about.html">关于我们</a></li>
 				<li><a href="reviews.html">产品中心</a></li>
-				<li><a href="single.html">充值中心</a></li>
+				<li><a href="deposit.html">充值中心</a></li>
 
 				<!-- <li><a href="gallery.html">精美画面</a></li> -->
 				<li><a href="contact.html">联系我们</a></li>
@@ -137,7 +101,7 @@
 		  <div class="callbacks_container">
 			  <ul class="rslides" id="slider">
 				
-					<div class="slid banner1" onclick="enterTrailer('golemgates.jpeg')" style="cursor: pointer;">
+					<div class="slid banner1" onclick="enterTrailer('golemgates-square.jpg')" style="cursor: pointer;">
 						  <div class="caption">
 								<h3>准备好在游戏场上成为最强的领导者吗?</h3>
 								<p>游戏里面有着意想不到的剧情，想要获得最高的荣誉就赶紧加入我们,为诺克萨斯星球奋斗吧．</p>
@@ -145,7 +109,7 @@
 					</div>
 				
 				
-					<div class="slid banner2" onclick="enterTrailer('batman.jpg')" style="cursor: pointer;">	
+					<div class="slid banner2" onclick="enterTrailer('batman-square.jpg')" style="cursor: pointer;">	
 						<div class="caption">
 							<h3>超低价格，简单激活，蓝洞授权，闪电授权.</h3>
 							<p>现在购买既可以享有Steam国区95折优惠．</p>
@@ -153,7 +117,7 @@
 					</div>
 				
 				
-					<div class="slid banner3" onclick="enterTrailer('heaven.jpg')" style="cursor: pointer;">	
+					<div class="slid banner3" onclick="enterTrailer('heaven-square.jpg')" style="cursor: pointer;">	
 						<div class="caption">
 							<h3>功夫老鼠：传奇重生 </h3>
 							<p>世界正处于灾难边缘。臭名昭着的恶魔控制了这个星球。隻有一个人可以拯救我们：一个叫沙飞鸿的可怜中国孤儿。我们的英雄必须前往遥远的地方，销毁这些一心想要搞破坏的流行偶像的锐气。他会成功吗？他当然会。他可是沙飞鸿。</p>
@@ -173,7 +137,7 @@
 		 </div>
 		 <div class="latest-top">				
 				<div class="col-md-5 trailer-text">
-				  <div class="sub-trailer" onclick="enterTrailer('v2.jpg')">
+				  <div class="sub-trailer" onclick="enterTrailer('v2-square.jpg')">
 				    <div class="col-md-4 sub-img">
 							<img src="images/v2sub.png" alt="img07"/>
 					  </div>
@@ -183,7 +147,7 @@
 					  </div>
 					  <div class="clearfix"> </div>
 				  </div>
-				    <div class="sub-trailer" onclick="enterTrailer('walkingdead.jpg')">
+				    <div class="sub-trailer" onclick="enterTrailer('walkingdead-square.jpg')">
 				      <div class="col-md-4 sub-img">
 								<img src="images/the-walking-dead.jpg" alt=""/>
 					   	</div>
@@ -234,31 +198,31 @@
 		 </div>
 		 <div class="top-game-grids">
 			 <ul id="flexiselDemo1">
-				 <li onclick="enterTrailer('driving2.jpg')">
+				 <li onclick="enterTrailer('driving2-square.jpg')">
 					 <div class="game-grid">
 						 <h4>动作 游戏</h4>
 						 <p>绝地求生大逃杀 PC版</p>
 						 <img src="images/t1.jpg" class="img-responsive" alt=""/>
 					 </div>	
 				 </li>
-				 <li onclick="enterTrailer('driving.jpg')">
+				 <li onclick="enterTrailer('driving-square.jpg')">
 					 <div class="game-grid">
 						 <h4>飙车 世界</h4>
 						 <p>侠盗猎车手3 PC版</p>
 						 <img src="images/t3.jpg" class="img-responsive" alt=""/>
 					 </div>
 				 </li>
-				 <li onclick="enterTrailer('piranda.jpg')">
+				 <li onclick="enterTrailer('piranda-square.jpg')">
 					 <div class="game-grid">
 						 <h4>3D 游戏体验</h4>
 						 <p>深蓝色3D迷宫 PC版 中文版</p>
 						 <img src="images/t4.jpg" class="img-responsive" alt=""/>
 					 </div>
 				 </li>
-				 <li onclick="enterTrailer('runaway.jpg')">
+				 <li onclick="enterTrailer('runaway-square.jpg')">
 					 <div class="game-grid">
 						 <h4>街机 游戏</h4>
-						 <p>终极街头霸王4 PC版 中文</p>
+						 <p>地铁跑酷 PC版 中文</p>
 						 <img src="images/t2.jpg" class="img-responsive" alt=""/>
 					 </div>	
 				 </li>				 				 	
@@ -296,7 +260,7 @@
 </div>
 
 <!-- poster -->
-<div class="poster" onclick="enterTrailer('ghostgame.jpg')">
+<div class="poster" onclick="enterTrailer('ghostgame-square.jpg')">
 	<div class="container" style="min-height:  500px;">
 		<div class="poster-info">
 			<h3>Raging Justice</h3>

@@ -6,13 +6,13 @@
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery (necessary JavaScript plugins) -->
 	<script src="js/bootstrap.js"></script>
+	<script src="js/include.js"></script>
 	<!-- Custom Theme files -->
 	<link href="css/style.css" rel='stylesheet' type='text/css' />
 	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
 	<link href="css/font.css" rel='stylesheet' type='text/css' />
 	<link rel="stylesheet" href="css/lightbox.css">
 	<!-- Custom Theme files -->
-	<!--//theme-style-->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="keywords" content="Game Box  Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
@@ -23,43 +23,7 @@
 <body>
 <!-- header -->
 <div class="top-banner">
-	<div class="header">
-		<div class="container banner-container">
-      <div class="headr-left col-sm-6 col-3">
-          <div class="social active">
-          	<a href="index.html" id="homeUrl">首页 <span class="phone">www.91chcf.com</span></a>
-          </div>
-        </div>
-			<div class="headr-right col-sm-6 col-9">
-				<div class="details">
-					<ul style="margin: 0px;display: flex;">
-						<!-- <li class="QLcoin" id="guestCoin">
-							<a href="single.html" style="font-weight: 600;">
-								青龙币储值
-							</a>
-						</li> -->
-						<li class="QLcoin" id="memberCoin" style="display: none;">
-							<a href="single.html" style="font-weight: 600;" id="QLcoin">
-								青龙币 0 元
-							</a>
-						</li>
-						<li id="guest">
-							<p href="single.html" style="font-weight: 600;">
-								<span class="home_login"><a href="form-2/index.html">登录</a></span>
-								&nbsp;&nbsp;|&nbsp;&nbsp;
-								<span class="home_register"><a href="form-2/register.html">注册</a></span></p>
-						</li>
-						<li id="member" style="display: none;">
-							<p style="font-weight: 600;" id="loginMem">
-								您好，<span class=""><span id="accountName" style="font-weight: 600;color: #fff;margin: 0;padding:0;"></span></span>
-								&nbsp;&nbsp;|&nbsp;&nbsp;
-								<span class="home_register" onclick="logout()">退出 </span></p>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
+	<div w3-include-html="./header.html"></div>
 	
 	<script>
 		let userName = localStorage.getItem('userName');
@@ -98,7 +62,7 @@
 				<ul class="nav1">
 					<li><a href="about.html">关于我们</a></li>
 					<li><a href="reviews.html">产品中心</a></li>
-					<li><a href="single.html">充值中心</a></li>
+					<li><a href="deposit.html">充值中心</a></li>
 					<!-- <li><a href="gallery.html">精美画面</a></li> -->
 					<li class="active"><a href="contact.html">联络我们</a></li>
 				</ul>
@@ -182,55 +146,13 @@
 		 </div>		 -->
 		</div>
 </div>
-<!-- footer -->
-<div class="footer-index">
-		<div class="container">
-			<div class="footer-grids">
-				<div class="col-md-3 ftr-grid">
-					<h3>客服中心</h3>
-					<ul>
-			  <li><a href="contact.html">联系我们</a></li>
-			  <li><a href="index.html">商城网址：www.91chcf.com</a></li>
-					</ul>
-				</div>
-				<div class="col-md-3 ftr-grid">
-					<h3>会员中心</h3>
-					<ul class="ftr-list">
-						<li><a href="form-2/index.html">会员登录</a></li>
-						<li><a href="form-2/register.html">会员注册</a></li>
-						<li><a href="agreement.html">服务条款</a></li>
-					</ul>				 
-				</div>
-				<div class="col-md-3 ftr-grid">
-					<h3>游戏平台</h3>
-					<ul class="ftr-list">
-						 <li><a href="https://baike.baidu.com/item/%E4%B8%AA%E4%BA%BA%E8%AE%A1%E7%AE%97%E6%9C%BA/3731770?fromtitle=pc&fromid=107&fr=aladdin">PC</a></li>
-						 <li><a href="http://www.playstation.com.cn/">Play Station</a></li>
-						<li><a href="https://www.xbox.com/en-US/games/xbox-360">XBOX 360</a></li>
-						<li><a href="https://www.xbox.com/en-US/">XBOX ONE</a></li>
-					</ul>				 
-				</div>
-				<div class="col-md-3 ftr-grid">
-					<h3>相关讯息</h3>
-					<ul class="ftr-list">	
-						<li><a href="index.html">首页</a></li>
-						<li><a href="about.html">关于我们</a></li>
-						<!-- <li><a href="gallery.html">精美画面</a></li> -->
-						<li><a href="reviews.html">产品中心</a></li> 
-					</ul>				 
-				</div>		
-			  <div class="clearfix"></div>
-			</div>
-		</div>
-	</div>
-	<!---->
-	<div class="copywrite" style="position: relative;">
-		 <div class="container">
-			 <p>粤网文〔2016〕1714-358号 粤ICP备18091202号  深圳市川海长丰网络科技有限公司 Copyright 2018© 青龙游戏 ,All Rights Reserved</p>
-	
-		 </div>
-	</div>
-	<!---->
+
+
+
+<div w3-include-html="./footer.html"></div>
+<script>
+includeHTML();
+</script>
 
 
 </body>

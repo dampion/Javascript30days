@@ -6,6 +6,7 @@
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery (necessary JavaScript plugins) -->
 	<script src="js/bootstrap.js"></script>
+	<script src="js/include.js"></script>
 	<!-- Custom Theme files -->
 	<link href="css/style.css" rel='stylesheet' type='text/css' />
 	<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
@@ -23,43 +24,7 @@
 <body>
 <!-- header -->
 <div class="top-banner">
-	<div class="header">
-		<div class="container banner-container">
-      <div class="headr-left col-sm-6 col-3">
-          <div class="social active">
-          	<a href="index.html" id="homeUrl">首页 <span class="phone">www.91chcf.com</span></a>
-          </div>
-        </div>
-			<div class="headr-right col-sm-6 col-9">
-				<div class="details">
-					<ul style="margin: 0px;display: flex;">
-						<li class="QLcoin" id="guestCoin">
-							<a href="single.html" style="font-weight: 600;">
-								青龙币储值
-							</a>
-						</li>
-						<li class="QLcoin" id="memberCoin" style="display: none;">
-							<a href="single.html" style="font-weight: 600;" id="QLcoin">
-								青龙币 0 元
-							</a>
-						</li>
-						<li id="guest">
-							<p href="single.html" style="font-weight: 600;">
-								<span class="home_login"><a href="form-2/index.html">登录</a></span>
-								&nbsp;&nbsp;|&nbsp;&nbsp;
-								<span class="home_register"><a href="form-2/register.html">注册</a></span></p>
-						</li>
-						<li id="member" style="display: none;">
-							<p href="single.html" style="font-weight: 600;" id="loginMem">
-								您好，<span class="home_login"><a href="form-2/index.html" id="accountName" style="font-weight: 600;color: #fff;"></a></span>
-								&nbsp;&nbsp;|&nbsp;&nbsp;
-								<span class="home_register" onclick="logout()">退出 </span></p>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
+	<div w3-include-html="./header.html"></div>
 	
 	<script>
 		let userName = localStorage.getItem('userName');
@@ -191,7 +156,7 @@
 			<div class="col-md-3 ftr-grid">
 				<h3>会员中心</h3>
 				<ul class="ftr-list">
-					<li><a href="form-2/index.html">会员登录</a></li>
+					<li><a href="form-2/login.html">会员登录</a></li>
 					<li><a href="form-2/register.html">会员注册</a></li>
 					<li><a href="agreement.html">服务条款</a></li>
 				</ul>				 
