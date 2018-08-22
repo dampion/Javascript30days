@@ -182,3 +182,27 @@ img { max-width: 100%; }
 	h1, h2 { font-size: 32px; }
 
 }
+
+.header{
+	background: #322348;
+}
+.banner-container {
+  padding-top: 11px;
+}
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1000px;
+  }
+  .bannerContainer {
+    width: 1000px;
+  }
+  .topGameContainer {
+    width: 1170px;
+  }
+}
